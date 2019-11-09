@@ -1,17 +1,9 @@
 body {
-  padding
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
-.article{
-  max-width: calc(100%);
-  /*max-width: calc(100% - 200px);*/
+.container-fluid{
   padding: 0px;
-}
-
-.anchor{
-  padding-top: 70px;
-  margin-top: -70px;
 }
 
 .sidemap{
