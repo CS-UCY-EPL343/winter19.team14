@@ -31,13 +31,13 @@
 					navbar.removeAttr( 'style' );
 				}
 			}
-			if ( st > 550 ) {
+			if ( st > 380 ) {
 				if (!navbar.hasClass('fadein') ){
 					navbar.addClass('fadein');
 					navbar.fadeIn();
 				}
 			}
-			if ( st < 550 ) {
+			if ( st < 380 ) {
 				if (navbar.hasClass('fadein') ){
 					navbar.removeClass('fadein');
 					navbar.hide();

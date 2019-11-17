@@ -1,0 +1,182 @@
+header {
+	background-image: url(../images/img-menu.jpg);
+	height: 400px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	box-shadow: -4px 4px 5px -2px #2f2e2e;
+}
+
+#menu-header {
+	font-size: 3rem;
+	color: white;
+}
+
+@media (max-width: 767px){
+	#menu-header {
+		font-size: 2rem;
+	}
+}
+
+#menu-tab li a {
+	
+}
+
+/*   Change Color for Active Tabs  main tabs   */
+#menu-tab a.active,
+#menu-tab a.active:focus,
+#menu-tab a.active:hover{
+	background-color: #fff;
+	border-color: #000;
+	color: #000;
+	cursor: default;
+	font-size: 20px;
+	font-weight: bold;
+}
+    
+/*   Change Color for Inactive Tabs  main tabs     */
+#menu-tab a {
+	background-color: #fff;
+	border-color: #999;
+	color: #999;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#menu-tab a:hover,
+#menu-tab a:focus{
+	background-color: #ebebeb;
+}
+
+#bar-categories .bar-category {
+	color: #333;
+	font-weight: 600;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+
+/* arrow after links on bar-categoreis*/
+
+#bar-categories .nav-item a,
+#bar-categories .nav-item a:focus,
+#bar-categories .nav-item a:hover{
+    color: #717171;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+#bar-categories .nav-item a:after {
+	color:#000;
+    content: ' \f0da';
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    text-decoration: inherit;
+	font-weight: 900;
+	opacity: 0;
+}
+
+#bar-categories .nav-item a:hover{
+  padding-right: 10px;
+}
+
+#bar-categories .nav-item a:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+div.category-container h2.category-title{
+	color: #C0C0C0;
+    padding: 10px 15px 10px 0;
+    margin: 0;
+    font-weight: 600;
+	font-size: 30px;
+}
+
+div.category-box>div.row,
+div.category-box div.table-responsive tr{
+	cursor: pointer;
+}
+
+
+/* Exapnd symbol */
+div.category-box div.expand-symbol{
+	padding-top: auto;
+	padding-bottom: auto;
+}
+
+div.category-box div.expand-symbol i.fa-minus,
+div.category-box div.expand-symbol i.fa-plus,
+div.category-box td i.fa-plus-square{
+	color: #784500;
+}
+
+div.category-box div.collapsed div.expand-symbol i.fa-minus{
+	display: none;
+}
+
+div.category-box div.expand-symbol i.fa-minus{
+	display: inline-block;
+}
+
+div.category-box div.collapsed div.expand-symbol i.fa-plus{
+	display: inline-block;
+}
+
+div.category-box div.expand-symbol i.fa-plus{
+	display: none;
+}
+
+div.category-box div.expand-title{
+	color: #717171;
+	font-size: 18px;
+	font-weight: 600;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#modalTitle {
+	color: #000;
+	font-weight: bold;
+}
+
+#modal-price {
+	color: #000;
+	font-weight: bold;
+}
+
+/* modal symbol up/down */
+.modal button.collapsed i.fa-caret-up{
+	display: none;
+}
+
+
+.modal button i.fa-caret-up{
+	display: inline-block;
+}
+
+.modal button.collapsed i.fa-caret-down{
+	display: inline-block;
+}
+
+
+.modal button i.fa-caret-down{
+	display: none;
+}
+
+.accordion div h2 button{
+	background-color: #fff;
+	border-color: #000;
+	color: #000;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -115px;
+    visibility: hidden;
+}
