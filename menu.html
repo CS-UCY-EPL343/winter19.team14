@@ -13,12 +13,11 @@
 	<!-- Bootstrap core CSS -->
 	<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 	
-	<link href="css/style.css" rel="stylesheet">
-	<link href="css/style-menu.css" rel="stylesheet">
-	
 	<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 	
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/style-menu.css" rel="stylesheet">
 	
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
@@ -73,7 +72,7 @@
 	<section>
 		<div class="container my-3">
 			<div class="row">
-				<div class="col-lg-9">
+				<div class="col-md-8">
 					<ul class="nav nav-tabs" id="menu-tab" role="tablist">
 						<li class="nav-item">
 							<a class="nav-link active" id="bar-tab" data-toggle="tab" href="#bar-menu" role="tab" aria-controls="bar-menu" aria-selected="true">BAR MENU</a>
@@ -87,7 +86,7 @@
 					<div class="tab-content" id="myTabContent">
 						<!-- BAR MENU TAB-->
 						<div class="tab-pane fade show active" id="bar-menu" role="tabpanel" aria-labelledby="bar-menu">
-							<div class="row">
+							<div id="bar-menu-row" class="row">
 								<div id="bar-categories" class="col-lg-4">
 								
 									<!-- dropdown categoryies-->
@@ -234,8 +233,8 @@
 												<div class="expand-title col-5 col-lg-4">
 													Hot
 												</div>
-												<div class="expand-image col-6 col-lg-7">
-												
+												<div class="expand-image col-6 col-lg-7 text-right">
+													<img src="images/espresso.png" alt="Hot" class="img-responsive">
 												</div>
 											</div>
 											
@@ -268,8 +267,8 @@
 												<div class="expand-title col-5 col-lg-4">
 													Cold
 												</div>
-												<div class="expand-image col-6 col-lg-7">
-												
+												<div class="expand-image col-6 col-lg-7 text-right">
+													<img src="images/freddo.jpg" alt="Cold" class="img-responsive">
 												</div>
 											</div>
 											
@@ -307,8 +306,8 @@
 												<div class="expand-title col-7 col-lg-4">
 													Cypriot Coffee
 												</div>
-												<div class="expand-image col-4 col-lg-7">
-												
+												<div class="expand-image col-4 col-lg-7 text-right">
+													<img src="images/cypriot-coffee.png" alt="Cypriot Coffee" class="img-responsive">
 												</div>
 											</div>
 											
@@ -343,8 +342,8 @@
 												<div class="expand-title col-5 col-lg-4">
 													Hot
 												</div>
-												<div class="expand-image col-6 col-lg-7">
-												
+												<div class="expand-image col-6 col-lg-7 text-right">
+													<!-- <img src="images/hot-chocolate.png" alt="Hot" class="img-responsive"> -->
 												</div>
 											</div>
 											
@@ -369,8 +368,8 @@
 												<div class="expand-title col-5 col-lg-4">
 													Cold
 												</div>
-												<div class="expand-image col-6 col-lg-7">
-												
+												<div class="expand-image col-6 col-lg-7 text-right">
+													<!-- <img src="images/cold-chocolate.jpg" alt="Hot" class="img-responsive"> -->
 												</div>
 											</div>
 											
@@ -401,8 +400,8 @@
 												<div class="expand-title col-5 col-lg-4">
 													Hot
 												</div>
-												<div class="expand-image col-6 col-lg-7">
-												
+												<div class="expand-image col-6 col-lg-7 text-right">
+													<!-- <img src="images/" alt="Hot" class="img-responsive"> -->
 												</div>
 											</div>
 											
@@ -427,8 +426,8 @@
 												<div class="expand-title col-5 col-lg-4">
 													Cold
 												</div>
-												<div class="expand-image col-6 col-lg-7">
-												
+												<div class="expand-image col-6 col-lg-7 text-right">
+													<img src="images/frappe.png" alt="Cold" class="img-responsive">
 												</div>
 											</div>
 											
@@ -459,8 +458,8 @@
 												<div class="expand-title col-5 col-lg-4">
 													Cold
 												</div>
-												<div class="expand-image col-6 col-lg-7">
-												
+												<div class="expand-image col-6 col-lg-7 text-right">
+													<img src="images/milkshake.png" alt="Cold" class="img-responsive">
 												</div>
 											</div>
 											
@@ -494,8 +493,8 @@
 												<div class="expand-title col-5 col-lg-4">
 													Hot
 												</div>
-												<div class="expand-image col-6 col-lg-7">
-												
+												<div class="expand-image col-6 col-lg-7 text-right">
+													<img src="images/tea-herbs.jpg" alt="Tea-herbs" class="img-responsive">
 												</div>
 											</div>
 											
@@ -526,8 +525,8 @@
 												<div class="expand-title col-5 col-lg-4">
 													Water
 												</div>
-												<div class="expand-image col-6 col-lg-7">
-												
+												<div class="expand-image col-6 col-lg-7 text-right">
+													<img src="images/water.jpg" alt="Water" class="img-responsive">
 												</div>
 											</div>
 											
@@ -550,8 +549,8 @@
 												<div class="expand-title col-5 col-lg-4">
 													Juice
 												</div>
-												<div class="expand-image col-6 col-lg-7">
-												
+												<div class="expand-image col-6 col-lg-7 text-right">
+													<img src="images/juice.png" alt="Juice" class="img-responsive">
 												</div>
 											</div>
 											
@@ -580,10 +579,80 @@
 				</div>
 				
 				<!-- BASKET-->
-				<div class="col-lg-3">
-				
+				<div class="col-md-4">
+					<div id="basket">
+							<h4 id="basket-title">My basket</h4>
+							<div id="">
+								<div class="" id="">
+									<div class="table-responsive">
+										<table class="table">
+											<tbody>
+                                                <tr>
+													<td data-title="Product" class="item-info">
+														Freddo Espresso
+														<br/>
+														<em><small class="">Gardiano Cafe, No Sugar</small></em></a>
+														<br/>
+														<i class="fa fa-plus"></i>
+														<small>1</small>
+														<i class="fa fa-minus"></i>
+													</td>
+													<td data-title="Price" class="text-right">
+														<div class="d-flex flex-row justify-content-end">
+															<div class="price">&euro;2.00</div> 
+															<div class="remove" data-toggle="tooltip" title="remove from basket"><i class="fas fa-minus-circle"></i></i></div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td data-title="Product" class="item-info">
+														Espresso
+														<br/>
+														<em><small class="">Gardiano Cafe, No Sugar</small></em></a>
+														<br/>
+														<i class="fa fa-plus"></i>
+														<small>1</small>
+														<i class="fa fa-minus"></i>
+													</td>
+													<td data-title="Price" class="text-right">
+														<div class="d-flex flex-row justify-content-end">
+															<div class="price">&euro;1.00</div> 
+															<div class="remove" data-toggle="tooltip" title="remove from basket"><i class="fas fa-minus-circle"></i></i></div>
+														</div>
+													</td>
+												</tr>
+                                            </tbody>
+										</table>
+									</div>
+									<div class="d-flex justify-content-center">
+										<span class="">Total:&nbsp;</span><span class="price">&euro;3.00</span>
+									</div>
+                                    <div class="alert alert-del-type">Please choose a delivery type: delivery or takeaway.</div>
+                                    <div id="cart_address_div">
+										<div class="sidebar-content" id="sidebar-cart-address-container">
+											<div class="cart-address">
+											</div>
+											<div class="cart-delivery-options text-center">
+												<div class="row" style="margin-top:2px;">
+													<div class="col-6" style="padding-right: 1px;">
+														<button class="btn btn-block order-button" title="Delivery" style="font-size:14px;">DELIVERY</button>
+													</div>
+													<div class="col-6" style="padding-left: 0;">
+														<button class="btn btn-block order-button" title="Takeaway" style="font-size:14px;">TAKE AWAY</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cart-actions text-center">
+										<button class="btn btn-default complete-button"><i class="fa fa-check"></i> Order</button>
+									</div>
+									<input type="hidden" class="cart-items-count" value="1">
+									<input type="hidden" class="cart-items-total" value="1.00">
+    							</div>
+							</div>					
+					</div>
 				</div>
-				
 				<!-- END BASKET-->
 			</div>
 		
@@ -602,11 +671,21 @@
             </button>
           </div>
           <div class="modal-body">
-            <div>
-				It is the cold version of a double espresso. It requires skill and knowledge to preserve most flavors and keep the body full without becoming watery.
-            </div>
-			<br/><br/>
+			<div class="add-modal-title">
+				Description:
+			</div>
+			<div>
+				<img class="right-float" src="images/freddo.jpg" alt="Freddo Espresso" style="max-width:25%;">
+				<div>It is the cold version of a double espresso. It requires skill and knowledge to preserve most flavors and keep the body full without becoming watery.</div>
+				<div class="clearfix"></div>
+			</div>
+			
+			<hr/>
+			
 			<!-- Modal accordion-->
+			<div class="add-modal-title mt-4">
+				Options:
+			</div>
 			<div class="accordion" id="accordion-modal">
 				<div class="card">
 					<div class="card-header" id="modal-heading1">
@@ -623,7 +702,7 @@
 								<div id="flavors" class="row">
 								  <div class="col-lg-3 col-md-6">
 									<input type="radio" name="flavor" id="none" value="none" checked>
-									<label for="none">none</label>
+									<label for="none">None</label>
 								  </div>
 								  <div class="col-lg-3 col-md-6">
 									<input type="radio" name="flavor" id="Vanilla" value="Vanilla">
@@ -686,8 +765,8 @@
 			
           </div>
           <div class="no-gutters modal-footer row justify-content-between">
-			<div id="modal-price" class="col-12 col-lg-5 text-lg-left text-center">Price: &euro;1.00 </div> 
-            <div class="col-12 col-lg-6 text-lg-right text-center mt-lg-0 mt-2"><button type="button" class="btn btn-warning" data-dismiss="modal">Add to Basket</button></div>
+			<div id="modal-price" class="col-12 col-lg-5 text-lg-left text-center">Price: &euro;2.00 </div> 
+            <div class="col-12 col-lg-6 text-lg-right text-center mt-lg-0 mt-2"><button type="button" id="add-to-basket-button" class="btn" data-dismiss="modal">Add to Basket</button></div>
           </div>
         </div>
       </div>

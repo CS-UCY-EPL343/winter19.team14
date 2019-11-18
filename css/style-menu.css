@@ -103,8 +103,7 @@ div.category-box div.table-responsive tr{
 
 /* Exapnd symbol */
 div.category-box div.expand-symbol{
-	padding-top: auto;
-	padding-bottom: auto;
+	margin: auto 0px;
 }
 
 div.category-box div.expand-symbol i.fa-minus,
@@ -147,6 +146,30 @@ div.category-box div.expand-title{
 	font-weight: bold;
 }
 
+div#addtocard-draft div.accordion div.card-header{
+	background-color: #fff;
+}
+
+div#addtocard-draft div.accordion div.card{
+	border: 0px;
+}
+
+.add-modal-title{
+	font-weight: bold;
+	text-decoration: underline;
+	color: #000;
+}
+
+.right-float{
+	float : right !important;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /* modal symbol up/down */
 .modal button.collapsed i.fa-caret-up{
 	display: none;
@@ -174,9 +197,91 @@ div.category-box div.expand-title{
 	font-weight: bold;
 }
 
+.accordion .card-header {
+  padding-left: 0;
+}
+
+
 a.anchor {
     display: block;
     position: relative;
     top: -115px;
     visibility: hidden;
 }
+
+/* BASKET */
+.alert-del-type{
+	color: #292929;
+	border-color: #ccc;
+	font-size: 12px;
+	background-color: #f5f3f1;
+	font-weight: bold;
+}
+
+#basket-title{
+	margin-top: 10px;
+	color: #000000;
+	font-size: 20px;
+}
+
+#basket{
+	border-top: 1px solid #a3a4a5;
+	border-bottom: 1px solid #a3a4a5;
+	-webkit-border-radius: 15px; 
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+div.remove{
+	cursor: pointer;
+}
+
+div.remove:hover i{
+	color: #212529;
+}
+
+div.remove i{
+	color: #613e00;
+	font-size: 14px;
+	margin-left:2px;
+}
+
+.item-info i{
+	cursor: pointer;
+	color:#784500;
+}
+
+.order-button:hover,
+.order-button:focus,
+#add-to-basket-button{
+	background-color: #624229;
+	color: #e1e1e1;
+}
+
+.complete-button:hover{
+	background-color:#388e3c;
+	color: #e1e1e1;
+}
+
+#add-to-basket-button:hover{
+	background-color:#68472ecc;
+}
+
+img.img-responsive{
+	max-height: 150px;
+	width: auto;
+	max-width: 125px;
+}
+
+@media (max-width: 992px){
+	img.img-responsive{
+		max-height: 100px;
+	}
+}
+
+@media (max-width: 380px){
+	img.img-responsive{
+		display: none;
+	}
+}
+
