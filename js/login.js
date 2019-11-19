@@ -1,6 +1,6 @@
 function LoginAuthentication() {
     event.preventDefault();
-
+    clear_function_register();
     //Hide warning messages
     let element = document.querySelector('#login_email_waring');
     element.classList.add('d-none');
@@ -10,7 +10,6 @@ function LoginAuthentication() {
 
     let empty = false;
 
-    //Get from the form the username
     const email = document.querySelector('#login_email');
     if (email.value.trim() === '') {
         element = document.querySelector('#login_email_waring');
@@ -18,7 +17,6 @@ function LoginAuthentication() {
         empty = true;
     }
 
-    //Get from the form the password
     const password = document.querySelector('#login_pwd');
     if (password.value.trim() === '') {
         element = document.querySelector('#login_pwd_warning');
@@ -35,9 +33,88 @@ function LoginAuthentication() {
         return;
     }
 
-    element = document.querySelector('#myModal');
+    $('#myModal').modal('hide');
+    clear_function_login();
+}
+
+function RegisterAuthentication() {
+    event.preventDefault();
+    clear_function_login();
+    //Hide warning messages
+    let element = document.querySelector('#register_email_waring');
     element.classList.add('d-none');
 
+    element = document.querySelector('#register_address_waring');
+    element.classList.add('d-none');
+
+    element = document.querySelector('#register_phone_waring');
+    element.classList.add('d-none');
+
+    element = document.querySelector('#register_pwd_warning');
+    element.classList.add('d-none');
+
+    element = document.querySelector('#register_confirm_pwd_warning');
+    element.classList.add('d-none');
+
+    element = document.querySelector('#register_terms_warning');
+    element.classList.add('d-none');
+
+    let empty = false;
+
+    const email = document.querySelector('#register_email');
+    if (email.value.trim() === '') {
+        element = document.querySelector('#register_email_waring');
+        element.classList.remove('d-none');
+        empty = true;
+    }
+
+    const address = document.querySelector('#register_address');
+    if (address.value.trim() === '') {
+        element = document.querySelector('#register_address_waring');
+        element.classList.remove('d-none');
+        empty = true;
+    }
+
+    const phone = document.querySelector('#register_phone');
+    if (phone.value.trim() === '') {
+        element = document.querySelector('#register_phone_waring');
+        element.classList.remove('d-none');
+        empty = true;
+    }
+
+    const password = document.querySelector('#register_pwd');
+    if (password.value.trim() === '') {
+        element = document.querySelector('#register_pwd_warning');
+        element.classList.remove('d-none');
+        empty = true;
+    }
+
+    const confirm = document.querySelector('#register_confirm_pwd');
+    if (confirm.value.trim() === '') {
+        element = document.querySelector('#register_confirm_pwd_warning');
+        element.classList.remove('d-none');
+        empty = true;
+    }
+
+    var checkBoox = document.getElementById("register_terms").checked;
+    if (checkBoox === false){
+        element = document.querySelector('#register_terms_warning');
+        element.classList.remove('d-none');
+        empty = true;
+    }
+
+    if (empty == true) {
+        return;
+    }
+
+    if (isNaN(phone.value.toString())){
+        alert('Segmentation Fault: Phone number can contains only integer digits!');
+        return;
+    }
+
+    $('#myModal').modal('hide');
+    alert('Registration Completed Successfully!');
+    clear_function_register();
 }
 
 function clear_function_login() {
@@ -48,6 +125,37 @@ function clear_function_login() {
     warning.classList.add('d-none');
 }
 
+function clear_function_register() {
+    document.getElementById("registerForm").reset();
+    let element = document.querySelector('#register_email_waring');
+    element.classList.add('d-none');
+
+    element = document.querySelector('#register_address_waring');
+    element.classList.add('d-none');
+
+    element = document.querySelector('#register_phone_waring');
+    element.classList.add('d-none');
+
+    element = document.querySelector('#register_pwd_warning');
+    element.classList.add('d-none');
+
+    element = document.querySelector('#register_confirm_pwd_warning');
+    element.classList.add('d-none');
+
+    element = document.querySelector('#register_terms_warning');
+    element.classList.add('d-none');
+}
+
+function closeModal() { 
+    jQuery(document).ready(function() {
+        jQuery("#panel8 button.close").click(function () {
+          jQuery("#panel8").modal("hide");
+        });
+      })      
+} 
 
 const login_button = document.querySelector('#login');
 login_button.addEventListener('click', LoginAuthentication);
+
+const register_button = document.querySelector('#signup');
+register_button.addEventListener('click', RegisterAuthentication);
