@@ -1,0 +1,42 @@
+#map{
+	width: 100%;
+	max-height: 610px;
+}
+
+#comments{
+	resize: none;
+}
+
+header {
+	background-image: url(../images/contact-us.png);
+	height: 400px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: bottom;
+	box-shadow: -4px 4px 5px -2px #2f2e2e;
+}
+
+#submition-btn{
+	background-color: #c8a97e;
+	color: #fff;
+}
+
+#submition-btn:hover,
+#submition-btn:focus{
+	background-color: #fff;
+	color: #c8a97e;
+	border: 1px solid #c8a97e;
+}
+
+.title{
+	color: #000;
+}
+
+.dbox,
+#email:hover,
+#email:focus,
+#email{
+	color: #c8a97e;
+	text-decoration: none;
+}
