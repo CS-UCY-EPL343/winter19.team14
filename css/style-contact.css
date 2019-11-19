@@ -17,6 +17,11 @@ header {
 	box-shadow: -4px 4px 5px -2px #2f2e2e;
 }
 
+#header {
+	font-size: 3rem;
+	color: white;
+}
+
 #submition-btn{
 	background-color: #c8a97e;
 	color: #fff;
