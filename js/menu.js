@@ -11,19 +11,18 @@ $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();   
 });
 
-/*
+
 $(function() {
 
     var $sidebar   = $("#basket"), 
         $window    = $(window),
         offset     = $sidebar.offset(),
         topPadding = 1;
-	var lastScrollTop = 0
-		initialposition = offset.top;
+	var lastScrollTop = 0;
 
     $window.scroll(function() {
-		var top_bar_menu = $("#bar-menu-row").offset().top;
-		var bottom_bar_menu = $("#bar-menu-row").offset().top + $("#bar-menu-row").outerHeight(true);
+		var top_bar_menu = $("#myTabContent").offset().top;
+		var bottom_menu = $("#myTabContent").offset().top + $("#myTabContent").outerHeight(true);
 		var top_sidebar = offset.top;
 		var bottom_sidebar = offset.top + $sidebar.outerHeight(true);
 		var scrollBottom = $window.scrollTop() + $window.height();
@@ -35,7 +34,14 @@ $(function() {
 		var st = $window.scrollTop();
 		if (st > lastScrollTop){
 			// downscroll code
-			if (scrollTop > (top_sidebar -100) && bottom_sidebar < bottom_bar_menu-100 && scrollBottom > bottom_sidebar) {
+			if (scrollBottom < bottom_sidebar ){
+				// do nothing
+			}
+			// when sidebar height is greater than window's height.
+			else if ($window.height() < $sidebar.height() && bottom_sidebar < bottom_menu-150) {
+				$sidebar.css('margin-top',$window.scrollTop() - (top_sidebar) - ($sidebar.height() - $window.height()+20) + topPadding+'px');
+			}
+			else if (scrollTop > (top_sidebar -100) && bottom_sidebar < bottom_menu-150 ) {
 				$sidebar.css('margin-top',$window.scrollTop() - (top_sidebar-100) + topPadding+'px');
 			}
 			else if (scrollTop <= (top_sidebar -100)){
@@ -54,5 +60,5 @@ $(function() {
     });
     
 });
-*/
+
 

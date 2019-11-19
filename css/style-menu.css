@@ -17,6 +17,10 @@ header {
 	#menu-header {
 		font-size: 2rem;
 	}
+	
+	#basket{
+		margin-top: 0px !important;
+	}
 }
 
 #menu-tab li a {
@@ -62,13 +66,23 @@ header {
 
 #bar-categories .nav-item a,
 #bar-categories .nav-item a:focus,
-#bar-categories .nav-item a:hover{
+#bar-categories .nav-item a:hover,
+#food-categories .nav-item a,
+#food-categories .nav-item a:focus,
+#food-categories .nav-item a:hover{
     color: #717171;
 	font-size: 14px;
 	text-decoration: none;
 }
 
-#bar-categories .nav-item a:after {
+#food-categories .nav-item a,
+#food-categories .nav-item a:focus,
+#food-categories .nav-item a:hover{
+	font-size: 18px;
+}
+
+#bar-categories .nav-item a:after,
+#food-categories .nav-item a:after {
 	color:#000;
     content: ' \f0da';
     font-family: "Font Awesome 5 Free";
@@ -78,13 +92,19 @@ header {
 	opacity: 0;
 }
 
-#bar-categories .nav-item a:hover{
+#bar-categories .nav-item a:hover,
+#food-categories .nav-item a:hover{
   padding-right: 10px;
 }
 
-#bar-categories .nav-item a:hover:after {
+#bar-categories .nav-item a:hover:after,
+#food-categories .nav-item a:hover:after {
   opacity: 1;
   right: 10px;
+}
+
+div#food-menu #food-categories li.nav-item{
+	padding: 8px 0px;
 }
 
 div.category-container h2.category-title{
