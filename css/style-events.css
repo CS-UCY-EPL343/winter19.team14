@@ -1,0 +1,160 @@
+header {
+	background-image: url(../images/img-events.jpg);
+	height: 400px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	box-shadow: -4px 4px 5px -2px #2f2e2e;
+}
+
+#header {
+	font-size: 3rem;
+	color: white;
+}
+
+/*   Change Color for Active Tabs  main tabs   */
+#evcomp-tab a.active,
+#evcomp-tab a.active:focus,
+#evcomp-tab a.active:hover{
+	background-color: #fff;
+	border-color: #000;
+	color: #000;
+	cursor: default;
+	font-size: 20px;
+	font-weight: bold;
+}
+    
+/*   Change Color for Inactive Tabs  main tabs     */
+#evcomp-tab a {
+	background-color: #fff;
+	border-color: #999;
+	color: #999;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#evcomp-tab a:hover,
+#evcomp-tab a:focus{
+	background-color: #ebebeb;
+}
+
+section{
+	padding-bottom: 110px;
+	padding-top: 20px;
+}
+
+.nums-block ul {
+	padding: 0;
+	margin: 0; 
+}
+  
+.nums-block ul li {
+	display: inline-block;
+	margin-bottom: 4px;
+	font-weight: 400; 
+}
+    
+.nums-block ul li a, 
+.nums-block ul li span {
+	border: 1px solid #c8a97e;
+	text-align: center;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 5px;
+	background: #fff; 
+}
+
+.nums-block ul li.active a, 
+.nums-block ul li.active span {
+	background: #c8a97e;
+	color: #fff;
+	border: 1px solid transparent; 
+}
+
+.nums-block li a{
+	color: #c8a97e;
+}
+
+.nums-block li a:hover,
+.nums-block li a focus{
+	border-color: #3f3322;
+	text-decoration: none;
+	background-color: #fffae4;
+}
+
+.block-img {
+	overflow: hidden;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 300px;
+	position: relative;
+	display: block; 
+}
+
+.event-entry a.block-img{
+	border-radius: 15px 50px 0px 0px;
+}
+
+.event-entry {
+	background: #fff;
+	border: 1px solid #c8a97e;
+	border-radius: 15px 50px;
+}
+
+.event-entry .text {
+    position: relative;
+    border-top: 0;
+    border-radius: 2px; 
+}
+
+.event-entry .text .heading {
+	font-size: 20px;
+	margin-bottom: 16px;
+	font-weight: 600; 
+}
+
+.event-entry .text .heading a {
+	color: #000000; 
+}
+
+.event-entry .text .read {
+	color: #000000;
+	font-size: 14px; 
+}
+
+.event-entry .meta > div {
+	display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 14px; 
+}
+
+.event-entry .meta > div a {
+	color: rgba(0, 0, 0, 0.3);
+	font-size: 15px; 
+}
+
+.event-entry .meta > div a:hover {
+	color: #cccccc;
+}
+
+.event-entry a:hover,
+.event-entry a:focus{
+	text-decoration: none;
+}
+
+.event-entry div.meta a,
+.event-entry div.heading a{
+	cursor: default;
+}
+
+@media (max-width: 512px){
+	.hide-xs{
+		display: none !important;
+	}
+}
