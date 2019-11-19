@@ -216,3 +216,9 @@ body {
 .notmember{
 	margin-bottom: 0;
 }
+
+@media (max-width: 992px) {
+	.options{
+		line-height: 1.35;
+	}
+}
