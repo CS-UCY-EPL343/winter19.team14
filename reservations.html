@@ -13,10 +13,9 @@
 	<!-- Bootstrap core CSS -->
 	<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 	
-	<link href="css/style.css" rel="stylesheet">
-	
 	<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300i,400&display=swap" rel="stylesheet">
 	
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 	
@@ -26,6 +25,10 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
 	<link rel="manifest" href="images/favicon/site.webmanifest">
+	
+	<link href="css/style-reservation.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+		
 </head>
 
 <body>
@@ -71,11 +74,72 @@
 
 	<div id="navbarfix" class="d-none"></div>
 
-	<!-- Page Content -->
-	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	
+	 <!-- Page Content -->
+	 
+	<div class="spaceOf120"></div> 
+	 
+	<div class="container gard-animate">
+		<div class="row">
+			<div class="col align-self-center">
+				<div class="bookTable">
+					<div class="borderBT">
+						<h1>Make a Reservation</h1>
+						<h2>To book for TODAY please call us.</h2>
+						<form>
+							<div class="grid-x grid-padding-x align-justify">
+								<div class="large-5 cell">
+									<div class="grid-x">
+										<div class="cell">
+											<input type="text" value="" placeholder="Name *" name="name" id="nameForm" required>
+										</div>
+										<div class="cell">
+											<input type="tel" value="" placeholder="Phone *" name="phone" id="telForm" required>
+										</div>
+										<div class="cell">
+											<input type="email" value="" placeholder="Email *" name="email" required>
+										</div>
+										<div class="cell">
+											<input type="number" min="1" value="" placeholder="No. of Persons *" name="persons" required>
+										</div>
+										<div class="cell">
+											<select required>
+											  <option value="" disabled selected>Please choose type of reservation:</option>
+											  <option value="table"  class="others">Book a table</option>
+											  <option value="event" class="others">Book an event</option>
+											</select>
+										</div>
+										<div class="cell">
+											<select required>
+											  <option value="" disabled selected>Please choose hour:</option>
+											  <option value="1000"  class="others">10:00</option>
+											  <option value="1200" class="others">12:00</option>
+											  <option value="1400"  class="others">14:00</option>
+											  <option value="1600" class="others">16:00</option>
+											  <option value="1800"  class="others">18:00</option>
+											  <option value="2000" class="others">20:00</option>
+											</select>
+										</div>
+										<div class="cell">
+											<div class='input-group date'>
+												<input id='datetimepicker1' type='text' class="form-control" required>
+												<span class="input-group-addon"></span>
+											</div>
+										</div>
+									</div>
+									<button type="submit" class="btn btn-success" style="position: absolute; right: 220px;">Book now!</button>
+								</div>						
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-	<!-- Page Content -->
+	<div class="spaceOf120"></div> 
+	
+	<!-- Footer -->
 
 	<footer class="gf-footer gf-bg-dark gf-section">
 		<div class="container">
@@ -145,11 +209,14 @@
 	<div id="toTop" class="align-items-center justify-content-center" ><i class="fas fa-level-up-alt fa-lg"></i></div>
 
 	<!-- Bootstrap core JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
 	<script src="vendor/jquery/jquery.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
 	<script src="vendor/jquery/jquery.waypoints.min.js"></script>
 	<script src="js/main.js"></script>
-
+	<script src="js/reservation.js"></script>
+	
 </body>
 
 </html>

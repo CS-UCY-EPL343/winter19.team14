@@ -1,0 +1,98 @@
+body {
+	background-image: url("../images/img-6.jpg");
+	background-color: #cccccc;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bookTable {
+	background: rgba(0,0,0,0.6);
+	padding: 40px;
+	font-family: "Roboto-Light", sans-serif;
+	max-width: 1000px;	
+	border-radius: 12px;
+}
+
+.borderBT {
+	background: rgba(0,0,0,0.6);
+	padding: 40px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+}
+
+.bookTable h1 {
+	font-size: 30px;
+   font-family: 'Roboto Condensed', sans-serif;
+	color: #ffffff;
+	padding: 20px 15px;
+	text-align: left;
+	text-shadow: 2px 2px 2px #aaa;
+}
+
+.bookTable h2 {
+	font-size: 20px;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #ffffff;
+	padding: 0 15px 20px;
+	text-align: left;
+	line-height: 1;
+	width: 100%;
+}
+
+.cell {
+	padding: 0 10px;
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+form input{
+  background-color: LightGray;
+}
+
+.spaceOf120 {
+	  height: 120px;
+}
+
+.large-5 .cell {
+    width: 50%;
+}
+
+.grid-x {
+	display: flex;
+   flex-flow: row wrap;
+}
+
+select {
+	height: 40px;
+	border: none !important;
+	border-bottom: 1px solid #fff !important;
+	background: transparent;
+	color: #ffffff;
+	font-size: 14px;
+	font-family: "Roboto-Light", sans-serif;
+	margin-bottom: 15px;
+	padding: 0 !important;
+	outline: none;
+}
+
+.bookTable input {
+	border: none !important;
+	border-bottom: 1px solid #fff !important;
+	background: transparent;
+	color: #ffffff;
+	font-size: 14px;
+	font-family: "Roboto-Light", sans-serif;
+	margin-bottom: 15px;
+	padding: 0 !important;
+	outline: none;
+}
+
+.others {
+    color:black
+}
+
+::placeholder {
+  color: Gray;
+  opacity:1;
+}
