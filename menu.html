@@ -20,6 +20,8 @@
 	<link href="css/style-menu.css" rel="stylesheet">
 	
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	
+	<link href="vendor/css/animate.css" rel="stylesheet">
 
 	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
@@ -32,7 +34,7 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-black static-top">
 		<div class="container">
-			<a id="navbar-title" class="navbar-brand" href="index.html">Gardiano Cafe</a>
+			<a id="navbar-title" class="navbar-brand animated pulse" href="index.html">Gardiano Cafe</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cafeNavbar" aria-controls="cafeNavbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -73,7 +75,7 @@
 
 	<!-- Page Content -->
 	<header class="d-flex align-items-end justify-content-center">
-		<div id="header">Gardiano Menu</div>
+		<div id="header" class="text-center">Gardiano Menu</div>
 	</header>
 	
 	<section>
@@ -82,10 +84,10 @@
 				<div class="col-md-8">
 					<ul class="nav nav-tabs" id="menu-tab" role="tablist">
 						<li class="nav-item">
-							<a class="nav-link active" id="bar-tab" data-toggle="tab" href="#bar-menu" role="tab" aria-controls="bar-menu" aria-selected="true">BAR MENU</a>
+							<a class="nav-link active gard-animate" id="bar-tab" data-toggle="tab" href="#bar-menu" role="tab" aria-controls="bar-menu" aria-selected="true">BAR MENU</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="food-tab" data-toggle="tab" href="#food-menu" role="tab" aria-controls="food-menu" aria-selected="false">FOOD MENU</a>
+							<a class="nav-link gard-animate" id="food-tab" data-toggle="tab" href="#food-menu" role="tab" aria-controls="food-menu" aria-selected="false">FOOD MENU</a>
 						</li>
 					</ul>
 					
@@ -132,7 +134,7 @@
 									<!-- large categories-->
 									<div id="large-categories" class="flex-column d-none d-lg-block">
 										<!-- start category -->
-										<div class="bar-category collapsed text-right py-2" data-toggle="collapse" id="cat_menu_1" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+										<div class="bar-category collapsed text-right py-2 gard-animate" data-toggle="collapse" id="cat_menu_1" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
 											Espresso Based
 										</div>
 										<ul class="nav flex-column collapse text-right" id="collapse1">
@@ -146,7 +148,7 @@
 										<!-- end category -->
 										
 										<!-- start category -->
-										<div class="bar-category collapsed text-right py-2" data-toggle="collapse" id="cat_menu_2" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+										<div class="bar-category collapsed text-right py-2 gard-animate" data-toggle="collapse" id="cat_menu_2" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
 											Cypriot Coffee
 										</div>
 										<ul class="nav flex-column collapse text-right" id="collapse2">
@@ -157,7 +159,7 @@
 										<!-- end category -->
 										
 										<!-- start category -->
-										<div class="bar-category collapsed text-right py-2" data-toggle="collapse" id="cat_menu_3" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+										<div class="bar-category collapsed text-right py-2 gard-animate" data-toggle="collapse" id="cat_menu_3" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
 											Chocolate
 										</div>
 										<ul class="nav flex-column collapse text-right" id="collapse3">
@@ -170,7 +172,7 @@
 										</ul>
 										<!-- end category -->
 										<!-- start category -->
-										<div class="bar-category collapsed text-right py-2" data-toggle="collapse" id="cat_menu_4" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+										<div class="bar-category collapsed text-right py-2 gard-animate" data-toggle="collapse" id="cat_menu_4" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
 											Instant
 										</div>
 										<ul class="nav flex-column collapse text-right" id="collapse4">
@@ -183,7 +185,7 @@
 										</ul>
 										<!-- end category -->
 										<!-- start category -->
-										<div class="bar-category collapsed text-right py-2" data-toggle="collapse" id="cat_menu_5" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+										<div class="bar-category collapsed text-right py-2 gard-animate" data-toggle="collapse" id="cat_menu_5" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
 											Beverages
 										</div>
 										<ul class="nav flex-column collapse text-right" id="collapse5">
@@ -193,7 +195,7 @@
 										</ul>
 										<!-- end category -->
 										<!-- start category -->
-										<div class="bar-category collapsed text-right py-2" data-toggle="collapse" id="cat_menu_6" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+										<div class="bar-category collapsed text-right py-2 gard-animate" data-toggle="collapse" id="cat_menu_6" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
 											Tea-Herbs
 										</div>
 										<ul class="nav flex-column collapse text-right" id="collapse6">
@@ -203,7 +205,7 @@
 										</ul>
 										<!-- end category -->
 										<!-- start category -->
-										<div class="bar-category collapsed text-right py-2" data-toggle="collapse" id="cat_menu_7" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+										<div class="bar-category collapsed text-right py-2 gard-animate" data-toggle="collapse" id="cat_menu_7" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
 											Other
 										</div>
 										<ul class="nav flex-column collapse text-right" id="collapse7">
@@ -601,16 +603,16 @@
 									<div id="food-large-categories" class="flex-column d-none d-lg-block">
 										<!-- start category -->
 										<ul class="nav flex-column text-right">
-											<li class="nav-item">
+											<li class="nav-item gard-animate">
 												<a href="#12" data-category-id="12">Kids Menu</a>
 											</li>
-											<li class="nav-item">
+											<li class="nav-item gard-animate">
 												<a href="#13" data-category-id="13">Adults Menu</a>
 											</li>
-											<li class="nav-item">
+											<li class="nav-item gard-animate">
 												<a href="#14" data-category-id="14">Finger Food</a>
 											</li>
-											<li class="nav-item">
+											<li class="nav-item gard-animate">
 												<a href="#15" data-category-id="15">Pastry Platter</a>
 											</li>
 										</ul>
@@ -771,7 +773,7 @@
 				
 				<!-- BASKET-->
 				<div class="col-md-4">
-					<div id="basket">
+					<div id="basket" class="gard-animate">
 							<h4 id="basket-title">My basket</h4>
 							<div id="">
 								<div class="" id="">
@@ -974,9 +976,9 @@
 						<h2 class="gf-heading-2">Gardiano Cafe</h2>
 						<p>This is the only time we'll ever meet.You could be in a cafe Or a bus as you read this.</p>
 						<ul class="gf-footer-social list-unstyled float-md-left float-lft mt-3">
-							<li><a class="d-flex align-items-center justify-content-center" href="https://www.facebook.com/Gardiano-Cafe-393005881429976/" target="_blank"><i class="fab fa-facebook-f fa-lg"></i></a></li>
-							<li><a class="d-flex align-items-center justify-content-center" href="javascript:void(0)"><i class="fab fa-twitter fa-lg"></i></a></li>
-							<li><a class="d-flex align-items-center justify-content-center" href="https://www.instagram.com/gardiano_cafe/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>
+							<li><a class="d-flex align-items-center justify-content-center gard-animate" href="https://www.facebook.com/Gardiano-Cafe-393005881429976/" target="_blank"><i class="fab fa-facebook-f fa-lg"></i></a></li>
+							<li><a class="d-flex align-items-center justify-content-center gard-animate" href="javascript:void(0)"><i class="fab fa-twitter fa-lg"></i></a></li>
+							<li><a class="d-flex align-items-center justify-content-center gard-animate" href="https://www.instagram.com/gardiano_cafe/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -1036,6 +1038,7 @@
 	<!-- Bootstrap core JavaScript -->
 	<script src="vendor/jquery/jquery.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
+	<script src="vendor/jquery/jquery.waypoints.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/menu.js"></script>
 

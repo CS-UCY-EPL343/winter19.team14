@@ -49,6 +49,44 @@
 
 	
 	});
+	
+	
+	var contentWayPoint = function() {
+		var i = 0;
+		$('.gard-animate').waypoint( function( direction ) {
+
+			if( direction === 'down' && !$(this.element).hasClass('gard-animated') ) {
+				
+				i++;
+
+				$(this.element).addClass('item-animate');
+				setTimeout(function(){
+
+					$('body .gard-animate.item-animate').each(function(k){
+						var el = $(this);
+						setTimeout( function () {
+							var effect = el.data('animate-effect');
+							if ( effect === 'fadeIn') {
+								el.addClass('fadeIn gard-animated');
+							} else if ( effect === 'fadeInLeft') {
+								el.addClass('fadeInLeft gard-animated');
+							} else if ( effect === 'fadeInRight') {
+								el.addClass('fadeInRight gard-animated');
+							} else {
+								el.addClass('fadeInUp gard-animated');
+							}
+							el.removeClass('item-animate');
+						},  k * 50, 'easeInOutExpo' );
+					});
+					
+				}, 100);
+				
+			}
+
+		} , { offset: '95%' } );
+	};
+	contentWayPoint();
+	
 
 });
   }(jQuery));
