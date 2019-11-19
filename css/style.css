@@ -216,3 +216,18 @@ body {
 .notmember{
 	margin-bottom: 0;
 }
+
+@media (max-width: 992px) {
+	.options{
+		line-height: 1.35;
+	}
+}
+
+.red_star {
+	color: red;
+  }
+
+.red_warning {
+	color: red;
+	font-size: 13px;
+  }

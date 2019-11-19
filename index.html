@@ -26,6 +26,7 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
 	<link rel="manifest" href="images/favicon/site.webmanifest">
+	<script src="js/login.js" defer></script>
 </head>
 
 <body>
@@ -58,7 +59,8 @@
 						<a class="nav-link" href="contact.html">Contact</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="" data-toggle="modal" data-target="#myModal"><i class="fas fa-sign-in-alt"></i> Sign in</a>
+						<a class="nav-link" href="" data-toggle="modal" data-target="#myModal"><i
+								class="fas fa-sign-in-alt"></i> Sign in</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link d-none" href="profile.html"><i class="fas fa-user-cog"></i> Profile</a>
@@ -171,7 +173,7 @@
 						<li class="nav-item">
 							<a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i
 									class="fas fa-user-plus mr-1"></i>
-								Signup</a>
+								Register</a>
 						</li>
 					</ul>
 
@@ -182,36 +184,35 @@
 
 							<!--Body-->
 							<div class="modal-body mb-1">
-								<form>
+								<form id="LoginForm">
 									<div class="form-group">
-										<label class="labeling" for="email">Email address</label>
+										<label class="labeling" for="email">Email</label>
 										<div class="input-group pb-modalreglog-input-group">
-											<input type="email" class="form-control" id="email" placeholder="Email">
-											<span class="input-group-addon"><span
-													class="glyphicon glyphicon-user"></span></span>
+											<input type="email" class="form-control" id="login_email" placeholder="Email">
 										</div>
+										<p class="d-none red_warning" id="login_email_waring">Please enter your email!</p>
 									</div>
 									<div class="form-group">
 										<label class="labeling" for="password">Password</label>
 										<div class="input-group pb-modalreglog-input-group">
-											<input type="password" class="form-control" id="pws" placeholder="Password">
-											<span class="input-group-addon"><span
-													class="glyphicon glyphicon-lock"></span></span>
+											<input type="password" class="form-control" id="login_pwd" placeholder="Password">
 										</div>
+										<p class="d-none red_warning" id="login_pwd_warning">Please enter your password!</p>
 									</div>
 								</form>
 								<div class="text-center mt-2">
-									<button class="btn btn-info">Log in <i class="fas fa-sign-in ml-1"></i></button>
+										
+									<button class="btn btn-info" id="login">Log in <i class="fas fa-sign-in ml-1"></i></button>
 								</div>
 							</div>
 							<!--Footer-->
 							<div class="modal-footer">
 								<div class="options mt-1">
-									<p class="notmember">Not a member? <a href="#" class="blue-text">Sign Up</a></p>
-									<p>Forgot <a href="#" class="blue-text">Password?</a></p>
+									<p class="notmember">Not a member? <a href="" class="blue-text">Register</a></p>
+									<p><a href="" class="blue-text">Forgot Password?</a></p>
 								</div>
 								<button type="button" class="btn btn-outline-info waves-effect ml-auto"
-									data-dismiss="modal">Close</button>
+									data-dismiss="modal" onclick="clear_function_login()" value="Reset form">Close</button>
 							</div>
 
 						</div>
@@ -224,34 +225,15 @@
 							<div class="modal-body">
 								<form class="pb-modalreglog-form-reg">
 									<div class="form-group">
-										<label class="labeling" for="email">Email address</label>
+										<label class="labeling" for="email">Email</label><span class="red_star"> *</span>
 										<div class="input-group pb-modalreglog-input-group">
+											<input type="email" class="form-control" id="email" placeholder="Email">
 											<span class="input-group-addon"><span
 													class="glyphicon glyphicon-user"></span></span>
-											<input type="email" class="form-control" id="inputEmail"
-												placeholder="Email">
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="labeling" for="password">Password</label>
-										<div class="input-group pb-modalreglog-input-group">
-											<span class="input-group-addon"><span
-													class="glyphicon glyphicon-lock"></span></span>
-											<input type="password" class="form-control" id="inputPws"
-												placeholder="Password">
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="labeling" for="confirmpassword">Confirm password</label>
-										<div class="input-group pb-modalreglog-input-group">
-											<span class="input-group-addon"><span
-													class="glyphicon glyphicon-lock"></span></span>
-											<input type="password" class="form-control" id="inputConfirmPws"
-												placeholder="Confirm Password">
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="labeling" for="address">Address</label>
+										<label class="labeling" for="address">Address</label><span class="red_star"> *</span>
 										<div class="input-group pb-modalreglog-input-group">
 											<span class="input-group-addon"><span
 													class="glyphicon glyphicon-lock"></span></span>
@@ -260,7 +242,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="labeling" for="phone">Phone</label>
+										<label class="labeling" for="phone">Phone</label><span class="red_star"> *</span>
 										<div class="input-group pb-modalreglog-input-group">
 											<span class="input-group-addon"><span
 													class="glyphicon glyphicon-lock"></span></span>
@@ -269,8 +251,26 @@
 										</div>
 									</div>
 									<div class="form-group">
+										<label class="labeling" for="password">Password</label><span class="red_star"> *</span>
+										<div class="input-group pb-modalreglog-input-group">
+											<span class="input-group-addon"><span
+													class="glyphicon glyphicon-lock"></span></span>
+											<input type="password" class="form-control" id="inputPws"
+												placeholder="Password">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="labeling" for="confirmpassword">Confirm password</label><span class="red_star"> *</span>
+										<div class="input-group pb-modalreglog-input-group">
+											<span class="input-group-addon"><span
+													class="glyphicon glyphicon-lock"></span></span>
+											<input type="password" class="form-control" id="inputConfirmPws"
+												placeholder="Confirm Password">
+										</div>
+									</div>
+									<div class="form-group">
 										<input type="checkbox" id="ch" name="chs">
-										I agree with <a href="#">terms and conditions.</a>
+										I agree with <a href="">terms and conditions</a> <span class="red_star"> *</span>
 									</div>
 								</form>
 
@@ -282,7 +282,7 @@
 							<!--Footer-->
 							<div class="modal-footer">
 								<div class="options">
-									<p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a>
+									<p class="pt-1">Already have an account? <a href="" class="blue-text">Log In</a>
 									</p>
 								</div>
 								<button type="button" class="btn btn-outline-info waves-effect ml-auto"
