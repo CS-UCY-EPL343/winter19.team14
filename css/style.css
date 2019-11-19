@@ -208,3 +208,7 @@ body {
 .gf-footer-social li a:hover {
 	color: #fff; 
 }
+
+.labeling{
+	font-weight: bold;
+}
