@@ -28,10 +28,19 @@ function LoginAuthentication() {
         return;
     }
 
-    if (email.value!='user' || password.value!='1234'){
+    if (email.value!='user' || password.value!='123'){
         alert('Username or Password is invalid');
         return;
     }
+
+    element = document.querySelector('#login_tab');
+    element.classList.add('d-none'); 
+    
+    element = document.querySelector('#profile_tab');
+    element.classList.remove('d-none'); 
+
+    element = document.querySelector('#logout_tab');
+    element.classList.remove('d-none'); 
 
     $('#myModal').modal('hide');
     clear_function_login();
@@ -108,7 +117,7 @@ function RegisterAuthentication() {
     }
 
     if (isNaN(phone.value.toString())){
-        alert('Segmentation Fault: Phone number can contains only integer digits!');
+        alert('Error: Phone number can contains only integer digits!');
         return;
     }
 
@@ -146,13 +155,45 @@ function clear_function_register() {
     element.classList.add('d-none');
 }
 
+function logout_function(){
+    clear_function_login();
+    clear_function_register();
+
+    let element = document.querySelector('#login_tab');
+    element.classList.remove('d-none'); 
+    
+    element = document.querySelector('#profile_tab');
+    element.classList.add('d-none'); 
+
+    element = document.querySelector('#logout_tab');
+    element.classList.add('d-none'); 
+}
+
 function closeModal() { 
     jQuery(document).ready(function() {
         jQuery("#panel8 button.close").click(function () {
           jQuery("#panel8").modal("hide");
         });
       })      
-} 
+}
+
+function open_login(){
+    let element = document.querySelector('#register_form_tab');
+    element.classList.remove('active'); 
+
+    element = document.querySelector('#panel8');
+    element.classList.remove('active'); 
+
+    element = document.querySelector('#login_form_tab');
+    element.classList.add('active');
+
+    element = document.querySelector('#panel7');
+    element.classList.add('active');
+    element.classList.add('show');
+
+    clear_function_login();
+    clear_function_register();
+}
 
 const login_button = document.querySelector('#login');
 login_button.addEventListener('click', LoginAuthentication);

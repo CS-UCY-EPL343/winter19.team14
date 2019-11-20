@@ -19,7 +19,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-	
+
 	<link href="vendor/css/animate.css" rel="stylesheet">
 
 	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -59,14 +59,16 @@
 						<a class="nav-link" href="contact.html">Contact</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="" data-toggle="modal" data-target="#myModal"><i
-								class="fas fa-sign-in-alt"></i> Sign in</a>
+						<a class="nav-link" href="" data-toggle="modal" data-target="#myModal" id="login_tab"
+							onclick="open_login()"><i class="fas fa-sign-in-alt"></i> Sign in</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link d-none" href="profile.html"><i class="fas fa-user-cog"></i> Profile</a>
+						<a class="nav-link d-none" href="profile.html" id="profile_tab"><i class="fas fa-user-cog"></i>
+							Profile</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link d-none" href="javascript:void(0)"><i class="fas fa-sign-out-alt"></i> Sign
+						<a class="nav-link d-none" href="" id="logout_tab" onclick="logout_function()"><i
+								class="fas fa-sign-out-alt"></i> Sign
 							out</a>
 					</li>
 				</ul>
@@ -90,9 +92,14 @@
 						<h2 class="gf-heading-2">Gardiano Cafe</h2>
 						<p>This is the only time we'll ever meet.You could be in a cafe Or a bus as you read this.</p>
 						<ul class="gf-footer-social list-unstyled float-md-left float-lft mt-3">
-							<li><a class="d-flex align-items-center justify-content-center gard-animate" href="https://www.facebook.com/Gardiano-Cafe-393005881429976/" target="_blank"><i class="fab fa-facebook-f fa-lg"></i></a></li>
-							<li><a class="d-flex align-items-center justify-content-center gard-animate" href="javascript:void(0)"><i class="fab fa-twitter fa-lg"></i></a></li>
-							<li><a class="d-flex align-items-center justify-content-center gard-animate" href="https://www.instagram.com/gardiano_cafe/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>
+							<li><a class="d-flex align-items-center justify-content-center gard-animate"
+									href="https://www.facebook.com/Gardiano-Cafe-393005881429976/" target="_blank"><i
+										class="fab fa-facebook-f fa-lg"></i></a></li>
+							<li><a class="d-flex align-items-center justify-content-center gard-animate"
+									href="javascript:void(0)"><i class="fab fa-twitter fa-lg"></i></a></li>
+							<li><a class="d-flex align-items-center justify-content-center gard-animate"
+									href="https://www.instagram.com/gardiano_cafe/" target="_blank"><i
+										class="fab fa-instagram fa-lg"></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -166,12 +173,12 @@
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
 						<li class="nav-item">
-							<a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i
-									class="fas fa-user mr-1"></i>
+							<a class="nav-link active" data-toggle="tab" href="#panel7" id="login_form_tab"
+								role="tab"><i class="fas fa-user mr-1"></i>
 								Login</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i
+							<a class="nav-link" data-toggle="tab" href="#panel8" id="register_form_tab" role="tab"><i
 									class="fas fa-user-plus mr-1"></i>
 								Register</a>
 						</li>
@@ -217,8 +224,7 @@
 									<p><a href="#" class="blue-text">Forgot Password?</a></p>
 								</div>
 								<button type="button" class="btn btn-outline-info waves-effect ml-auto"
-									data-dismiss="modal" onclick="clear_function_login()"
-									value="Reset form">Close</button>
+									data-dismiss="modal">Close</button>
 							</div>
 
 						</div>
@@ -302,8 +308,7 @@
 									</p>
 								</div>
 								<button type="button" class="btn btn-outline-info waves-effect ml-auto"
-									data-dismiss="modal" onclick="clear_function_register()"
-									value="Reset form">Close</button>
+									data-dismiss="modal">Close</button>
 							</div>
 						</div>
 						<!--/.Panel 8-->
