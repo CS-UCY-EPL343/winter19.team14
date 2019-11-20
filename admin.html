@@ -69,8 +69,6 @@
                 </div>
             </div>
 
-
-
             <div class="col-lg-3 col-md-6">
                 <div class="card">
                     <div class="card-body">
@@ -103,9 +101,10 @@
         </div>
         <!-- /Widgets -->
 
-        <!-- Orders -->
+        <!-- First Row -->
         <div class="orders">
             <div class="row">
+                <!-- Orders -->
                 <div class="col-xl-8">
                     <div class="card">
                         <div class="card-body">
@@ -116,7 +115,7 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th class="serial">#</th>
+                                            <th>#</th>
                                             <th>ID</th>
                                             <th>Name</th>
                                             <th>Type</th>
@@ -126,62 +125,62 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="serial">1.</td>
+                                            <td>1.</td>
                                             <td> #1849 </td>
-                                            <td> <span class="name">Antroulla Konstantinou</span> </td>
-                                            <td> <span class="product">Delivery</span> </td>
+                                            <td> <span>Antroulla Konstantinou</span> </td>
+                                            <td> <span>Delivery</span> </td>
                                             <td> <span class="badge badge-pill badge-warning">Pending</span></td>
 
                                             <td>
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderModal">
                                                     Details
                                                 </button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="serial">2.</td>
+                                            <td>2.</td>
                                             <td> #1848 </td>
-                                            <td> <span class="name">Kostis Papakosta</span> </td>
-                                            <td> <span class="product">Take-away</span> </td>
+                                            <td> <span>Kostis Papakosta</span> </td>
+                                            <td> <span>Take-away</span> </td>
                                             <td><span class="badge badge-pill badge-success">Completed</span></td>
                                             <td>
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderModal">
                                                     Details
                                                 </button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="serial">3.</td>
+                                            <td>3.</td>
                                             <td> #1847 </td>
-                                            <td> <span class="name">Katerina H</span> </td>
-                                            <td> <span class="product">Take-away</span> </td>
+                                            <td> <span>Katerina H</span> </td>
+                                            <td> <span>Take-away</span> </td>
                                             <td><span class="badge badge-pill badge-success">Completed</span></td>
                                             <td>
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderModal">
                                                     Details
                                                 </button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="serial">4.</td>
+                                            <td>4.</td>
                                             <td> #1846 </td>
-                                            <td> <span class="name">Marialena Ioannou</span> </td>
-                                            <td> <span class="product">Delivery</span> </td>
+                                            <td> <span>Marialena Ioannou</span> </td>
+                                            <td> <span>Delivery</span> </td>
                                             <td><span class="badge badge-pill badge-primary">In progress</span></td>
                                             <td>
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderModal">
                                                     Details
                                                 </button>
                                             </td>
                                         </tr>
                                         <tr class=" pb-0">
-                                            <td class="serial">5.</td>
+                                            <td>5.</td>
                                             <td> #1845 </td>
-                                            <td> <span class="name">Giannos Petrou</span> </td>
-                                            <td> <span class="product">Delivery</span> </td>
+                                            <td> <span>Giannos Petrou</span> </td>
+                                            <td> <span>Delivery</span> </td>
                                             <td><span class="badge badge-pill badge-danger">Declined</span></td>
                                             <td>
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderModal">
                                                     Details
                                                 </button>
                                             </td>
@@ -189,12 +188,10 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <!-- /.table-stats -->
                         </div>
                     </div>
-                    <!-- /.card -->
                 </div>
-                <!-- /.col-lg-8 -->
+                <!-- /Orders -->
 
                 <div class="col-xl-4">
                     <div class="row">
@@ -234,24 +231,21 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <!-- /.table-stats -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- /.col-md-4 -->
             </div>
         </div>
-        <!-- /.orders -->
+        <!-- /First Row -->
 
         <!-- Modal Order Details -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Order Details</h5>
-
+                        <h5 class="modal-title" id="orderModalLabel">Order Details</h5>
                     </div>
                     <div class="modal-body">
                         <table class="table table-striped table-responsive">
@@ -263,21 +257,21 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">Name</th>
-                                    <td> <span class="name">Antroulla Konstantinou</span> </td>
+                                    <td> <span>Antroulla Konstantinou</span> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Type</th>
-                                    <td> <span class="product">Delivery</span> </td>
+                                    <td> <span>Delivery</span> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Address</th>
-                                    <td> <span class="product"> 21A Marco António Elias Santos Str., 1205 Larnaca,
+                                    <td> <span> 21A Marco António Elias Santos Str., 1205 Larnaca,
                                             Cyprus</span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Payment Method</th>
-                                    <td> <span class="product">Card</span> </td>
+                                    <td> <span>Card</span> </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Status</th>
@@ -297,7 +291,7 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">Time submitted</th>
-                                    <td> <span class="product">13:55</span>
+                                    <td> <span>13:55</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -356,8 +350,9 @@
         </div>
         <!-- end of Modal Order Details -->
 
-        <!-- To Do -->
+        <!-- Second Row -->
         <div class="row">
+            <!-- To Do -->
             <div class="col-lg-6">
                 <div class="card">
                     <div class="card-body">
@@ -417,13 +412,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- /.todo-list -->
                         </div>
                     </div>
-                    <!-- /.card-body -->
                 </div>
-                <!-- /.card -->
             </div>
+            <!-- /To do -->
 
             <div class="col-lg-6">
                 <div class="card">
@@ -506,20 +499,11 @@
                         </div>
                     </div>
                 </div>
-                <!-- /.card-body -->
             </div>
-            <!-- /.card -->
         </div>
+        <!-- /Second Row -->
     </div>
-    </div>
-
-    </div>
-    <!-- /.content -->
-    <div class="clearfix"></div>
-    <!-- Footer -->
-    <footer>
-
-    </footer>
+    <!-- /Content -->
 </body>
 
 </html>
