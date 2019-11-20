@@ -37,7 +37,6 @@
 .tdl-holder li span {
     margin-left: 30px;
     vertical-align: middle;
-    -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
 
@@ -124,7 +123,6 @@ ol {
     border-radius: 5px;
     padding: 0;
     border: 0px solid transparent;
-    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
 }
 
