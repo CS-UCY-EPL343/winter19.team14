@@ -1,3 +1,30 @@
+var code;
+function createCaptcha() {
+  //clear the contents of captcha div first 
+  document.getElementById('captcha').innerHTML = "";
+  var charsArray =
+  "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
+  var lengthOtp = 6;
+  var captcha = [];
+  for (var i = 0; i < lengthOtp; i++) {
+    //below code will not allow Repetition of Characters
+    var index = Math.floor(Math.random() * charsArray.length + 1); //get the next character from the array
+    if (captcha.indexOf(charsArray[index]) == -1)
+      captcha.push(charsArray[index]);
+    else i--;
+  }
+  var canv = document.createElement("canvas");
+  canv.id = "captcha";
+  canv.width = 150;
+  canv.height = 40;
+  var ctx = canv.getContext("2d");
+  ctx.font = "25px Georgia";
+  ctx.strokeText(captcha.join(""), 0, 30);
+  //storing captcha so that can validate you can save it somewhere else according to your specific requirements
+  code = captcha.join("");
+  document.getElementById("captcha").appendChild(canv); // adds the canvas to the body element
+}
+
 function LoginAuthentication() {
     event.preventDefault();
     clear_function_register();
@@ -25,6 +52,14 @@ function LoginAuthentication() {
     }
 
     if (empty == true) {
+        return;
+    }
+
+    if (email.value==='admin' && password.value==='123'){
+        console.log("lol");
+        $('#myModal').modal('hide');
+        clear_function_login();
+        window.location.href = "./admin.html";
         return;
     }
 
@@ -66,6 +101,9 @@ function RegisterAuthentication() {
     element.classList.add('d-none');
 
     element = document.querySelector('#register_terms_warning');
+    element.classList.add('d-none');
+
+    element = document.querySelector('#register_captcha_warning');
     element.classList.add('d-none');
 
     let empty = false;
@@ -112,13 +150,32 @@ function RegisterAuthentication() {
         empty = true;
     }
 
+    var cpatcha = document.getElementById("cpatchaTextBox");
+    if (cpatcha.value.trim() === '') {
+        element = document.querySelector('#register_captcha_warning');
+        element.classList.remove('d-none');
+        createCaptcha();
+        empty = true;
+    }  
+
     if (empty == true) {
         return;
     }
 
     if (isNaN(phone.value.toString())){
-        alert('Error: Phone number can contains only integer digits!');
+        alert('Phone number can contains only integer digits. Try Again!');
         return;
+    }
+
+    if (password.value != confirm.value){
+        alert('Passwords do not match. Try Again!');
+        return;
+    }
+
+    if (document.getElementById("cpatchaTextBox").value != code) {
+        alert("Invalid Captcha. Try Again!");
+        createCaptcha();
+        return;     
     }
 
     $('#myModal').modal('hide');
@@ -153,6 +210,9 @@ function clear_function_register() {
 
     element = document.querySelector('#register_terms_warning');
     element.classList.add('d-none');
+
+    element = document.querySelector('#register_captcha_warning');
+    element.classList.add('d-none');
 }
 
 function logout_function(){
@@ -178,6 +238,8 @@ function closeModal() {
 }
 
 function open_login(){
+    createCaptcha();
+
     let element = document.querySelector('#register_form_tab');
     element.classList.remove('active'); 
 
@@ -192,7 +254,25 @@ function open_login(){
     element.classList.add('show');
 
     clear_function_login();
-	
+    clear_function_register();
+}
+
+function open_register(){
+    let element = document.querySelector('#register_form_tab');
+    element.classList.add('active'); 
+
+    element = document.querySelector('#panel8');
+    element.classList.add('active'); 
+    element.classList.add('show'); 
+
+    element = document.querySelector('#login_form_tab');
+    element.classList.remove('active');
+
+    element = document.querySelector('#panel7');
+    element.classList.remove('active');
+    element.classList.remove('show');
+
+    clear_function_login();
     clear_function_register();
 }
 

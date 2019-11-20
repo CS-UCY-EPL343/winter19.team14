@@ -130,7 +130,7 @@
 							<a href="javascript:void(0)" class="thumb-menu"
 								style="background-image: url(images/img-3.jpg);background-size: cover;">
 							</a>
-							
+
 						</div>
 						<div class="thumb d-flex">
 							<a href="javascript:void(0)" class="thumb-menu"
@@ -221,7 +221,8 @@
 							<!--Footer-->
 							<div class="modal-footer">
 								<div class="options mt-1">
-									<p class="notmember">Not a member? <a href="#" class="blue-text">Register</a></p>
+									<p class="notmember" onclick="open_register()">Not a member? <a href="#"
+											class="blue-text">Register</a></p>
 									<p><a href="#" class="blue-text">Forgot Password?</a></p>
 								</div>
 								<button type="button" class="btn btn-outline-info waves-effect ml-auto"
@@ -287,6 +288,17 @@
 										<p class="d-none red_warning" id="register_confirm_pwd_warning">Please confirm
 											your password!</p>
 									</div>
+									
+
+									<div class="form-group">
+										<label class="labeling captcha_label">Write the following text</label><span
+											class="red_star"> *</span>
+										<div id="captcha">
+										</div>
+										<input type="captcha" class="form-control" placeholder="Captcha" id="cpatchaTextBox">
+										<p class="d-none red_warning" id="register_captcha_warning">Are you a robot?</p>
+									</div>
+
 									<div class="form-group terms">
 										<input type="checkbox" id="register_terms" name="chs">
 										I agree with <a href="">terms and conditions</a> <span class="red_star">
@@ -294,6 +306,8 @@
 									</div>
 									<p class="d-none red_warning" id="register_terms_warning">Please accept the terms!
 									</p>
+
+
 								</form>
 
 								<div class="text-center form-sm mt-2">
@@ -305,7 +319,8 @@
 							<!--Footer-->
 							<div class="modal-footer">
 								<div class="options">
-									<p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a>
+									<p class="pt-1">Already have an account? <a href="#" class="blue-text"
+											onclick="open_login()">Log In</a>
 									</p>
 								</div>
 								<button type="button" class="btn btn-outline-info waves-effect ml-auto"
