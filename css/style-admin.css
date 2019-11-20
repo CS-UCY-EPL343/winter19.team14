@@ -92,27 +92,6 @@
     z-index: 1;
 }
 
-.tdl-holder input[type="checkbox"]:checked+i::after {
-    content: "\e64c";
-    font-family: 'themify';
-    display: block;
-    color: rgba(153, 171, 180, 0.5);
-    left: 0;
-    position: absolute;
-    top: -16px;
-    z-index: 2;
-}
-
-.tdl-holder input[type="checkbox"]:checked~span {
-    text-decoration: line-through;
-}
-
-.tdl-holder input[type="text"] {
-    height: 60px;
-    margin-top: 20px;
-    font-size: 14px;
-}
-
 body {
     display: table;
     font-family: "Open Sans", sans-serif;
@@ -128,13 +107,6 @@ h5 {
 ul,
 ol {
     padding-left: 0;
-}
-
-.btn:focus,
-button:focus {
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    outline: 0;
 }
 
 .modal-header {
