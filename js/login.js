@@ -192,6 +192,7 @@ function open_login(){
     element.classList.add('show');
 
     clear_function_login();
+	
     clear_function_register();
 }
 
