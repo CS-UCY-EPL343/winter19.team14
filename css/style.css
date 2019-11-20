@@ -282,3 +282,21 @@ canvas{
 .captcha_label{
 	margin-bottom: 0;
 }
+
+.term_title{
+	font-weight: bold;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.terms_format{
+	line-height: 1.4;
+	text-align: justify;
+}
+
+.row_terms{
+	margin-top:15px;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
