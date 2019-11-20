@@ -7,19 +7,62 @@
 	resize: none;
 }
 
+.parent {
+  height: 400px;
+  width: 100%
+}
+/*
 header {
-	background-image: url(../images/contact-us.png);
-	height: 400px;
+	background-image: url(../images/img-contactus.jpeg);
+	width: 100%;
+	height: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	background-position: bottom;
-	box-shadow: -4px 4px 5px -2px #2f2e2e;
+	background-position: bottom center;
+	box-shadow: -4px 4px 5px -2px #2f2e2e;	
+	transition: all .5s;
 }
-
+*/
 #header {
 	font-size: 3rem;
 	color: white;
+	background-image: url(../images/img-contactus.jpeg);
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: bottom center;
+	box-shadow: -4px 4px 5px -2px #2f2e2e;	
+	transition: all .5s;
+	
+}
+
+#title_contact {
+	display: none;
+	font-size: 35px;
+	color: #F7F9F9  !important;
+	font-family: sans-serif;
+	text-align: center;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 350px;
+}
+
+.parent:hover  #header,
+.parent:focus  #header{
+  /*transform: scale(1,1.1);*/
+  filter: blur(8px);
+}
+
+.parent:hover #title_contact, 
+.parent:focus #title_contact {
+    display: block;
 }
 
 #submition-btn{

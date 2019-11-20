@@ -1,10 +1,10 @@
 header {
-	background-image: url(../images/img-events.jpg);
+	background-image: url(../images/img-event.jpeg);
 	height: 400px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	background-position: center;
+	background-position: bottom center;
 	box-shadow: -4px 4px 5px -2px #2f2e2e;
 }
 

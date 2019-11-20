@@ -96,3 +96,42 @@ select {
   color: Gray;
   opacity:1;
 }
+
+#bookIt {
+	position: absolute; 
+	right: 220px;
+}
+
+@media (max-width: 692px){
+	.bookTable {
+		padding: 15px;
+	}
+	
+	.borderBT {
+		padding: 20px;
+		padding-bottom: 30px;
+	}
+	
+	.bookTable h1 {
+		font-size: 19px;
+	}
+	
+	.bookTable h2 {
+		font-size: 15px;
+	}
+	
+	.large-5 .cell {
+		width: 100%;
+	}
+	
+	select {
+		font-size: 12px;
+	}
+	
+	#bookIt {
+		right: 40%;
+		position: absolute;
+		padding-bottom: -10px;
+	}
+	
+}
