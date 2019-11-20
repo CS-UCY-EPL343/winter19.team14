@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Gardiano Admin page</title>
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- /Bootstrap -->
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- /fontawesome -->
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/style-admin.css">
+
+</head>
+
+<body>
+    <!-- Header-->
+        <div style="text-align: right;">
+            <div class="header-menu" style="padding-right: 15pt;">
+                <div style="margin: 10pt;">
+                    <a href="">
+                        Sign out
+                    </a>
+                </div>
+            </div>
+        </div>
+    <!-- /Header -->
+
+    <!-- Content -->
+    <div class="content">
+
+        <!-- Widgets  -->
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text">€<span class="count"> 55.95</span></div>
+                                    <div class="stat-heading">Today's Sales</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">1</span></div>
+                                    <div class="stat-heading">Current Pending Orders</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">2</span></div>
+                                    <div class="stat-heading">Today's reservations</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">2/3</span></div>
+                                    <div class="stat-heading">Available delivery boys</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Widgets -->
+
+        <!-- Orders -->
+        <div class="orders">
+            <div class="row">
+                <div class="col-xl-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="box-title">Orders </h4>
+                        </div>
+                        <div class="card-body--">
+                            <div style="padding: 15pt;">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th class="serial">#</th>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Status</th>
+                                            <th>Details</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="serial">1.</td>
+                                            <td> #1849 </td>
+                                            <td> <span class="name">Antroulla Konstantinou</span> </td>
+                                            <td> <span class="product">Delivery</span> </td>
+                                            <td> <span class="badge badge-pill badge-warning">Pending</span></td>
+
+                                            <td>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                    data-target="#exampleModal">
+                                                    Details
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="serial">2.</td>
+                                            <td> #1848 </td>
+                                            <td> <span class="name">Kostis Papakosta</span> </td>
+                                            <td> <span class="product">Take-away</span> </td>
+                                            <td><span class="badge badge-pill badge-success">Completed</span></td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                    data-target="#exampleModal">
+                                                    Details
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="serial">3.</td>
+                                            <td> #1847 </td>
+                                            <td> <span class="name">Katerina H</span> </td>
+                                            <td> <span class="product">Take-away</span> </td>
+                                            <td><span class="badge badge-pill badge-success">Completed</span></td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                    data-target="#exampleModal">
+                                                    Details
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="serial">4.</td>
+                                            <td> #1846 </td>
+                                            <td> <span class="name">Marialena Ioannou</span> </td>
+                                            <td> <span class="product">Delivery</span> </td>
+                                            <td><span class="badge badge-pill badge-primary">In progress</span></td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                    data-target="#exampleModal">
+                                                    Details
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr class=" pb-0">
+                                            <td class="serial">5.</td>
+                                            <td> #1845 </td>
+                                            <td> <span class="name">Giannos Petrou</span> </td>
+                                            <td> <span class="product">Delivery</span> </td>
+                                            <td><span class="badge badge-pill badge-danger">Declined</span></td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                    data-target="#exampleModal">
+                                                    Details
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> <!-- /.table-stats -->
+                        </div>
+                    </div> <!-- /.card -->
+                </div> <!-- /.col-lg-8 -->
+
+                <div class="col-xl-4">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-6 col-xl-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="box-title">November 2019 </h4>
+                                </div>
+                                <div class="card-body--">
+                                    <div style="padding: 15pt;">
+                                        <table class="table table-striped" style="width:100%;height:100%;">
+                                            <tbody style="width:100%;height:100%;">
+                                                <tr style="width:100%;height:100%;">
+                                                    <th scope="row">Total Sales</th>
+                                                    <td class="text-right">€ 3543.99 </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Expenses</th>
+                                                    <td class="text-right">€ 1899.00 </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Online Orders</th>
+                                                    <td class="text-right">599</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Favourite Product</th>
+                                                    <td class="text-right"> Freddo Espresso
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Events</th>
+                                                    <td class="text-right"> 25 </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Registered Users</th>
+                                                    <td class="text-right"> 785 </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div> <!-- /.table-stats -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- /.col-md-4 -->
+            </div>
+        </div>
+        <!-- /.orders -->
+
+        <!-- Modal Order Details -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Order Details</h5>
+
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-striped table-responsive">
+
+                            <tbody>
+                                <tr>
+                                    <th scope="row">ID</th>
+                                    <td> #1849 </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Name</th>
+                                    <td> <span class="name">Antroulla Konstantinou</span> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Type</th>
+                                    <td> <span class="product">Delivery</span> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Address</th>
+                                    <td> <span class="product"> 21A Marco António Elias Santos Str., 1205 Larnaca,
+                                            Cyprus</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Payment Method</th>
+                                    <td> <span class="product">Card</span> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Status</th>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-warning dropdown-toggle"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Pending
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Pending</a>
+                                                <a class="dropdown-item" href="#">Declined</a>
+                                                <a class="dropdown-item" href="#">In progress</a>
+                                                <a class="dropdown-item" href="#">Completed</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Time submitted</th>
+                                    <td> <span class="product">13:55</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Items</th>
+                                    <td>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr style="background: white;">
+                                                        <td>
+                                                            Freddo Espresso
+                                                            <br />
+                                                            <em><small>Gardiano Cafe, No Sugar</small></em></a>
+                                                            <br />
+                                                            <small> Quantity 1</small>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <div class="d-flex flex-row justify-content-end">
+                                                                <div>&euro;2.00</div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Espresso
+                                                            <br />
+                                                            <small>Quantity 2</small>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <div class="d-flex flex-row justify-content-end">
+                                                                <div>2 x &euro;1.00</div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Total</th>
+                                    <td>
+                                        <div class="text-right">&euro;4.00</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save
+                            changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of Modal Order Details -->
+
+        <!-- To Do -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title box-title">To Do List</h4>
+                        <div class="card-content">
+                            <div class="todo-list">
+                                <div class="tdl-holder">
+                                    <div class="tdl-content">
+                                        <ul>
+                                            <li>
+                                                <label>
+                                                    <!--<input type="checkbox"><i class="check-box"></i>-->
+                                                        <span>Παραγγελία
+                                                        πλαστικών ποτηριών XL</span>
+                                                    <a href="" class="fa fa-times"></a>
+                                                    <a href="" class="fa fa-pencil"></a>
+                                                    <a href="" class="fa fa-check"></a>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <!--<input type="checkbox"><i class="check-box"></i>-->
+                                                        <span>Διακόσμηση
+                                                        χώρου για εκδήλωση Δήμου</span>
+                                                    <a href="" class="fa fa-times"></a>
+                                                    <a href="" class="fa fa-pencil"></a>
+                                                    <a href="" class="fa fa-check"></a>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <!--<input type="checkbox"><i class="check-box"></i>-->
+                                                        <span>Πληρωμή
+                                                        προμηθευτή</span>
+                                                    <a href="" class="fa fa-times"></a>
+                                                    <a href="" class="fa fa-pencil"></a>
+                                                    <a href="" class="fa fa-check"></a>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <!--<input type="checkbox"><i class="check-box"></i>-->
+                                                        <span>Meeting για
+                                                        ιστοσελίδα εταιρίας</span>
+                                                    <a href="" class="fa fa-times"></a>
+                                                    <a href="" class="fa fa-pencil"></a>
+                                                    <a href="" class="fa fa-check"></a>
+                                                </label>
+                                            </li>
+
+                                            <li>
+                                                <label>
+                                                    <!--<input type="checkbox"><i class="check-box"></i>-->
+                                                    <span>Καθάρισμα
+                                                        αποθήκης</span>
+                                                    <a href="" class="fa fa-times"></a>
+                                                    <a href="" class="fa fa-pencil"></a>
+                                                    <a href="" class="fa fa-check"></a>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> <!-- /.todo-list -->
+                        </div>
+                    </div> <!-- /.card-body -->
+                </div><!-- /.card -->
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title box-title">Add Item</h4>
+                        <div class="card-content">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                        aria-controls="home" aria-selected="true">Event/Competition</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                        aria-controls="profile" aria-selected="false">Offer</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                    aria-labelledby="home-tab">
+                                    <form style="padding: 20pt;">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Title</label>
+                                            <input type="email" class="form-control" id="exampleFormControlInput1">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Link to social media</label>
+                                            <input type="email" class="form-control" id="exampleFormControlInput1">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Type</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option>Event</option>
+                                                <option>Competition</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            Due Date <input type="date" name="bday">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Description</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                rows="3"></textarea>
+                                        </div>
+                                        <div style="margin-bottom: 20pt;">
+                                            <label for="exampleFormControlFile1">Photo file</label>
+                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                        </div>
+                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <form style="padding: 20pt;">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Title</label>
+                                            <input class="form-control" id="exampleFormControlInput1">
+                                        </div>
+                                        <div class="form-group">
+                                            Included Products
+                                            <div>
+                                                <select multiple class="chosen-select" name="test" style="width: 50%;">
+                                                    <option>Freddo Espresso</option>
+                                                    <option>Freddo Espresso</option>
+                                                    <option>Freddo Espresso</option>
+                                                    <option>Freddo Espresso</option>
+                                                    <option>Freddo Espresso</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            Due Date <input type="date" name="bday">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Description</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                rows="3"></textarea>
+                                        </div>
+                                        <div style="margin-bottom: 20pt;">
+                                            <label for="exampleFormControlFile1">Photo file</label>
+                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                        </div>
+                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- /.card-body -->
+            </div><!-- /.card -->
+        </div>
+    </div>
+    </div>
+
+    </div>
+    <!-- /.content -->
+    <div class="clearfix"></div>
+    <!-- Footer -->
+    <footer>
+
+    </footer>
+</body>
+
+</html>
