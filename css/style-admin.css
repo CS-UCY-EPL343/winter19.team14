@@ -1,34 +1,47 @@
 .tdl-holder {
-  margin: 0 auto; }
-  .tdl-holder ul {
+    margin: 0 auto;
+}
+
+.tdl-holder ul {
     list-style: none;
     margin: 0;
-    padding: 0; }
-  .tdl-holder li {
+    padding: 0;
+}
+
+.tdl-holder li {
     position: relative;
     background-color: transparent;
     list-style: outside none none;
     margin: 0;
-    padding: 7px 0; }
-    .tdl-holder li:after, .tdl-holder li:before {
-      content: "\f142";
-      top: 24px;
-      position: absolute;
-      font: normal normal normal 14px/1 FontAwesome;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      z-index: 99;
-      color: #99abb4; }
-    .tdl-holder li:after {
-      left: 10px; }
-    .tdl-holder li:before {
-      left: 14px; }
-    .tdl-holder li span {
-      margin-left: 30px;
-      vertical-align: middle;
-      -webkit-transition: all 0.2s linear;
-      transition: all 0.2s linear; }
-  .tdl-holder label {
+    padding: 7px 0;
+}
+
+.tdl-holder li:after,
+.tdl-holder li:before {
+    content: "\f142";
+    top: 24px;
+    position: absolute;
+    font: normal normal normal 14px/1 FontAwesome;
+    z-index: 99;
+    color: #99abb4;
+}
+
+.tdl-holder li:after {
+    left: 10px;
+}
+
+.tdl-holder li:before {
+    left: 14px;
+}
+
+.tdl-holder li span {
+    margin-left: 30px;
+    vertical-align: middle;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.tdl-holder label {
     cursor: pointer;
     display: block;
     line-height: 50px;
@@ -39,251 +52,188 @@
     background: #fafafa;
     color: #99abb4;
     font-size: 15px;
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear; }
-    .tdl-holder label:hover {
-      background-color: rgba(153, 171, 180, 0.1); }
-    .tdl-holder label a {
-      border-radius: 50%;
-      color: rgba(153, 171, 180, 0.5);
-      float: right;
-      line-height: normal;
-      margin-top: 15px;
-      text-align: center;
-      text-decoration: none;
-      height: 16px;
-      width: 20px;
-      -webkit-transition: all 0.2s linear;
-      transition: all 0.2s linear; }
-      .tdl-holder label a:hover {
-        color: rgba(153, 171, 180, 0.8); }
-  .tdl-holder input[type="checkbox"] {
+    transition: all 0.2s linear;
+}
+
+.tdl-holder label:hover {
+    background-color: rgba(153, 171, 180, 0.1);
+}
+
+.tdl-holder label a {
+    border-radius: 50%;
+    color: rgba(153, 171, 180, 0.5);
+    float: right;
+    line-height: normal;
+    margin-top: 15px;
+    text-align: center;
+    text-decoration: none;
+    height: 16px;
+    width: 20px;
+    transition: all 0.2s linear;
+}
+
+.tdl-holder label a:hover {
+    color: rgba(153, 171, 180, 0.8);
+}
+
+.tdl-holder input[type="checkbox"] {
     cursor: pointer;
     opacity: 0;
-    position: absolute; }
-    .tdl-holder input[type="checkbox"] + i {
-      border: 1px solid rgba(153, 171, 180, 0.3);
-      display: block;
-      height: 18px;
-      position: absolute;
-      top: 15px;
-      width: 18px;
-      z-index: 1; }
-    .tdl-holder input[type="checkbox"]:checked + i::after {
-      content: "\e64c";
-      font-family: 'themify';
-      display: block;
-      color: rgba(153, 171, 180, 0.5);
-      left: 0;
-      position: absolute;
-      top: -16px;
-      z-index: 2; }
-    .tdl-holder input[type="checkbox"]:checked ~ span {
-      text-decoration: line-through; }
-  .tdl-holder input[type="text"] {
+    position: absolute;
+}
+
+.tdl-holder input[type="checkbox"]+i {
+    border: 1px solid rgba(153, 171, 180, 0.3);
+    display: block;
+    height: 18px;
+    position: absolute;
+    top: 15px;
+    width: 18px;
+    z-index: 1;
+}
+
+.tdl-holder input[type="checkbox"]:checked+i::after {
+    content: "\e64c";
+    font-family: 'themify';
+    display: block;
+    color: rgba(153, 171, 180, 0.5);
+    left: 0;
+    position: absolute;
+    top: -16px;
+    z-index: 2;
+}
+
+.tdl-holder input[type="checkbox"]:checked~span {
+    text-decoration: line-through;
+}
+
+.tdl-holder input[type="text"] {
     height: 60px;
     margin-top: 20px;
-    font-size: 14px; }
+    font-size: 14px;
+}
 
 body {
-  display: table;
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  width: 100%; }
+    display: table;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    width: 100%;
+}
 
-button {
-  text-decoration: none;
-  outline: none !important;
-  color: #878787;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease; }
-
-h1,
-h2,
-h3,
 h4,
-h5,
-h6 {
-  margin: 0; }
-
 h5 {
-  font-size: 1em; }
+    font-size: 1em;
+}
 
 ul,
 ol {
-  padding-left: 0; }
+    padding-left: 0;
+}
 
 .btn:focus,
 button:focus {
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-  outline: 0; }
-
-.btn.disabled, .btn:disabled {
-  cursor: not-allowed; }
-
-img {
-  max-width: 100%; }
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline: 0;
+}
 
 .modal-header {
-  display: block; }
-
-.btn {
-  border-radius: 3px; }
+    display: block;
+}
 
 .content {
-  float: left;
-  padding: 1.875em;
-  width: 100%; }
+    float: left;
+    padding: 1.875em;
+    width: 100%;
+}
 
 .card {
-  margin-bottom: 1.875em;
-  border-radius: 5px;
-  padding: 0;
-  border: 0px solid transparent;
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.08); }
-  .card .box-title {
+    margin-bottom: 1.875em;
+    border-radius: 5px;
+    padding: 0;
+    border: 0px solid transparent;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.card .box-title {
     font-weight: 600;
     font-size: 1em;
-    padding: 5px 0; }
-  
-  .card .card-top,
-  .card .card-footer {
+    padding: 5px 0;
+}
+
+.card .card-top,
+.card .card-footer {
     background: #fafafa;
     border-bottom: 1px solid #e8e9ef;
     float: left;
     padding: .75em 1.125em;
-    width: 100%; }
-    .card .card-top .card-title,
-    .card .card-footer .card-title {
-      color: #343a40;
-      font-size: .875em;
-      font-weight: 600;
-      padding-top: 5px;
-      text-transform: capitalize; }
-    .card .card-top button,
-    .card .card-footer button {
-      background: none;
-      border: none;
-      -webkit-box-shadow: none;
-              box-shadow: none;
-      color: #868e96;
-      font-size: 12px;
-      padding: 0 5px; }
-    .card .card-top[class*="bg"] .card-title,
-    .card .card-footer[class*="bg"] .card-title {
-      color: #fff; }
-  .card .card-left {
-    width: 60%; }
-  .card .card-right {
-    width: 40%; }
-  .card .card-body {
+    width: 100%;
+}
+
+.card .card-top .card-title,
+.card .card-footer .card-title {
+    color: #343a40;
+    font-size: .875em;
+    font-weight: 600;
+    padding-top: 5px;
+    text-transform: capitalize;
+}
+
+.card .card-top button,
+.card .card-footer button {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: #868e96;
+    font-size: 12px;
+    padding: 0 5px;
+}
+
+.card .card-body {
     float: left;
     padding: 1.25em;
     position: relative;
-    width: 100%; }
-  .card h4 {
-    font-size: 1.1rem; }
-  .card .user-header .media img {
-    border: 5px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    -webkit-border-radius: 50%; }
-  .card .card-header .card-actions button {
-    display: block;
-    float: left;
-    width: 50px;
-    padding: .75rem 0;
-    margin: 0 !important;
-    color: #fff;
-    outline: 0;
-    text-align: center;
-    background: transparent;
-    border: 0;
-    border-left: 1px solid rgba(120, 130, 140, 0.4); }
-  .card .card-footer {
+    width: 100%;
+}
+
+.card .card-footer {
     padding: 0.65rem 1.25rem;
     background-color: #f0f3f5;
-    border-top: 1px solid #c2cfd6; }
-    .card .card-footer ul li {
-      display: table-cell;
-      padding: 0 1rem;
-      text-align: center; }
-  .card .nav-tabs {
-    margin-bottom: -1px; }
-    .card .nav-tabs a {
-      border-radius: 0;
-      color: #b5bcc2;
-      font-size: 12px;
-      font-weight: 700;
-      padding: .25em .5em;
-      text-transform: uppercase; }
-      .card .nav-tabs a:hover {
-        border-color: transparent; }
-    .card .nav-tabs .active a {
-      border-color: #e8e9ef;
-      color: #868e96 !important; }
+    border-top: 1px solid #c2cfd6;
+}
 
-/* Tabs */
-.nav-tabs a.active {
-  color: #555;
-  cursor: default;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-bottom-color: transparent; }
-.nav-tabs .dropdown .dropdown-menu {
-  top: 100% !important; }
+.card .card-footer ul li {
+    display: table-cell;
+    padding: 0 1rem;
+    text-align: center;
+}
 
-.custom-tab .nav-tabs > a.active,
-.custom-tab .nav-tabs > .active > a:focus,
-.custom-tab .nav-tabs > li.active > a:hover {
-  border-color: transparent transparent;
-  color: #ff2e44;
-  position: relative; }
 
-.custom-tab .nav-tabs > a.active:after,
-.custom-tab .nav-tabs > li.active > a:focus:after,
-.custom-tab .nav-tabs > li.active > a:hover:after {
-  background: #ff2e44;
-  bottom: -1px;
-  content: "";
-  height: 2px;
-  left: 0;
-  position: absolute;
-  right: 0;
-  width: 100%;
-  z-index: 999; }
+/* Widget */
 
-.card .card-header .card-actions {
-  float: right; }
-  .card .card-header .card-actions [class*="btn"] {
-    border-left: 1px solid rgba(120, 130, 140, 0.4);
-    color: #878787;
-    display: inline-block;
-    font-size: 16px;
-    float: left;
-    padding: 0 7px;
-    width: inherit;
-    text-align: center; }
+.stat-widget {
+    min-height: 60px;
+}
 
-.buttons button {
-  margin: 2px 0; }
-
-/*    Widget Five
----------------------------*/
-.stat-widget-five {
-  min-height: 60px; }
-  .stat-widget-five .stat-icon {
+.stat-widget-top .stat-icon {
     font-size: 50px;
     line-height: 50px;
     position: absolute;
     left: 30px;
-    top: 20px; }
-  .stat-widget-five .stat-content {
-    margin-left: 100px; }
-  .stat-widget-five .stat-text {
+    top: 20px;
+}
+
+.stat-widget-top .stat-content {
+    margin-left: 100px;
+}
+
+.stat-widget-top .stat-text {
     color: #455a64;
-    font-size: 20px; }
-  .stat-widget-five .stat-heading {
+    font-size: 20px;
+}
+
+.stat-widget-top .stat-heading {
     color: #99abb4;
-    font-size: 14px; }
+    font-size: 14px;
+}
