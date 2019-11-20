@@ -19,7 +19,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-	
+
 	<link href="vendor/css/animate.css" rel="stylesheet">
 
 	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -59,14 +59,16 @@
 						<a class="nav-link" href="contact.html">Contact</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="" data-toggle="modal" data-target="#myModal"><i
-								class="fas fa-sign-in-alt"></i> Sign in</a>
+						<a class="nav-link" href="" data-toggle="modal" data-target="#myModal" id="login_tab"
+							onclick="open_login()"><i class="fas fa-sign-in-alt"></i> Sign in</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link d-none" href="profile.html"><i class="fas fa-user-cog"></i> Profile</a>
+						<a class="nav-link d-none" href="profile.html" id="profile_tab"><i class="fas fa-user-cog"></i>
+							Profile</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link d-none" href="javascript:void(0)"><i class="fas fa-sign-out-alt"></i> Sign
+						<a class="nav-link d-none" href="" id="logout_tab" onclick="logout_function()"><i
+								class="fas fa-sign-out-alt"></i> Sign
 							out</a>
 					</li>
 				</ul>
@@ -90,9 +92,14 @@
 						<h2 class="gf-heading-2">Gardiano Cafe</h2>
 						<p>This is the only time we'll ever meet.You could be in a cafe Or a bus as you read this.</p>
 						<ul class="gf-footer-social list-unstyled float-md-left float-lft mt-3">
-							<li><a class="d-flex align-items-center justify-content-center gard-animate" href="https://www.facebook.com/Gardiano-Cafe-393005881429976/" target="_blank"><i class="fab fa-facebook-f fa-lg"></i></a></li>
-							<li><a class="d-flex align-items-center justify-content-center gard-animate" href="javascript:void(0)"><i class="fab fa-twitter fa-lg"></i></a></li>
-							<li><a class="d-flex align-items-center justify-content-center gard-animate" href="https://www.instagram.com/gardiano_cafe/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>
+							<li><a class="d-flex align-items-center justify-content-center gard-animate"
+									href="https://www.facebook.com/Gardiano-Cafe-393005881429976/" target="_blank"><i
+										class="fab fa-facebook-f fa-lg"></i></a></li>
+							<li><a class="d-flex align-items-center justify-content-center gard-animate"
+									href="javascript:void(0)"><i class="fab fa-twitter fa-lg"></i></a></li>
+							<li><a class="d-flex align-items-center justify-content-center gard-animate"
+									href="https://www.instagram.com/gardiano_cafe/" target="_blank"><i
+										class="fab fa-instagram fa-lg"></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -123,6 +130,7 @@
 							<a href="javascript:void(0)" class="thumb-menu"
 								style="background-image: url(images/img-3.jpg);background-size: cover;">
 							</a>
+							
 						</div>
 						<div class="thumb d-flex">
 							<a href="javascript:void(0)" class="thumb-menu"
@@ -166,12 +174,12 @@
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
 						<li class="nav-item">
-							<a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i
-									class="fas fa-user mr-1"></i>
+							<a class="nav-link active" data-toggle="tab" href="#panel7" id="login_form_tab"
+								role="tab"><i class="fas fa-user mr-1"></i>
 								Login</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i
+							<a class="nav-link" data-toggle="tab" href="#panel8" id="register_form_tab" role="tab"><i
 									class="fas fa-user-plus mr-1"></i>
 								Register</a>
 						</li>
@@ -188,31 +196,36 @@
 									<div class="form-group">
 										<label class="labeling" for="email">Email</label>
 										<div class="input-group pb-modalreglog-input-group">
-											<input type="email" class="form-control" id="login_email" placeholder="Email">
+											<input type="email" class="form-control" id="login_email"
+												placeholder="Email">
 										</div>
-										<p class="d-none red_warning" id="login_email_waring">Please enter your email!</p>
+										<p class="d-none red_warning" id="login_email_waring">Please enter your email!
+										</p>
 									</div>
 									<div class="form-group">
 										<label class="labeling" for="password">Password</label>
 										<div class="input-group pb-modalreglog-input-group">
-											<input type="password" class="form-control" id="login_pwd" placeholder="Password">
+											<input type="password" class="form-control" id="login_pwd"
+												placeholder="Password">
 										</div>
-										<p class="d-none red_warning" id="login_pwd_warning">Please enter your password!</p>
+										<p class="d-none red_warning" id="login_pwd_warning">Please enter your password!
+										</p>
 									</div>
 								</form>
 								<div class="text-center mt-2">
-										
-									<button class="btn btn-info" id="login">Log in <i class="fas fa-sign-in ml-1"></i></button>
+
+									<button class="btn btn-info" id="login">Log in <i
+											class="fas fa-sign-in ml-1"></i></button>
 								</div>
 							</div>
 							<!--Footer-->
 							<div class="modal-footer">
 								<div class="options mt-1">
-									<p class="notmember">Not a member? <a href="" class="blue-text">Register</a></p>
-									<p><a href="" class="blue-text">Forgot Password?</a></p>
+									<p class="notmember">Not a member? <a href="#" class="blue-text">Register</a></p>
+									<p><a href="#" class="blue-text">Forgot Password?</a></p>
 								</div>
 								<button type="button" class="btn btn-outline-info waves-effect ml-auto"
-									data-dismiss="modal" onclick="clear_function_login()" value="Reset form">Close</button>
+									data-dismiss="modal">Close</button>
 							</div>
 
 						</div>
@@ -223,66 +236,76 @@
 
 							<!--Body-->
 							<div class="modal-body">
-								<form class="pb-modalreglog-form-reg">
+								<form class="pb-modalreglog-form-reg" id="registerForm">
 									<div class="form-group">
-										<label class="labeling" for="email">Email</label><span class="red_star"> *</span>
+										<label class="labeling" for="email">Email</label><span class="red_star">
+											*</span>
 										<div class="input-group pb-modalreglog-input-group">
-											<input type="email" class="form-control" id="email" placeholder="Email">
-											<span class="input-group-addon"><span
-													class="glyphicon glyphicon-user"></span></span>
+											<input type="email" class="form-control" id="register_email"
+												placeholder="Email">
 										</div>
+										<p class="d-none red_warning" id="register_email_waring">Please enter your
+											email!</p>
 									</div>
 									<div class="form-group">
-										<label class="labeling" for="address">Address</label><span class="red_star"> *</span>
+										<label class="labeling" for="address">Address</label><span class="red_star">
+											*</span>
 										<div class="input-group pb-modalreglog-input-group">
-											<span class="input-group-addon"><span
-													class="glyphicon glyphicon-lock"></span></span>
-											<input type="address" class="form-control" id="inputConfirmPws"
+											<input type="address" class="form-control" id="register_address"
 												placeholder="Address">
 										</div>
+										<p class="d-none red_warning" id="register_address_waring">Please enter your
+											address!</p>
 									</div>
 									<div class="form-group">
-										<label class="labeling" for="phone">Phone</label><span class="red_star"> *</span>
+										<label class="labeling" for="phone">Phone</label><span class="red_star">
+											*</span>
 										<div class="input-group pb-modalreglog-input-group">
-											<span class="input-group-addon"><span
-													class="glyphicon glyphicon-lock"></span></span>
-											<input type="phone" class="form-control" id="inputConfirmPws"
+											<input type="phone" class="form-control" id="register_phone"
 												placeholder="Phone">
 										</div>
+										<p class="d-none red_warning" id="register_phone_waring">Please enter your
+											phone!</p>
 									</div>
 									<div class="form-group">
-										<label class="labeling" for="password">Password</label><span class="red_star"> *</span>
+										<label class="labeling" for="password">Password</label><span class="red_star">
+											*</span>
 										<div class="input-group pb-modalreglog-input-group">
-											<span class="input-group-addon"><span
-													class="glyphicon glyphicon-lock"></span></span>
-											<input type="password" class="form-control" id="inputPws"
+											<input type="password" class="form-control" id="register_pwd"
 												placeholder="Password">
 										</div>
+										<p class="d-none red_warning" id="register_pwd_warning">Please enter your
+											password!</p>
 									</div>
 									<div class="form-group">
-										<label class="labeling" for="confirmpassword">Confirm password</label><span class="red_star"> *</span>
+										<label class="labeling" for="confirmpassword">Confirm password</label><span
+											class="red_star"> *</span>
 										<div class="input-group pb-modalreglog-input-group">
-											<span class="input-group-addon"><span
-													class="glyphicon glyphicon-lock"></span></span>
-											<input type="password" class="form-control" id="inputConfirmPws"
+											<input type="password" class="form-control" id="register_confirm_pwd"
 												placeholder="Confirm Password">
 										</div>
+										<p class="d-none red_warning" id="register_confirm_pwd_warning">Please confirm
+											your password!</p>
 									</div>
-									<div class="form-group">
-										<input type="checkbox" id="ch" name="chs">
-										I agree with <a href="">terms and conditions</a> <span class="red_star"> *</span>
+									<div class="form-group terms">
+										<input type="checkbox" id="register_terms" name="chs">
+										I agree with <a href="">terms and conditions</a> <span class="red_star">
+											*</span>
 									</div>
+									<p class="d-none red_warning" id="register_terms_warning">Please accept the terms!
+									</p>
 								</form>
 
 								<div class="text-center form-sm mt-2">
-									<button class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+									<button class="btn btn-info" id="signup">Sign up <i
+											class="fas fa-sign-in ml-1"></i></button>
 								</div>
 
 							</div>
 							<!--Footer-->
 							<div class="modal-footer">
 								<div class="options">
-									<p class="pt-1">Already have an account? <a href="" class="blue-text">Log In</a>
+									<p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a>
 									</p>
 								</div>
 								<button type="button" class="btn btn-outline-info waves-effect ml-auto"

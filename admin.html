@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Gardiano Admin page</title>
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- /Bootstrap -->
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- /fontawesome -->
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/style-admin.css">
+
+</head>
+
+<body>
+    <!-- Header-->
+    <div style="text-align: right;">
+        <div class="header-menu" style="padding-right: 15pt;">
+            <div style="margin: 10pt;">
+                <a href="./index.html">
+                    Sign out
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- /Header -->
+
+    <!-- Content -->
+    <div class="content">
+
+        <!-- Widgets  -->
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-top">
+                            <div class="stat-content">
+                                <div class="text-left ">
+                                    <div class="stat-text">€<span> 55.95</span></div>
+                                    <div class="stat-heading">Today's Sales</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-top">
+                            <div class="stat-content">
+                                <div class="text-left ">
+                                    <div class="stat-text"><span>1</span></div>
+                                    <div class="stat-heading">Current Pending Orders</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-top">
+                            <div class="stat-content">
+                                <div class="text-left ">
+                                    <div class="stat-text"><span>2</span></div>
+                                    <div class="stat-heading">Today's reservations</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-top">
+                            <div class="stat-content">
+                                <div class="text-left ">
+                                    <div class="stat-text"><span>2/3</span></div>
+                                    <div class="stat-heading">Available delivery boys</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Widgets -->
+
+        <!-- First Row -->
+        <div class="orders">
+            <div class="row">
+                <!-- Orders -->
+                <div class="col-xl-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="box-title">Orders </h4>
+                        </div>
+                        <div class="card-body--">
+                            <div style="padding: 15pt;">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Status</th>
+                                            <th>Details</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1.</td>
+                                            <td> #1849 </td>
+                                            <td><span>Antroulla Konstantinou</span></td>
+                                            <td><span>Delivery</span></td>
+                                            <td><span class="badge badge-pill badge-warning">Pending</span></td>
+
+                                            <td>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderModal">
+                                                    Details
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2.</td>
+                                            <td> #1848 </td>
+                                            <td><span>Kostis Papakosta</span> </td>
+                                            <td><span>Take-away</span> </td>
+                                            <td><span class="badge badge-pill badge-success">Completed</span></td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderModal">
+                                                    Details
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3.</td>
+                                            <td> #1847 </td>
+                                            <td><span>Katerina H</span> </td>
+                                            <td><span>Take-away</span> </td>
+                                            <td><span class="badge badge-pill badge-success">Completed</span></td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderModal">
+                                                    Details
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4.</td>
+                                            <td> #1846 </td>
+                                            <td><span>Marialena Ioannou</span> </td>
+                                            <td><span>Delivery</span> </td>
+                                            <td><span class="badge badge-pill badge-primary">In progress</span></td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderModal">
+                                                    Details
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5.</td>
+                                            <td> #1845 </td>
+                                            <td> <span>Giannos Petrou</span> </td>
+                                            <td> <span>Delivery</span> </td>
+                                            <td><span class="badge badge-pill badge-danger">Declined</span></td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderModal">
+                                                    Details
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Orders -->
+
+                <div class="col-xl-4">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-6 col-xl-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="box-title">November 2019 </h4>
+                                </div>
+                                <div class="card-body--">
+                                    <div style="padding: 15pt;">
+                                        <table class="table table-striped" style="width:100%;height:100%;">
+                                            <tbody style="width:100%;height:100%;">
+                                                <tr style="width:100%;height:100%;">
+                                                    <th scope="row">Total Sales</th>
+                                                    <td class="text-right">€ 3543.99 </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Expenses</th>
+                                                    <td class="text-right">€ 1899.00 </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Online Orders</th>
+                                                    <td class="text-right">599</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Favourite Product</th>
+                                                    <td class="text-right"> Freddo Espresso
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Events</th>
+                                                    <td class="text-right"> 25 </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Registered Users</th>
+                                                    <td class="text-right"> 785 </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /First Row -->
+
+        <!-- Modal Order Details -->
+        <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="orderModalLabel">Order Details</h5>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-striped table-responsive">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">ID</th>
+                                    <td> #1849 </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Name</th>
+                                    <td> <span>Antroulla Konstantinou</span> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Type</th>
+                                    <td> <span>Delivery</span> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Address</th>
+                                    <td> <span> 21A Marco António Elias Santos Str., 1205 Larnaca,
+                                            Cyprus</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Payment Method</th>
+                                    <td> <span>Card</span> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Status</th>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Pending
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Pending</a>
+                                                <a class="dropdown-item" href="#">Declined</a>
+                                                <a class="dropdown-item" href="#">In progress</a>
+                                                <a class="dropdown-item" href="#">Completed</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Time submitted</th>
+                                    <td> <span>13:55</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Items</th>
+                                    <td>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr style="background: white;">
+                                                        <td>
+                                                            Freddo Espresso
+                                                            <br />
+                                                            <em><small>Gardiano Cafe, No Sugar</small></em></a>
+                                                            <br />
+                                                            <small> Quantity 1</small>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <div class="d-flex flex-row justify-content-end">
+                                                                <div>&euro;2.00</div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Espresso
+                                                            <br />
+                                                            <small>Quantity 2</small>
+                                                        </td>
+                                                        <td class="text-right">
+                                                            <div class="d-flex flex-row justify-content-end">
+                                                                <div>2 x &euro;1.00</div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Total</th>
+                                    <td>
+                                        <div class="text-right">&euro;4.00</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save
+                            changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Modal Order Details -->
+
+        <!-- Second Row -->
+        <div class="row">
+            <!-- To Do -->
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title box-title">To Do List</h4>
+                        <div class="card-content">
+                            <div class="todo-list">
+                                <div class="tdl-holder">
+                                    <div class="tdl-content">
+                                        <ul>
+                                            <li>
+                                                <label>
+                                                    <span>Παραγγελία
+                                                        πλαστικών ποτηριών XL</span>
+                                                    <a href="" class="fa fa-times"></a>
+                                                    <a href="" class="fa fa-pencil"></a>
+                                                    <a href="" class="fa fa-check"></a>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <span>Διακόσμηση
+                                                        χώρου για εκδήλωση Δήμου</span>
+                                                    <a href="" class="fa fa-times"></a>
+                                                    <a href="" class="fa fa-pencil"></a>
+                                                    <a href="" class="fa fa-check"></a>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <span>Πληρωμή
+                                                        προμηθευτή</span>
+                                                    <a href="" class="fa fa-times"></a>
+                                                    <a href="" class="fa fa-pencil"></a>
+                                                    <a href="" class="fa fa-check"></a>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <span>Meeting για
+                                                        ιστοσελίδα εταιρίας</span>
+                                                    <a href="" class="fa fa-times"></a>
+                                                    <a href="" class="fa fa-pencil"></a>
+                                                    <a href="" class="fa fa-check"></a>
+                                                </label>
+                                            </li>
+
+                                            <li>
+                                                <label>
+                                                    <span>Καθάρισμα
+                                                        αποθήκης</span>
+                                                    <a href="" class="fa fa-times"></a>
+                                                    <a href="" class="fa fa-pencil"></a>
+                                                    <a href="" class="fa fa-check"></a>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /To do -->
+
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title box-title">Add Item</h4>
+                        <div class="card-content">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Event/Competition</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Offer</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <form style="padding: 20pt;">
+                                        <div class="form-group">
+                                            <label for="formControlInput">Title</label>
+                                            <input type="email" class="form-control" id="formControlInput">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="formControlInput">Link to social media</label>
+                                            <input type="email" class="form-control" id="formControlInput">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="formControlSelect">Type</label>
+                                            <select class="form-control" id="formControlSelect">
+                                                <option>Event</option>
+                                                <option>Competition</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            Due Date <input type="date" name="date">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="formControlTextArea">Description</label>
+                                            <textarea class="form-control" id="formControlTextArea" rows="3"></textarea>
+                                        </div>
+                                        <div style="margin-bottom: 20pt;">
+                                            <label for="formControlFile">Photo file</label>
+                                            <input type="file" class="form-control-file" id="formControlFile">
+                                        </div>
+                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <form style="padding: 20pt;">
+                                        <div class="form-group">
+                                            <label for="formControlInput">Title</label>
+                                            <input class="form-control" id="formControlInput">
+                                        </div>
+                                        <div class="form-group">
+                                            Included Products
+                                            <div>
+                                                <select multiple class="chosen-select" name="test" style="width: 50%;">
+                                                    <option>Freddo Espresso</option>
+                                                    <option>Freddo Espresso</option>
+                                                    <option>Freddo Espresso</option>
+                                                    <option>Freddo Espresso</option>
+                                                    <option>Freddo Espresso</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            Due Date <input type="date" name="date">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="formControlTextArea">Description</label>
+                                            <textarea class="form-control" id="formControlTextArea" rows="3"></textarea>
+                                        </div>
+                                        <div style="margin-bottom: 20pt;">
+                                            <label for="formControlFile">Photo file</label>
+                                            <input type="file" class="form-control-file" id="formControlFile">
+                                        </div>
+                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Second Row -->
+    </div>
+    <!-- /Content -->
+</body>
+
+</html>

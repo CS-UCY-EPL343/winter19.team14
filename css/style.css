@@ -230,4 +230,8 @@ body {
 .red_warning {
 	color: red;
 	font-size: 13px;
-  }
+}
+
+.terms{
+	margin-bottom: 0px;
+}
