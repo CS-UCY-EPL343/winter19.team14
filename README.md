@@ -7,12 +7,14 @@ The "Gardiano Website" was implemented as part of the final project for lesson E
 For this assignment some of the latest web design technologies where used, such as HTML, CSS, JavaScript, JQuery and Bootstrap.
 
 # Team Members
-Marcos Antonios Charalambous
-
 Andreas Tsouloupas
+
+George Hadjiantonis
+
+Constandinos Demetriou
+
+Marcos Antonios Charalambous
 
 Nicolas Zachariou
 
-George Hadjiantonis 
-
-Constandinos Demetriou
+Christakis Achilleos
