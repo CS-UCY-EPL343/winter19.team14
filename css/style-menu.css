@@ -8,11 +8,6 @@ header {
 	box-shadow: -4px 4px 5px -2px #2f2e2e;
 }
 
-#header {
-	font-size: 3rem;
-	color: white;
-}
-
 @media (max-width: 767px){
 	#menu-header {
 		font-size: 2rem;

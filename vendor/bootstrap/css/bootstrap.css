@@ -6507,6 +6507,16 @@ a.close.disabled {
   vertical-align: text-top !important;
 }
 
+.bg-gardiano {
+	background-color: #231d1f !important;
+}
+
+a.bg-gardiano:hover, a.bg-gardiano:focus,
+button.bg-gardiano:hover,
+button.bg-gardiano:focus {
+  background-color: #1d2124 !important;
+}
+
 .bg-black {
   background-color: #141313 !important;
 }
