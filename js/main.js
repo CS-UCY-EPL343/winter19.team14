@@ -42,12 +42,8 @@
 					navbar.removeClass('fadein');
 					navbar.hide();
 				}
-			}
-				
-				
-		});
-
-	
+			}								
+		});	
 	});
 	
 	
@@ -93,8 +89,7 @@
   
   
 //back to top button
-jQuery(document).ready(function() {
-  
+jQuery(document).ready(function() {  
 	var btn = $('#toTop');
 	btn.hide();
 
@@ -145,4 +140,3 @@ function subscribe(event) {
 }
 
 document.getElementById("subscribe-btn").addEventListener("click", subscribe);
-
