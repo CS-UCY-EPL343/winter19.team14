@@ -1,0 +1,60 @@
+body{
+  background-color: #231d1f; 
+}
+
+.carousel-inner{
+	max-height: 400px;
+}
+
+
+.article-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.section-content{
+  position: relative;
+  height: 600px;  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom center;
+  box-shadow: -4px 4px 5px -2px #2f2e2e;
+}
+
+.day-section {
+  background-image: url(../images/img-1.jpg);
+}
+
+.menu-section {
+  background-image: url(../images/img-2.jpg);
+}
+
+.night-section {
+  background-image: url(../images/img-3.jpg);
+}
+
+.reservations-section {
+  background-image: url(../images/img-5.jpg);
+}
+
+.events-section {
+  background-image: url(../images/img-3.jpg);
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
