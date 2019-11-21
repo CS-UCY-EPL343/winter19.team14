@@ -276,10 +276,6 @@ function open_register(){
     clear_function_register();
 }
 
-function logout_profile(){
-    window.location.href = "./index.html";
-}
-
 const login_button = document.querySelector('#login');
 login_button.addEventListener('click', LoginAuthentication);
 
