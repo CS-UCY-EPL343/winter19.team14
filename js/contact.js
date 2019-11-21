@@ -36,3 +36,33 @@ function openWeatherMap(){
 $(document).ready(function() {
     openWeatherMap();
 })
+
+function contactMessage(event) {
+	let name = document.getElementById("contact-name").value;
+	let email = document.getElementById("contact-email").value;
+	let subject = document.getElementById("contact-subject").value;
+	let comments = document.getElementById("comments").value;
+
+	event.preventDefault();
+  
+	if (name === "" || email === "" || subject === "" || comments === ""){
+		swal({
+			title: "Empty fields.",
+			text: "All fields in the form must be filled.",
+			icon: "error",
+			button: "Close"
+		});
+   }else {
+		swal({
+			title: "Success!",
+			text: "Your message has been sent succesfully.",
+			icon: "success",
+			button: "Close"
+		});
+		document.getElementById("contact-form").reset();
+
+   }
+	
+}
+
+document.getElementById("submition-btn").addEventListener("click", contactMessage);
