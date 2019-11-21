@@ -28,6 +28,10 @@ body {
 	background-position: center;
 }
  
+a.logo-ref{
+	height: 74px;
+}
+ 
 #navbar-title {
 	font-family: 'Pacifico', cursive;
 	font-size: 2rem;
