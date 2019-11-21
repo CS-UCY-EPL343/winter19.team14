@@ -243,13 +243,21 @@ a.logo-ref{
 	margin-bottom: 0;
 }
 
+.options{
+    padding-left:0px;
+}
+
 @media (max-width: 992px) {
-	.options{
+    .options{
 		line-height: 1.35;
 	}
 }
 
-.red_star {
+.loginfooter {
+    margin-right: 0px;
+    width:100%;
+}
+    .red_star {
 	color: red;
   }
 
@@ -302,5 +310,10 @@ canvas{
 	margin-top:15px;
 	margin-right: 3px;
 	margin-left: 3px;
+}
+
+.closebutton{
+    text-align:right;
+    padding-right: 0px;
 }
 
