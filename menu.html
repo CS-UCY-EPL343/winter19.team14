@@ -12,21 +12,22 @@
 
 	<!-- Bootstrap core CSS -->
 	<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-	
+
 	<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-	
+
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/style-menu.css" rel="stylesheet">
-	
+
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-	
+
 	<link href="vendor/css/animate.css" rel="stylesheet">
 
 	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
 	<link rel="manifest" href="images/favicon/site.webmanifest">
+	<script src="js/login.js" defer></script>
 </head>
 
 <body>
@@ -34,15 +35,18 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-gardiano static-top">
 		<div class="container">
-			<a class="logo-ref" href="index.html"><div id="navbar-logo" class="navbar-brand"></div></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cafeNavbar" aria-controls="cafeNavbar" aria-expanded="false" aria-label="Toggle navigation">
+			<a class="logo-ref" href="index.html">
+				<div id="navbar-logo" class="navbar-brand"></div>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cafeNavbar"
+				aria-controls="cafeNavbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="cafeNavbar">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
 						<a class="nav-link" href="index.html"><i class="fas fa-home"></i>Home
-							
+
 						</a>
 					</li>
 					<li class="nav-item active">
@@ -58,13 +62,20 @@
 						<a class="nav-link" href="contact.html">Contact</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="javascript:void(0)"><i class="fas fa-sign-in-alt"></i> Sign in</a>
+						<a class="nav-link" href="" data-toggle="modal" data-target="#myModal" id="login_tab"
+							onclick="open_login()"><i class="fas fa-sign-in-alt"></i>Sign in</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link d-none" href="profile.html"><i class="fas fa-user-cog"></i> Profile</a>
+						<a class="nav-link d-none" href="profile.html" id="profile_tab">
+							<i class="fas fa-user-cog"></i>
+							Profile
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link d-none" href="javascript:void(0)"><i class="fas fa-sign-out-alt"></i> Sign out</a>
+						<a class="nav-link d-none" href="" id="logout_tab" onclick="logout_function()">
+							<i class="fas fa-sign-out-alt"></i> Sign
+							out
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -77,64 +88,68 @@
 	<header class="d-flex align-items-end justify-content-center">
 		<div id="header-title" class="text-center">Gardiano Menu</div>
 	</header>
-	
+
 	<section>
 		<div class="container my-3">
 			<div class="row">
 				<div class="col-md-8">
 					<ul class="nav nav-tabs" id="menu-tab" role="tablist">
 						<li class="nav-item">
-							<a class="nav-link active gard-animate" id="bar-tab" data-toggle="tab" href="#bar-menu" role="tab" aria-controls="bar-menu" aria-selected="true">BAR MENU</a>
+							<a class="nav-link active gard-animate" id="bar-tab" data-toggle="tab" href="#bar-menu"
+								role="tab" aria-controls="bar-menu" aria-selected="true">BAR MENU</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link gard-animate" id="food-tab" data-toggle="tab" href="#food-menu" role="tab" aria-controls="food-menu" aria-selected="false">FOOD MENU</a>
+							<a class="nav-link gard-animate" id="food-tab" data-toggle="tab" href="#food-menu"
+								role="tab" aria-controls="food-menu" aria-selected="false">FOOD MENU</a>
 						</li>
 					</ul>
-					
+
 					<!-- Tabs content-->
 					<div class="tab-content" id="myTabContent">
 						<!-- BAR MENU TAB-->
 						<div class="tab-pane fade show active" id="bar-menu" role="tabpanel" aria-labelledby="bar-menu">
 							<div id="bar-menu-row" class="row">
 								<div id="bar-categories" class="col-lg-4">
-								
+
 									<!-- dropdown categoryies-->
 									<div class="d-lg-none">
 										<div class="">Categories</div>
-											<select class="form-control" onchange="location = this.value;">
-												<optgroup label="Espresso Based">
-													<option value="#1">Hot</option>
-													<option value="#2">Cold</option>
-												</optgroup>
-												<optgroup label="Cypriot Coffe">
-													<option value="#3">Cypriot Coffee</option>
-												</optgroup>
-												<optgroup label="Chocolate">
-													<option value="#4">Hot</option>
-													<option value="#5">Cold</option>
-												</optgroup>
-												<optgroup label="Instant">
-													<option value="#6">Hot</option>
-													<option value="#7">Cold</option>
-												</optgroup>
-												<optgroup label="Beverages">
-													<option value="#8">Cold</option>
-												</optgroup>
-												<optgroup label="Tea-Herbs">
-													<option value="#9">Hot</option>
-												</optgroup>
-												<optgroup label="Other">
-													<option value="#10">Water</option>
-													<option value="#11">Juice</option>
-												</optgroup>
-											</select>
+										<select class="form-control" onchange="location = this.value;">
+											<optgroup label="Espresso Based">
+												<option value="#1">Hot</option>
+												<option value="#2">Cold</option>
+											</optgroup>
+											<optgroup label="Cypriot Coffe">
+												<option value="#3">Cypriot Coffee</option>
+											</optgroup>
+											<optgroup label="Chocolate">
+												<option value="#4">Hot</option>
+												<option value="#5">Cold</option>
+											</optgroup>
+											<optgroup label="Instant">
+												<option value="#6">Hot</option>
+												<option value="#7">Cold</option>
+											</optgroup>
+											<optgroup label="Beverages">
+												<option value="#8">Cold</option>
+											</optgroup>
+											<optgroup label="Tea-Herbs">
+												<option value="#9">Hot</option>
+											</optgroup>
+											<optgroup label="Other">
+												<option value="#10">Water</option>
+												<option value="#11">Juice</option>
+											</optgroup>
+										</select>
 									</div>
 									<!-- end dropdown categories-->
-								
+
 									<!-- large categories-->
 									<div id="large-categories" class="flex-column d-none d-lg-block">
 										<!-- start category -->
-										<div class="bar-category collapsed text-right py-2 gard-animate" data-toggle="collapse" id="cat_menu_1" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+										<div class="bar-category collapsed text-right py-2 gard-animate"
+											data-toggle="collapse" id="cat_menu_1" data-target="#collapse1"
+											aria-expanded="false" aria-controls="collapse1">
 											Espresso Based
 										</div>
 										<ul class="nav flex-column collapse text-right" id="collapse1">
@@ -146,20 +161,25 @@
 											</li>
 										</ul>
 										<!-- end category -->
-										
+
 										<!-- start category -->
-										<div class="bar-category collapsed text-right py-2 gard-animate" data-toggle="collapse" id="cat_menu_2" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+										<div class="bar-category collapsed text-right py-2 gard-animate"
+											data-toggle="collapse" id="cat_menu_2" data-target="#collapse2"
+											aria-expanded="false" aria-controls="collapse2">
 											Cypriot Coffee
 										</div>
 										<ul class="nav flex-column collapse text-right" id="collapse2">
 											<li class="nav-item w-100">
-												<a href="#3" data-parent-h4="cat_menu_2" data-category-id="3">Cypriot Coffee</a>
+												<a href="#3" data-parent-h4="cat_menu_2" data-category-id="3">Cypriot
+													Coffee</a>
 											</li>
 										</ul>
 										<!-- end category -->
-										
+
 										<!-- start category -->
-										<div class="bar-category collapsed text-right py-2 gard-animate" data-toggle="collapse" id="cat_menu_3" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+										<div class="bar-category collapsed text-right py-2 gard-animate"
+											data-toggle="collapse" id="cat_menu_3" data-target="#collapse3"
+											aria-expanded="false" aria-controls="collapse3">
 											Chocolate
 										</div>
 										<ul class="nav flex-column collapse text-right" id="collapse3">
@@ -172,7 +192,9 @@
 										</ul>
 										<!-- end category -->
 										<!-- start category -->
-										<div class="bar-category collapsed text-right py-2 gard-animate" data-toggle="collapse" id="cat_menu_4" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+										<div class="bar-category collapsed text-right py-2 gard-animate"
+											data-toggle="collapse" id="cat_menu_4" data-target="#collapse4"
+											aria-expanded="false" aria-controls="collapse4">
 											Instant
 										</div>
 										<ul class="nav flex-column collapse text-right" id="collapse4">
@@ -185,7 +207,9 @@
 										</ul>
 										<!-- end category -->
 										<!-- start category -->
-										<div class="bar-category collapsed text-right py-2 gard-animate" data-toggle="collapse" id="cat_menu_5" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+										<div class="bar-category collapsed text-right py-2 gard-animate"
+											data-toggle="collapse" id="cat_menu_5" data-target="#collapse5"
+											aria-expanded="false" aria-controls="collapse5">
 											Beverages
 										</div>
 										<ul class="nav flex-column collapse text-right" id="collapse5">
@@ -195,7 +219,9 @@
 										</ul>
 										<!-- end category -->
 										<!-- start category -->
-										<div class="bar-category collapsed text-right py-2 gard-animate" data-toggle="collapse" id="cat_menu_6" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+										<div class="bar-category collapsed text-right py-2 gard-animate"
+											data-toggle="collapse" id="cat_menu_6" data-target="#collapse6"
+											aria-expanded="false" aria-controls="collapse6">
 											Tea-Herbs
 										</div>
 										<ul class="nav flex-column collapse text-right" id="collapse6">
@@ -205,26 +231,30 @@
 										</ul>
 										<!-- end category -->
 										<!-- start category -->
-										<div class="bar-category collapsed text-right py-2 gard-animate" data-toggle="collapse" id="cat_menu_7" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+										<div class="bar-category collapsed text-right py-2 gard-animate"
+											data-toggle="collapse" id="cat_menu_7" data-target="#collapse7"
+											aria-expanded="false" aria-controls="collapse7">
 											Other
 										</div>
 										<ul class="nav flex-column collapse text-right" id="collapse7">
 											<li class="nav-item w-100">
-												<a href="#10" data-parent-h4="cat_menu_7" data-category-id="10">Water</a>
+												<a href="#10" data-parent-h4="cat_menu_7"
+													data-category-id="10">Water</a>
 											</li>
 											<li class="nav-item w-100">
-												<a href="#11" data-parent-h4="cat_menu_7" data-category-id="11">Juice</a>
+												<a href="#11" data-parent-h4="cat_menu_7"
+													data-category-id="11">Juice</a>
 											</li>
 										</ul>
 										<!-- end category -->
-										
-										
+
+
 									</div>
 									<!-- large categories-->
-									
-									
+
+
 								</div>
-								
+
 								<div class="col-lg-8">
 									<!-- Products-->
 									<!-- Start Category -->
@@ -233,7 +263,9 @@
 											Espresso Based
 										</h2>
 										<div class="category-box ml-lg-4 py-4">
-											<div class="row collapsed" data-toggle="collapse" id="cat_det_1" data-target="#collapse-table-det-1" aria-expanded="false" aria-controls="collapse-table-det-1">
+											<div class="row collapsed" data-toggle="collapse" id="cat_det_1"
+												data-target="#collapse-table-det-1" aria-expanded="false"
+												aria-controls="collapse-table-det-1">
 												<div class="expand-symbol col-1 col-lg-1">
 													<i class="fa fa-plus"></i>
 													<i class="fa fa-minus"></i>
@@ -246,28 +278,55 @@
 													<img src="images/espresso.png" alt="Hot" class="img-responsive">
 												</div>
 											</div>
-											
+
 											<div class="table-responsive">
 												<table class="table table-hover collapse" id="collapse-table-det-1">
 													<tbody>
 														<tr data-toggle="modal" data-target="#addtocard-draft">
 															<td>Espresso</td>
-															<td class="text-right"><span class="text-nowrap">&euro;1.00 <i class="far fa-plus-square"></i></span></td>
+															<td class="text-right"><span class="text-nowrap">&euro;1.00
+																	<i class="far fa-plus-square"></i></span></td>
 														</tr>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Double Espresso</td><td class="text-right"><span class="text-nowrap">&euro;1.50 <i class="far fa-plus-square"></i></span></td></tr>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Americano</td><td class="text-right"><span class="text-nowrap">&euro;2.00 <i class="far fa-plus-square"></i></span></td></tr>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Cappuccino</td><td class="text-right"><span class="text-nowrap">&euro;2.70 <i class="far fa-plus-square"></i></span></td></tr>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Macchiato</td><td class="text-right"><span class="text-nowrap">&euro;1.50 <i class="far fa-plus-square"></i></span></td></tr>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Latte Macchiato</td><td class="text-right"><span class="text-nowrap">&euro;2.70 <i class="far fa-plus-square"></i></span></td></tr>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Mocha</td><td class="text-right"><span class="text-nowrap">&euro;2.90 <i class="far fa-plus-square"></i></span></td></tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Double Espresso</td>
+															<td class="text-right"><span class="text-nowrap">&euro;1.50
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Americano</td>
+															<td class="text-right"><span class="text-nowrap">&euro;2.00
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Cappuccino</td>
+															<td class="text-right"><span class="text-nowrap">&euro;2.70
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Macchiato</td>
+															<td class="text-right"><span class="text-nowrap">&euro;1.50
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Latte Macchiato</td>
+															<td class="text-right"><span class="text-nowrap">&euro;2.70
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Mocha</td>
+															<td class="text-right"><span class="text-nowrap">&euro;2.90
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
 
 													</tbody>
 												</table>
 											</div>
-											
+
 										</div>
 										<div class="category-box ml-lg-4 py-4">
-											<div class="row collapsed" data-toggle="collapse" id="cat_det_2" data-target="#collapse-table-det-2" aria-expanded="false" aria-controls="collapse-table-det-2">
+											<div class="row collapsed" data-toggle="collapse" id="cat_det_2"
+												data-target="#collapse-table-det-2" aria-expanded="false"
+												aria-controls="collapse-table-det-2">
 												<div class="expand-symbol col-1 col-lg-1">
 													<i class="fa fa-plus"></i>
 													<i class="fa fa-minus"></i>
@@ -280,33 +339,52 @@
 													<img src="images/freddo.jpg" alt="Cold" class="img-responsive">
 												</div>
 											</div>
-											
+
 											<div class="table-responsive">
 												<table class="table table-hover collapse" id="collapse-table-det-2">
 													<tbody>
 														<tr data-toggle="modal" data-target="#addtocard-draft">
 															<td>Freddo Espresso</td>
-															<td class="text-right"><span class="text-nowrap">&euro;2.00 <i class="far fa-plus-square"></i></span></td>
+															<td class="text-right"><span class="text-nowrap">&euro;2.00
+																	<i class="far fa-plus-square"></i></span></td>
 														</tr>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Freddo Cappucino</td><td class="text-right"><span class="text-nowrap">&euro;2.50 <i class="far fa-plus-square"></i></span></td></tr>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Iced Americano</td><td class="text-right"><span class="text-nowrap">&euro;2.00 <i class="far fa-plus-square"></i></span></td></tr>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Iced Latte</td><td class="text-right"><span class="text-nowrap">&euro;2.70 <i class="far fa-plus-square"></i></span></td></tr>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Iced Mocha</td><td class="text-right"><span class="text-nowrap">&euro;2.90 <i class="far fa-plus-square"></i></span></td></tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Freddo Cappucino</td>
+															<td class="text-right"><span class="text-nowrap">&euro;2.50
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Iced Americano</td>
+															<td class="text-right"><span class="text-nowrap">&euro;2.00
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Iced Latte</td>
+															<td class="text-right"><span class="text-nowrap">&euro;2.70
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Iced Mocha</td>
+															<td class="text-right"><span class="text-nowrap">&euro;2.90
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
 													</tbody>
 												</table>
 											</div>
-											
+
 										</div>
 									</div>
 									<!-- End Category -->
-									
+
 									<!-- Start Category -->
 									<div class="category-container py-2">
 										<h2 class="category-title ml-lg-2">
 											Cypriot Coffee
 										</h2>
 										<div class="category-box ml-lg-4 py-4">
-											<div class="row collapsed" data-toggle="collapse" id="cat_det_3" data-target="#collapse-table-det-3" aria-expanded="false" aria-controls="collapse-table-det-3">
+											<div class="row collapsed" data-toggle="collapse" id="cat_det_3"
+												data-target="#collapse-table-det-3" aria-expanded="false"
+												aria-controls="collapse-table-det-3">
 												<div class="expand-symbol col-1 col-lg-1">
 													<i class="fa fa-plus"></i>
 													<i class="fa fa-minus"></i>
@@ -316,33 +394,41 @@
 													Cypriot Coffee
 												</div>
 												<div class="expand-image col-4 col-lg-7 text-right">
-													<img src="images/cypriot-coffee.png" alt="Cypriot Coffee" class="img-responsive">
+													<img src="images/cypriot-coffee.png" alt="Cypriot Coffee"
+														class="img-responsive">
 												</div>
 											</div>
-											
+
 											<div class="table-responsive">
 												<table class="table table-hover collapse" id="collapse-table-det-3">
 													<tbody>
 														<tr data-toggle="modal" data-target="#addtocard-draft">
 															<td>Cyprus Coffee</td>
-															<td class="text-right"><span class="text-nowrap">&euro;1.20 <i class="far fa-plus-square"></i></span></td>
+															<td class="text-right"><span class="text-nowrap">&euro;1.20
+																	<i class="far fa-plus-square"></i></span></td>
 														</tr>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Double Cyprus Coffee</td><td class="text-right"><span class="text-nowrap">&euro;1.80 <i class="far fa-plus-square"></i></span></td></tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Double Cyprus Coffee</td>
+															<td class="text-right"><span class="text-nowrap">&euro;1.80
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
 													</tbody>
 												</table>
 											</div>
-											
+
 										</div>
 									</div>
 									<!-- End Category -->
-									
+
 									<!-- Start Category -->
 									<div class="category-container py-2">
 										<h2 class="category-title ml-lg-2">
 											Chocolate
 										</h2>
 										<div class="category-box ml-lg-4 py-4">
-											<div class="row collapsed" data-toggle="collapse" id="cat_det_4" data-target="#collapse-table-det-4" aria-expanded="false" aria-controls="collapse-table-det-4">
+											<div class="row collapsed" data-toggle="collapse" id="cat_det_4"
+												data-target="#collapse-table-det-4" aria-expanded="false"
+												aria-controls="collapse-table-det-4">
 												<div class="expand-symbol col-1 col-lg-1">
 													<i class="fa fa-plus"></i>
 													<i class="fa fa-minus"></i>
@@ -355,20 +441,24 @@
 													<!-- <img src="images/hot-chocolate.png" alt="Hot" class="img-responsive"> -->
 												</div>
 											</div>
-											
+
 											<div class="table-responsive">
 												<table class="table table-hover collapse" id="collapse-table-det-4">
 													<tbody>
 														<tr data-toggle="modal" data-target="#addtocard-draft">
-															<td>Hot Chocolate</td><td class="text-right"><span class="text-nowrap">&euro;2.80 <i class="far fa-plus-square"></i></span></td>
+															<td>Hot Chocolate</td>
+															<td class="text-right"><span class="text-nowrap">&euro;2.80
+																	<i class="far fa-plus-square"></i></span></td>
 														</tr>
 													</tbody>
 												</table>
 											</div>
-											
+
 										</div>
 										<div class="category-box ml-lg-4 py-4">
-											<div class="row collapsed" data-toggle="collapse" id="cat_det_5" data-target="#collapse-table-det-5" aria-expanded="false" aria-controls="collapse-table-det-5">
+											<div class="row collapsed" data-toggle="collapse" id="cat_det_5"
+												data-target="#collapse-table-det-5" aria-expanded="false"
+												aria-controls="collapse-table-det-5">
 												<div class="expand-symbol col-1 col-lg-1">
 													<i class="fa fa-plus"></i>
 													<i class="fa fa-minus"></i>
@@ -381,26 +471,32 @@
 													<!-- <img src="images/cold-chocolate.jpg" alt="Hot" class="img-responsive"> -->
 												</div>
 											</div>
-											
+
 											<div class="table-responsive">
 												<table class="table table-hover collapse" id="collapse-table-det-5">
 													<tbody>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Iced Chocolate</td><td class="text-right"><span class="text-nowrap">&euro;2.80 <i class="far fa-plus-square"></i></span></td></tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Iced Chocolate</td>
+															<td class="text-right"><span class="text-nowrap">&euro;2.80
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
 													</tbody>
 												</table>
 											</div>
-											
+
 										</div>
 									</div>
 									<!-- End Category -->
-									
+
 									<!-- Start Category -->
 									<div class="category-container py-2">
 										<h2 class="category-title ml-lg-2">
 											Instant
 										</h2>
 										<div class="category-box ml-lg-4 py-4">
-											<div class="row collapsed" data-toggle="collapse" id="cat_det_6" data-target="#collapse-table-det-6" aria-expanded="false" aria-controls="collapse-table-det-6">
+											<div class="row collapsed" data-toggle="collapse" id="cat_det_6"
+												data-target="#collapse-table-det-6" aria-expanded="false"
+												aria-controls="collapse-table-det-6">
 												<div class="expand-symbol col-1 col-lg-1">
 													<i class="fa fa-plus"></i>
 													<i class="fa fa-minus"></i>
@@ -413,20 +509,24 @@
 													<!-- <img src="images/" alt="Hot" class="img-responsive"> -->
 												</div>
 											</div>
-											
+
 											<div class="table-responsive">
 												<table class="table table-hover collapse" id="collapse-table-det-6">
 													<tbody>
 														<tr data-toggle="modal" data-target="#addtocard-draft">
-															<td>Maxwell Instant Coffee</td><td class="text-right"><span class="text-nowrap">&euro;2.00 <i class="far fa-plus-square"></i></span></td>
+															<td>Maxwell Instant Coffee</td>
+															<td class="text-right"><span class="text-nowrap">&euro;2.00
+																	<i class="far fa-plus-square"></i></span></td>
 														</tr>
 													</tbody>
 												</table>
 											</div>
-											
+
 										</div>
 										<div class="category-box ml-lg-4 py-4">
-											<div class="row collapsed" data-toggle="collapse" id="cat_det_7" data-target="#collapse-table-det-7" aria-expanded="false" aria-controls="collapse-table-det-7">
+											<div class="row collapsed" data-toggle="collapse" id="cat_det_7"
+												data-target="#collapse-table-det-7" aria-expanded="false"
+												aria-controls="collapse-table-det-7">
 												<div class="expand-symbol col-1 col-lg-1">
 													<i class="fa fa-plus"></i>
 													<i class="fa fa-minus"></i>
@@ -439,26 +539,32 @@
 													<img src="images/frappe.png" alt="Cold" class="img-responsive">
 												</div>
 											</div>
-											
+
 											<div class="table-responsive">
 												<table class="table table-hover collapse" id="collapse-table-det-7">
 													<tbody>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Frappe</td><td class="text-right"><span class="text-nowrap">&euro;2.00 <i class="far fa-plus-square"></i></span></td></tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Frappe</td>
+															<td class="text-right"><span class="text-nowrap">&euro;2.00
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
 													</tbody>
 												</table>
 											</div>
-											
+
 										</div>
 									</div>
 									<!-- End Category -->
-									
+
 									<!-- Start Category -->
 									<div class="category-container py-2">
 										<h2 class="category-title ml-lg-2">
 											Beverages
 										</h2>
 										<div class="category-box ml-lg-4 py-4">
-											<div class="row collapsed" data-toggle="collapse" id="cat_det_8" data-target="#collapse-table-det-8" aria-expanded="false" aria-controls="collapse-table-det-8">
+											<div class="row collapsed" data-toggle="collapse" id="cat_det_8"
+												data-target="#collapse-table-det-8" aria-expanded="false"
+												aria-controls="collapse-table-det-8">
 												<div class="expand-symbol col-1 col-lg-1">
 													<i class="fa fa-plus"></i>
 													<i class="fa fa-minus"></i>
@@ -471,29 +577,47 @@
 													<img src="images/milkshake.png" alt="Cold" class="img-responsive">
 												</div>
 											</div>
-											
+
 											<div class="table-responsive">
 												<table class="table table-hover collapse" id="collapse-table-det-8">
 													<tbody>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Milkshake</td><td class="text-right"><span class="text-nowrap">&euro;3.50 <i class="far fa-plus-square"></i></span></td></tr>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Squeezer Ice Tea</td><td class="text-right"><span class="text-nowrap">&euro;2.50 <i class="far fa-plus-square"></i></span></td></tr>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Squeezer Refreshment</td><td class="text-right"><span class="text-nowrap">&euro;2.90 <i class="far fa-plus-square"></i></span></td></tr>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Refreshment</td><td class="text-right"><span class="text-nowrap">&euro;1.00 <i class="far fa-plus-square"></i></span></td></tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Milkshake</td>
+															<td class="text-right"><span class="text-nowrap">&euro;3.50
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Squeezer Ice Tea</td>
+															<td class="text-right"><span class="text-nowrap">&euro;2.50
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Squeezer Refreshment</td>
+															<td class="text-right"><span class="text-nowrap">&euro;2.90
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Refreshment</td>
+															<td class="text-right"><span class="text-nowrap">&euro;1.00
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
 													</tbody>
 												</table>
 											</div>
-											
+
 										</div>
 									</div>
 									<!-- End Category -->
-									
+
 									<!-- Start Category -->
 									<div class="category-container py-2">
 										<h2 class="category-title ml-lg-2">
 											Tea-Herbs
 										</h2>
 										<div class="category-box ml-lg-4 py-4">
-											<div class="row collapsed" data-toggle="collapse" id="cat_det_9" data-target="#collapse-table-det-9" aria-expanded="false" aria-controls="collapse-table-det-9">
+											<div class="row collapsed" data-toggle="collapse" id="cat_det_9"
+												data-target="#collapse-table-det-9" aria-expanded="false"
+												aria-controls="collapse-table-det-9">
 												<div class="expand-symbol col-1 col-lg-1">
 													<i class="fa fa-plus"></i>
 													<i class="fa fa-minus"></i>
@@ -503,29 +627,36 @@
 													Hot
 												</div>
 												<div class="expand-image col-6 col-lg-7 text-right">
-													<img src="images/tea-herbs.jpg" alt="Tea-herbs" class="img-responsive">
+													<img src="images/tea-herbs.jpg" alt="Tea-herbs"
+														class="img-responsive">
 												</div>
 											</div>
-											
+
 											<div class="table-responsive">
 												<table class="table table-hover collapse" id="collapse-table-det-9">
 													<tbody>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Herbal Tea</td><td class="text-right"><span class="text-nowrap">&euro;2.00 <i class="far fa-plus-square"></i></span></td></tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Herbal Tea</td>
+															<td class="text-right"><span class="text-nowrap">&euro;2.00
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
 													</tbody>
 												</table>
 											</div>
-											
+
 										</div>
 									</div>
 									<!-- End Category -->
-									
+
 									<!-- Start Category -->
 									<div class="category-container py-2">
 										<h2 class="category-title ml-lg-2">
 											Other
 										</h2>
 										<div class="category-box ml-lg-4 py-4">
-											<div class="row collapsed" data-toggle="collapse" id="cat_det_10" data-target="#collapse-table-det-10" aria-expanded="false" aria-controls="collapse-table-det-10">
+											<div class="row collapsed" data-toggle="collapse" id="cat_det_10"
+												data-target="#collapse-table-det-10" aria-expanded="false"
+												aria-controls="collapse-table-det-10">
 												<div class="expand-symbol col-1 col-lg-1">
 													<i class="fa fa-plus"></i>
 													<i class="fa fa-minus"></i>
@@ -538,18 +669,24 @@
 													<img src="images/water.jpg" alt="Water" class="img-responsive">
 												</div>
 											</div>
-											
+
 											<div class="table-responsive">
 												<table class="table table-hover collapse" id="collapse-table-det-10">
 													<tbody>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Water</td><td class="text-right"><span class="text-nowrap">&euro;0.50 <i class="far fa-plus-square"></i></span></td></tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Water</td>
+															<td class="text-right"><span class="text-nowrap">&euro;0.50
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
 													</tbody>
 												</table>
 											</div>
-											
+
 										</div>
 										<div class="category-box ml-lg-4 py-4">
-											<div class="row collapsed" data-toggle="collapse" id="cat_det_11" data-target="#collapse-table-det-11" aria-expanded="false" aria-controls="collapse-table-det-11">
+											<div class="row collapsed" data-toggle="collapse" id="cat_det_11"
+												data-target="#collapse-table-det-11" aria-expanded="false"
+												aria-controls="collapse-table-det-11">
 												<div class="expand-symbol col-1 col-lg-1">
 													<i class="fa fa-plus"></i>
 													<i class="fa fa-minus"></i>
@@ -562,43 +699,47 @@
 													<img src="images/juice.png" alt="Juice" class="img-responsive">
 												</div>
 											</div>
-											
+
 											<div class="table-responsive">
 												<table class="table table-hover collapse" id="collapse-table-det-11">
 													<tbody>
-														<tr data-toggle="modal" data-target="#addtocard-draft"><td>Fresh Juice</td><td class="text-right"><span class="text-nowrap">&euro;2.50 <i class="far fa-plus-square"></i></span></td></tr>
+														<tr data-toggle="modal" data-target="#addtocard-draft">
+															<td>Fresh Juice</td>
+															<td class="text-right"><span class="text-nowrap">&euro;2.50
+																	<i class="far fa-plus-square"></i></span></td>
+														</tr>
 													</tbody>
 												</table>
 											</div>
-											
+
 										</div>
 									</div>
 									<!-- End Category -->
-									
+
 									<!-- Products-->
 								</div>
 							</div>
 						</div>
-						
+
 						<!-- FOOD MENU TAB-->
 						<div class="tab-pane fade" id="food-menu" role="tabpanel" aria-labelledby="food-menu">
 							<div id="food-menu-row" class="row">
 								<div id="food-categories" class="col-lg-4">
-								
+
 									<!-- dropdown categoryies-->
 									<div class="d-lg-none">
 										<div class="">Categories</div>
-											<select class="form-control" onchange="location = this.value;">
-												<optgroup label="Food Menu">
-													<option value="#12">Kids Menu</option>
-													<option value="#13">Adults Menu</option>
-													<option value="#14">Finger Food</option>
-													<option value="#15">Pastry Platter</option>
-												</optgroup>
-											</select>
+										<select class="form-control" onchange="location = this.value;">
+											<optgroup label="Food Menu">
+												<option value="#12">Kids Menu</option>
+												<option value="#13">Adults Menu</option>
+												<option value="#14">Finger Food</option>
+												<option value="#15">Pastry Platter</option>
+											</optgroup>
+										</select>
 									</div>
 									<!-- end dropdown categories-->
-								
+
 									<!-- large categories-->
 									<div id="food-large-categories" class="flex-column d-none d-lg-block">
 										<!-- start category -->
@@ -619,15 +760,17 @@
 										<!-- end category -->
 									</div>
 									<!-- large categories-->
-									
-									
+
+
 								</div>
-								
+
 								<div class="col-lg-8">
 									<!-- Products-->
 									<!-- Start Category -->
 									<div class="category-box ml-lg-4 py-4">
-										<div class="row collapsed" data-toggle="collapse" id="cat_det_12" data-target="#collapse-table-det-12" aria-expanded="false" aria-controls="collapse-table-det-12">
+										<div class="row collapsed" data-toggle="collapse" id="cat_det_12"
+											data-target="#collapse-table-det-12" aria-expanded="false"
+											aria-controls="collapse-table-det-12">
 											<div class="expand-symbol col-1 col-lg-1">
 												<i class="fa fa-plus"></i>
 												<i class="fa fa-minus"></i>
@@ -640,24 +783,35 @@
 												<img src="images/kids-menu.jpg" alt="Kids menu" class="img-responsive">
 											</div>
 										</div>
-										
+
 										<div class="table-responsive">
 											<table class="table table-hover collapse" id="collapse-table-det-12">
 												<tbody>
 													<tr data-toggle="modal" data-target="#addtocard-draft">
 														<td>Nuggets</td>
-														<td class="text-right"><span class="text-nowrap">&euro;5.00 <i class="far fa-plus-square"></i></span></td>
+														<td class="text-right"><span class="text-nowrap">&euro;5.00 <i
+																	class="far fa-plus-square"></i></span></td>
 													</tr>
-													<tr data-toggle="modal" data-target="#addtocard-draft"><td>Burger with Salad</td><td class="text-right"><span class="text-nowrap">&euro;5.00 <i class="far fa-plus-square"></i></span></td></tr>
-													<tr data-toggle="modal" data-target="#addtocard-draft"><td>Chips and Pizza</td><td class="text-right"><span class="text-nowrap">&euro;5.00 <i class="far fa-plus-square"></i></span></td></tr>
+													<tr data-toggle="modal" data-target="#addtocard-draft">
+														<td>Burger with Salad</td>
+														<td class="text-right"><span class="text-nowrap">&euro;5.00 <i
+																	class="far fa-plus-square"></i></span></td>
+													</tr>
+													<tr data-toggle="modal" data-target="#addtocard-draft">
+														<td>Chips and Pizza</td>
+														<td class="text-right"><span class="text-nowrap">&euro;5.00 <i
+																	class="far fa-plus-square"></i></span></td>
+													</tr>
 												</tbody>
 											</table>
 										</div>
-										
+
 									</div>
-									
+
 									<div class="category-box ml-lg-4 py-4">
-										<div class="row collapsed" data-toggle="collapse" id="cat_det_13" data-target="#collapse-table-det-13" aria-expanded="false" aria-controls="collapse-table-det-13">
+										<div class="row collapsed" data-toggle="collapse" id="cat_det_13"
+											data-target="#collapse-table-det-13" aria-expanded="false"
+											aria-controls="collapse-table-det-13">
 											<div class="expand-symbol col-1 col-lg-1">
 												<i class="fa fa-plus"></i>
 												<i class="fa fa-minus"></i>
@@ -667,31 +821,59 @@
 												Adults Menu
 											</div>
 											<div class="expand-image col-6 col-lg-7 text-right">
-												<img src="images/adults-menu.png" alt="Adults menu" class="img-responsive">
+												<img src="images/adults-menu.png" alt="Adults menu"
+													class="img-responsive">
 											</div>
 										</div>
-										
+
 										<div class="table-responsive">
 											<table class="table table-hover collapse" id="collapse-table-det-13">
 												<tbody>
 													<tr data-toggle="modal" data-target="#addtocard-draft">
 														<td>Kebab</td>
-														<td class="text-right">&euro;8.00 <i class="far fa-plus-square"></i></td>
+														<td class="text-right">&euro;8.00 <i
+																class="far fa-plus-square"></i></td>
 													</tr>
-													<tr data-toggle="modal" data-target="#addtocard-draft"><td>Chips</td><td class="text-right"><span class="text-nowrap">&euro;8.00 <i class="far fa-plus-square"></i></span></td></tr>
-													<tr data-toggle="modal" data-target="#addtocard-draft"><td>Meatballs</td><td class="text-right"><span class="text-nowrap">&euro;8.00 <i class="far fa-plus-square"></i></span></td></tr>
-													<tr data-toggle="modal" data-target="#addtocard-draft"><td>Pasta</td><td class="text-right"><span class="text-nowrap">&euro;8.00 <i class="far fa-plus-square"></i></span></td></tr>
-													<tr data-toggle="modal" data-target="#addtocard-draft"><td>Rice</td><td class="text-right"><span class="text-nowrap">&euro;8.00 <i class="far fa-plus-square"></i></span></td></tr>
-													<tr data-toggle="modal" data-target="#addtocard-draft"><td>Gyros in Pitta</td><td class="text-right"><span class="text-nowrap">&euro;8.00 <i class="far fa-plus-square"></i></span></td></tr>
-													<tr data-toggle="modal" data-target="#addtocard-draft"><td>Chicken with Chinese sauce</td><td class="text-right"><span class="text-nowrap">&euro;8.00 <i class="far fa-plus-square"></i></span></td></tr>
+													<tr data-toggle="modal" data-target="#addtocard-draft">
+														<td>Chips</td>
+														<td class="text-right"><span class="text-nowrap">&euro;8.00 <i
+																	class="far fa-plus-square"></i></span></td>
+													</tr>
+													<tr data-toggle="modal" data-target="#addtocard-draft">
+														<td>Meatballs</td>
+														<td class="text-right"><span class="text-nowrap">&euro;8.00 <i
+																	class="far fa-plus-square"></i></span></td>
+													</tr>
+													<tr data-toggle="modal" data-target="#addtocard-draft">
+														<td>Pasta</td>
+														<td class="text-right"><span class="text-nowrap">&euro;8.00 <i
+																	class="far fa-plus-square"></i></span></td>
+													</tr>
+													<tr data-toggle="modal" data-target="#addtocard-draft">
+														<td>Rice</td>
+														<td class="text-right"><span class="text-nowrap">&euro;8.00 <i
+																	class="far fa-plus-square"></i></span></td>
+													</tr>
+													<tr data-toggle="modal" data-target="#addtocard-draft">
+														<td>Gyros in Pitta</td>
+														<td class="text-right"><span class="text-nowrap">&euro;8.00 <i
+																	class="far fa-plus-square"></i></span></td>
+													</tr>
+													<tr data-toggle="modal" data-target="#addtocard-draft">
+														<td>Chicken with Chinese sauce</td>
+														<td class="text-right"><span class="text-nowrap">&euro;8.00 <i
+																	class="far fa-plus-square"></i></span></td>
+													</tr>
 												</tbody>
 											</table>
 										</div>
-										
+
 									</div>
-									
+
 									<div class="category-box ml-lg-4 py-4">
-										<div class="row collapsed" data-toggle="collapse" id="cat_det_14" data-target="#collapse-table-det-14" aria-expanded="false" aria-controls="collapse-table-det-14">
+										<div class="row collapsed" data-toggle="collapse" id="cat_det_14"
+											data-target="#collapse-table-det-14" aria-expanded="false"
+											aria-controls="collapse-table-det-14">
 											<div class="expand-symbol col-1 col-lg-1">
 												<i class="fa fa-plus"></i>
 												<i class="fa fa-minus"></i>
@@ -701,32 +883,64 @@
 												Finger Food
 											</div>
 											<div class="expand-image col-6 col-lg-7 text-right">
-												<img src="images/finger-food.png" alt="Finger Food" class="img-responsive">
+												<img src="images/finger-food.png" alt="Finger Food"
+													class="img-responsive">
 											</div>
 										</div>
-										
+
 										<div class="table-responsive">
 											<table class="table table-hover collapse" id="collapse-table-det-14">
 												<tbody>
 													<tr data-toggle="modal" data-target="#addtocard-draft">
 														<td>Meatballs</td>
-														<td class="text-right"><span class="text-nowrap">&euro;6.50 <i class="far fa-plus-square"></i></span></td>
+														<td class="text-right"><span class="text-nowrap">&euro;6.50 <i
+																	class="far fa-plus-square"></i></span></td>
 													</tr>
-													<tr data-toggle="modal" data-target="#addtocard-draft"><td>Spring Rolls</td><td class="text-right"><span class="text-nowrap">&euro;6.50 <i class="far fa-plus-square"></i></span></td></tr>
-													<tr data-toggle="modal" data-target="#addtocard-draft"><td>Chicken Wings</td><td class="text-right"><span class="text-nowrap">&euro;6.50 <i class="far fa-plus-square"></i></span></td></tr>
-													<tr data-toggle="modal" data-target="#addtocard-draft"><td>Pitta with Haloumi</td><td class="text-right"><span class="text-nowrap">&euro;6.50 <i class="far fa-plus-square"></i></span></td></tr>
-													<tr data-toggle="modal" data-target="#addtocard-draft"><td>Koupes</td><td class="text-right"><span class="text-nowrap">&euro;6.50 <i class="far fa-plus-square"></i></span></td></tr>
-													<tr data-toggle="modal" data-target="#addtocard-draft"><td>Pizza</td><td class="text-right"><span class="text-nowrap">&euro;6.50 <i class="far fa-plus-square"></i></span></td></tr>
-													<tr data-toggle="modal" data-target="#addtocard-draft"><td>Nugets</td><td class="text-right"><span class="text-nowrap">&euro;6.50 <i class="far fa-plus-square"></i></span></td></tr>
-													<tr data-toggle="modal" data-target="#addtocard-draft"><td>Chicken Wrap</td><td class="text-right"><span class="text-nowrap">&euro;6.50 <i class="far fa-plus-square"></i></span></td></tr>
+													<tr data-toggle="modal" data-target="#addtocard-draft">
+														<td>Spring Rolls</td>
+														<td class="text-right"><span class="text-nowrap">&euro;6.50 <i
+																	class="far fa-plus-square"></i></span></td>
+													</tr>
+													<tr data-toggle="modal" data-target="#addtocard-draft">
+														<td>Chicken Wings</td>
+														<td class="text-right"><span class="text-nowrap">&euro;6.50 <i
+																	class="far fa-plus-square"></i></span></td>
+													</tr>
+													<tr data-toggle="modal" data-target="#addtocard-draft">
+														<td>Pitta with Haloumi</td>
+														<td class="text-right"><span class="text-nowrap">&euro;6.50 <i
+																	class="far fa-plus-square"></i></span></td>
+													</tr>
+													<tr data-toggle="modal" data-target="#addtocard-draft">
+														<td>Koupes</td>
+														<td class="text-right"><span class="text-nowrap">&euro;6.50 <i
+																	class="far fa-plus-square"></i></span></td>
+													</tr>
+													<tr data-toggle="modal" data-target="#addtocard-draft">
+														<td>Pizza</td>
+														<td class="text-right"><span class="text-nowrap">&euro;6.50 <i
+																	class="far fa-plus-square"></i></span></td>
+													</tr>
+													<tr data-toggle="modal" data-target="#addtocard-draft">
+														<td>Nugets</td>
+														<td class="text-right"><span class="text-nowrap">&euro;6.50 <i
+																	class="far fa-plus-square"></i></span></td>
+													</tr>
+													<tr data-toggle="modal" data-target="#addtocard-draft">
+														<td>Chicken Wrap</td>
+														<td class="text-right"><span class="text-nowrap">&euro;6.50 <i
+																	class="far fa-plus-square"></i></span></td>
+													</tr>
 												</tbody>
 											</table>
 										</div>
-										
+
 									</div>
-									
+
 									<div class="category-box ml-lg-4 py-4">
-										<div class="row collapsed" data-toggle="collapse" id="cat_det_15" data-target="#collapse-table-det-15" aria-expanded="false" aria-controls="collapse-table-det-15">
+										<div class="row collapsed" data-toggle="collapse" id="cat_det_15"
+											data-target="#collapse-table-det-15" aria-expanded="false"
+											aria-controls="collapse-table-det-15">
 											<div class="expand-symbol col-1 col-lg-1">
 												<i class="fa fa-plus"></i>
 												<i class="fa fa-minus"></i>
@@ -736,235 +950,267 @@
 												Pastry Platter
 											</div>
 											<div class="expand-image col-6 col-lg-7 text-right">
-												<img src="images/pastry-platter.png" alt="Pastry Platter" class="img-responsive">
+												<img src="images/pastry-platter.png" alt="Pastry Platter"
+													class="img-responsive">
 											</div>
 										</div>
-										
+
 										<div class="table-responsive">
 											<table class="table table-hover collapse" id="collapse-table-det-15">
 												<tbody>
 													<tr data-toggle="modal" data-target="#addtocard-draft">
 														<td>Cheese Pies (30pieces)</td>
-														<td class="text-right"><span class="text-nowrap">&euro;25.00 <i class="far fa-plus-square"></i></span></td>
+														<td class="text-right"><span class="text-nowrap">&euro;25.00 <i
+																	class="far fa-plus-square"></i></span></td>
 													</tr>
-													<tr data-toggle="modal" data-target="#addtocard-draft"><td>Sausage Pies (30pieces)</td><td class="text-right"><span class="text-nowrap">&euro;25.00 <i class="far fa-plus-square"></i></span></td></tr>
-													<tr data-toggle="modal" data-target="#addtocard-draft"><td>Apple Pie (30pieces)</td><td class="text-right"><span class="text-nowrap">&euro;25.00 <i class="far fa-plus-square"></i></span></td></tr>
-													<tr data-toggle="modal" data-target="#addtocard-draft"><td><span class="text-nowrap">Ham and Cheese Pies (30pieces)</span></td><td class="text-right"><span class="text-nowrap">&euro;25.00 <i class="far fa-plus-square"></i></span></td></tr>
+													<tr data-toggle="modal" data-target="#addtocard-draft">
+														<td>Sausage Pies (30pieces)</td>
+														<td class="text-right"><span class="text-nowrap">&euro;25.00 <i
+																	class="far fa-plus-square"></i></span></td>
+													</tr>
+													<tr data-toggle="modal" data-target="#addtocard-draft">
+														<td>Apple Pie (30pieces)</td>
+														<td class="text-right"><span class="text-nowrap">&euro;25.00 <i
+																	class="far fa-plus-square"></i></span></td>
+													</tr>
+													<tr data-toggle="modal" data-target="#addtocard-draft">
+														<td><span class="text-nowrap">Ham and Cheese Pies
+																(30pieces)</span></td>
+														<td class="text-right"><span class="text-nowrap">&euro;25.00 <i
+																	class="far fa-plus-square"></i></span></td>
+													</tr>
 
 												</tbody>
 											</table>
 										</div>
-										
+
 									</div>
-									
+
 
 									<!-- End Category -->
 
 									<!-- Products-->
 								</div>
 							</div>
-						
+
 						</div>
-						
+
 					</div>
-					
-					
+
+
 				</div>
-				
+
 				<!-- BASKET-->
 				<div class="col-md-4">
 					<div id="basket" class="gard-animate">
-							<h4 id="basket-title">My basket</h4>
-							<div id="">
-								<div class="" id="">
-									<div class="table-responsive">
-										<table class="table">
-											<tbody>
-                                                <tr>
-													<td data-title="Product" class="item-info">
-														Freddo Espresso
-														<br/>
-														<em><small class="">Gardiano Cafe, No Sugar</small></em></a>
-														<br/>
-														<i class="fa fa-plus"></i>
-														<small>1</small>
-														<i class="fa fa-minus"></i>
-													</td>
-													<td data-title="Price" class="text-right">
-														<div class="d-flex flex-row justify-content-end">
-															<div class="price">&euro;2.00</div> 
-															<div class="remove" data-toggle="tooltip" title="remove from basket"><i class="fas fa-minus-circle"></i></i></div>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td data-title="Product" class="item-info">
-														Espresso
-														<br/>
-														<em><small class="">Gardiano Cafe, No Sugar</small></em></a>
-														<br/>
-														<i class="fa fa-plus"></i>
-														<small>1</small>
-														<i class="fa fa-minus"></i>
-													</td>
-													<td data-title="Price" class="text-right">
-														<div class="d-flex flex-row justify-content-end">
-															<div class="price">&euro;1.00</div> 
-															<div class="remove" data-toggle="tooltip" title="remove from basket"><i class="fas fa-minus-circle"></i></i></div>
-														</div>
-													</td>
-												</tr>
-                                            </tbody>
-										</table>
-									</div>
-									<div class="d-flex justify-content-center">
-										<span class="">Total:&nbsp;</span><span class="price">&euro;3.00</span>
-									</div>
-                                    <div class="alert alert-del-type">Please choose a delivery type: delivery or takeaway.</div>
-                                    <div id="cart_address_div">
-										<div class="sidebar-content" id="sidebar-cart-address-container">
-											<div class="cart-address">
-											</div>
-											<div class="cart-delivery-options text-center">
-												<div class="row" style="margin-top:2px;">
-													<div class="col-6" style="padding-right: 1px;">
-														<button class="btn btn-block order-button" title="Delivery" style="font-size:14px;">DELIVERY</button>
+						<h4 id="basket-title">My basket</h4>
+						<div id="">
+							<div class="" id="">
+								<div class="table-responsive">
+									<table class="table">
+										<tbody>
+											<tr>
+												<td data-title="Product" class="item-info">
+													Freddo Espresso
+													<br />
+													<em><small class="">Gardiano Cafe, No Sugar</small></em></a>
+													<br />
+													<i class="fa fa-plus"></i>
+													<small>1</small>
+													<i class="fa fa-minus"></i>
+												</td>
+												<td data-title="Price" class="text-right">
+													<div class="d-flex flex-row justify-content-end">
+														<div class="price">&euro;2.00</div>
+														<div class="remove" data-toggle="tooltip"
+															title="remove from basket"><i
+																class="fas fa-minus-circle"></i></i></div>
 													</div>
-													<div class="col-6" style="padding-left: 0;">
-														<button class="btn btn-block order-button" title="Takeaway" style="font-size:14px;">TAKE AWAY</button>
+												</td>
+											</tr>
+											<tr>
+												<td data-title="Product" class="item-info">
+													Espresso
+													<br />
+													<em><small class="">Gardiano Cafe, No Sugar</small></em></a>
+													<br />
+													<i class="fa fa-plus"></i>
+													<small>1</small>
+													<i class="fa fa-minus"></i>
+												</td>
+												<td data-title="Price" class="text-right">
+													<div class="d-flex flex-row justify-content-end">
+														<div class="price">&euro;1.00</div>
+														<div class="remove" data-toggle="tooltip"
+															title="remove from basket"><i
+																class="fas fa-minus-circle"></i></i></div>
 													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="d-flex justify-content-center">
+									<span class="">Total:&nbsp;</span><span class="price">&euro;3.00</span>
+								</div>
+								<div class="alert alert-del-type">Please choose a delivery type: delivery or takeaway.
+								</div>
+								<div id="cart_address_div">
+									<div class="sidebar-content" id="sidebar-cart-address-container">
+										<div class="cart-address">
+										</div>
+										<div class="cart-delivery-options text-center">
+											<div class="row" style="margin-top:2px;">
+												<div class="col-6" style="padding-right: 1px;">
+													<button class="btn btn-block order-button" title="Delivery"
+														style="font-size:14px;">DELIVERY</button>
+												</div>
+												<div class="col-6" style="padding-left: 0;">
+													<button class="btn btn-block order-button" title="Takeaway"
+														style="font-size:14px;">TAKE AWAY</button>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="cart-actions text-center">
-										<button class="btn btn-default complete-button"><i class="fa fa-check"></i> Order</button>
-									</div>
-									<input type="hidden" class="cart-items-count" value="1">
-									<input type="hidden" class="cart-items-total" value="1.00">
-    							</div>
-							</div>					
-					</div>
-				</div>
-				<!-- END BASKET-->
-			</div>
-		
-		</div>
-	
-	</section>
-	
-	<!-- Modal addtocard -->
-    <div class="modal fade" id="addtocard-draft" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalTitle">Freddo Espresso</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-			<div class="add-modal-title">
-				Description:
-			</div>
-			<div>
-				<img class="right-float" src="images/freddo.jpg" alt="Freddo Espresso" style="max-width:25%;">
-				<div>It is the cold version of a double espresso. It requires skill and knowledge to preserve most flavors and keep the body full without becoming watery.</div>
-				<div class="clearfix"></div>
-			</div>
-			
-			<hr/>
-			
-			<!-- Modal accordion-->
-			<div class="add-modal-title mt-4">
-				Options:
-			</div>
-			<div class="accordion" id="accordion-modal">
-				<div class="card">
-					<div class="card-header" id="modal-heading1">
-						<h2 class="mb-0">
-							<button class="btn" type="button" data-toggle="collapse" data-target="#modal-collapse1" aria-expanded="true" aria-controls="modal-collapse1">
-								Flavors <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i>
-							</button>
-						</h2>
-					</div>
-
-					<div id="modal-collapse1" class="collapse show" aria-labelledby="modal-heading1" data-parent="#accordion-modal">
-						<div class="card-body">
-							<div class="form-group">
-								<div id="flavors" class="row">
-								  <div class="col-lg-3 col-md-6">
-									<input type="radio" name="flavor" id="none" value="none" checked>
-									<label for="none">None</label>
-								  </div>
-								  <div class="col-lg-3 col-md-6">
-									<input type="radio" name="flavor" id="Vanilla" value="Vanilla">
-									<label for="Vanilla">Vanilla (&euro;0.40)</label>
-								  </div>
-								  <div class="col-lg-3 col-md-6">
-									<input type="radio" name="flavor" id="Caramel" value="Caramel">
-									<label for="Caramel">Caramel (&euro;0.40)</label>
-								  </div>
-								  <div class="col-lg-3 col-md-6">
-									<input type="radio" name="flavor" id="Hazelnut" value="Hazelnut">
-									<label for="Hazelnut">Hazelnut (&euro;0.40)</label>
-								  </div>
 								</div>
+								<div class="cart-actions text-center">
+									<button class="btn btn-default complete-button"><i class="fa fa-check"></i>
+										Order</button>
+								</div>
+								<input type="hidden" class="cart-items-count" value="1">
+								<input type="hidden" class="cart-items-total" value="1.00">
 							</div>
 						</div>
 					</div>
 				</div>
-				
-				<div class="card">
-					<div class="card-header" id="modal-heading2">
-						<h2 class="mb-0">
-							<button class="btn collapsed" type="button" data-toggle="collapse" data-target="#modal-collapse2" aria-expanded="false" aria-controls="modal-collapse2">
-								Sugar <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i>
-							</button>
-						</h2>
+				<!-- END BASKET-->
+			</div>
+
+		</div>
+
+	</section>
+
+	<!-- Modal addtocard -->
+	<div class="modal fade" id="addtocard-draft" tabindex="-1" role="dialog" aria-labelledby="modalTitle"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalTitle">Freddo Espresso</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="add-modal-title">
+						Description:
+					</div>
+					<div>
+						<img class="right-float" src="images/freddo.jpg" alt="Freddo Espresso" style="max-width:25%;">
+						<div>It is the cold version of a double espresso. It requires skill and knowledge to preserve
+							most flavors and keep the body full without becoming watery.</div>
+						<div class="clearfix"></div>
 					</div>
 
-					<div id="modal-collapse2" class="collapse" aria-labelledby="modal-heading2" data-parent="#accordion-modal">
-						<div class="card-body">
-							<div class="form-group">
-								<div id="sugar" class="row">
-								  <div class="col-lg-3 col-md-6">
-									<input type="radio" name="sugar" id="nosugar" value="nosugar" checked>
-									<label for="nosugar">No Sugar</label>
-								  </div>
-								  <div class="col-lg-3 col-md-6">
-									<input type="radio" name="sugar" id="sweet" value="sweet">
-									<label for="sweet">Sweet</label>
-								  </div>
-								  <div class="col-lg-3 col-md-6">
-									<input type="radio" name="sugar" id="medium" value="medium">
-									<label for="medium">Medium</label>
-								  </div>
-								  <div class="col-lg-3 col-md-6">
-									<input type="radio" name="sugar" id="mediums" value="mediums">
-									<label for="mediums">Medium (Stevia)</label>
-								  </div>
-								  <div class="col-lg-3 col-md-6">
-									<input type="radio" name="sugar" id="mediumb" value="mediumb">
-									<label for="mediumb">Medium (Brown)</label>
-								  </div>
+					<hr />
+
+					<!-- Modal accordion-->
+					<div class="add-modal-title mt-4">
+						Options:
+					</div>
+					<div class="accordion" id="accordion-modal">
+						<div class="card">
+							<div class="card-header" id="modal-heading1">
+								<h2 class="mb-0">
+									<button class="btn" type="button" data-toggle="collapse"
+										data-target="#modal-collapse1" aria-expanded="true"
+										aria-controls="modal-collapse1">
+										Flavors <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i>
+									</button>
+								</h2>
+							</div>
+
+							<div id="modal-collapse1" class="collapse show" aria-labelledby="modal-heading1"
+								data-parent="#accordion-modal">
+								<div class="card-body">
+									<div class="form-group">
+										<div id="flavors" class="row">
+											<div class="col-lg-3 col-md-6">
+												<input type="radio" name="flavor" id="none" value="none" checked>
+												<label for="none">None</label>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<input type="radio" name="flavor" id="Vanilla" value="Vanilla">
+												<label for="Vanilla">Vanilla (&euro;0.40)</label>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<input type="radio" name="flavor" id="Caramel" value="Caramel">
+												<label for="Caramel">Caramel (&euro;0.40)</label>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<input type="radio" name="flavor" id="Hazelnut" value="Hazelnut">
+												<label for="Hazelnut">Hazelnut (&euro;0.40)</label>
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>						
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card-header" id="modal-heading2">
+								<h2 class="mb-0">
+									<button class="btn collapsed" type="button" data-toggle="collapse"
+										data-target="#modal-collapse2" aria-expanded="false"
+										aria-controls="modal-collapse2">
+										Sugar <i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i>
+									</button>
+								</h2>
+							</div>
+
+							<div id="modal-collapse2" class="collapse" aria-labelledby="modal-heading2"
+								data-parent="#accordion-modal">
+								<div class="card-body">
+									<div class="form-group">
+										<div id="sugar" class="row">
+											<div class="col-lg-3 col-md-6">
+												<input type="radio" name="sugar" id="nosugar" value="nosugar" checked>
+												<label for="nosugar">No Sugar</label>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<input type="radio" name="sugar" id="sweet" value="sweet">
+												<label for="sweet">Sweet</label>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<input type="radio" name="sugar" id="medium" value="medium">
+												<label for="medium">Medium</label>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<input type="radio" name="sugar" id="mediums" value="mediums">
+												<label for="mediums">Medium (Stevia)</label>
+											</div>
+											<div class="col-lg-3 col-md-6">
+												<input type="radio" name="sugar" id="mediumb" value="mediumb">
+												<label for="mediumb">Medium (Brown)</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
+					<!-- end Modal Accordion -->
+
+				</div>
+				<div class="no-gutters modal-footer row justify-content-between">
+					<div id="modal-price" class="col-12 col-lg-5 text-lg-left text-center">Price: &euro;2.00 </div>
+					<div class="col-12 col-lg-6 text-lg-right text-center mt-lg-0 mt-2"><button type="button"
+							id="add-to-basket-button" class="btn" data-dismiss="modal">Add to Basket</button></div>
 				</div>
 			</div>
-			<!-- end Modal Accordion -->
-			
-          </div>
-          <div class="no-gutters modal-footer row justify-content-between">
-			<div id="modal-price" class="col-12 col-lg-5 text-lg-left text-center">Price: &euro;2.00 </div> 
-            <div class="col-12 col-lg-6 text-lg-right text-center mt-lg-0 mt-2"><button type="button" id="add-to-basket-button" class="btn" data-dismiss="modal">Add to Basket</button></div>
-          </div>
-        </div>
-      </div>
-    </div>
-	
+		</div>
+	</div>
+
 
 	<!-- Page Content -->
 
@@ -976,9 +1222,14 @@
 						<h2 class="gf-heading-2">Gardiano Cafe</h2>
 						<p>This is the only time we'll ever meet.You could be in a cafe Or a bus as you read this.</p>
 						<ul class="gf-footer-social list-unstyled float-md-left float-lft mt-3">
-							<li><a class="d-flex align-items-center justify-content-center gard-animate" href="https://www.facebook.com/Gardiano-Cafe-393005881429976/" target="_blank"><i class="fab fa-facebook-f fa-lg"></i></a></li>
-							<li><a class="d-flex align-items-center justify-content-center gard-animate" href="javascript:void(0)"><i class="fab fa-twitter fa-lg"></i></a></li>
-							<li><a class="d-flex align-items-center justify-content-center gard-animate" href="https://www.instagram.com/gardiano_cafe/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>
+							<li><a class="d-flex align-items-center justify-content-center gard-animate"
+									href="https://www.facebook.com/Gardiano-Cafe-393005881429976/" target="_blank"><i
+										class="fab fa-facebook-f fa-lg"></i></a></li>
+							<li><a class="d-flex align-items-center justify-content-center gard-animate"
+									href="javascript:void(0)"><i class="fab fa-twitter fa-lg"></i></a></li>
+							<li><a class="d-flex align-items-center justify-content-center gard-animate"
+									href="https://www.instagram.com/gardiano_cafe/" target="_blank"><i
+										class="fab fa-instagram fa-lg"></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -1000,19 +1251,25 @@
 					<div class="gf-footer-widget mb-4">
 						<h2 class="gf-heading-2">Photographs</h2>
 						<div class="thumb d-flex">
-							<a href="javascript:void(0)" class="thumb-menu" style="background-image: url(images/img-1.jpg);background-size: cover;">
+							<a href="javascript:void(0)" class="thumb-menu"
+								style="background-image: url(images/img-1.jpg);background-size: cover;">
 							</a>
-							<a href="javascript:void(0)" class="thumb-menu" style="background-image: url(images/img-2.jpg);background-size: cover;">
+							<a href="javascript:void(0)" class="thumb-menu"
+								style="background-image: url(images/img-2.jpg);background-size: cover;">
 							</a>
-							<a href="javascript:void(0)" class="thumb-menu" style="background-image: url(images/img-3.jpg);background-size: cover;">
+							<a href="javascript:void(0)" class="thumb-menu"
+								style="background-image: url(images/img-3.jpg);background-size: cover;">
 							</a>
 						</div>
 						<div class="thumb d-flex">
-							<a href="javascript:void(0)" class="thumb-menu" style="background-image: url(images/img-4.jpg);background-size: cover;">
+							<a href="javascript:void(0)" class="thumb-menu"
+								style="background-image: url(images/img-4.jpg);background-size: cover;">
 							</a>
-							<a href="javascript:void(0)" class="thumb-menu" style="background-image: url(images/img-5.jpg);background-size: cover;">
+							<a href="javascript:void(0)" class="thumb-menu"
+								style="background-image: url(images/img-5.jpg);background-size: cover;">
 							</a>
-							<a href="javascript:void(0)" class="thumb-menu" style="background-image: url(images/img-6.jpg);background-size: cover;">
+							<a href="javascript:void(0)" class="thumb-menu"
+								style="background-image: url(images/img-6.jpg);background-size: cover;">
 							</a>
 						</div>
 					</div>
@@ -1023,7 +1280,8 @@
 						<p>Subscribe to receive our newsletter and stay updated on the latest offers.</p>
 						<form action="javascript:void(0)" class="subscribe-form">
 							<div class="form-group">
-								<input type="text" class="form-control mb-2 text-center py-4" placeholder="Enter email address">
+								<input type="text" class="form-control mb-2 text-center py-4"
+									placeholder="Enter email address">
 								<input type="submit" value="Subscribe" class="form-control submit px-3">
 							</div>
 						</form>
@@ -1031,9 +1289,219 @@
 				</div>
 			</div>
 		</div>
-    </footer>
+	</footer>
 
-	<div id="toTop" class="align-items-center justify-content-center" ><i class="fas fa-level-up-alt fa-lg"></i></div>
+	<div id="toTop" class="align-items-center justify-content-center"><i class="fas fa-level-up-alt fa-lg"></i></div>
+
+	<!--Modal: Login / Register Form-->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog cascading-modal" role="document">
+			<!--Content-->
+			<div class="modal-content">
+
+				<!--Modal cascading tabs-->
+				<div class="modal-c-tabs">
+
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#panel7" id="login_form_tab" role="tab">
+								<i class="fas fa-user mr-1"></i>
+								Login
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#panel8" id="register_form_tab" role="tab">
+								<i class="fas fa-user-plus mr-1"></i>
+								Register
+							</a>
+						</li>
+					</ul>
+
+					<!-- Tab panels -->
+					<div class="tab-content">
+						<!--Panel 7-->
+						<div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+							<!--Body-->
+							<div class="modal-body mb-1">
+								<form id="LoginForm">
+									<div class="form-group">
+										<label class="labeling" for="email">Email</label>
+										<div class="input-group pb-modalreglog-input-group">
+											<input type="email" class="form-control" id="login_email"
+												placeholder="Email">
+										</div>
+										<p class="d-none red_warning" id="login_email_waring">
+											Please enter your email!
+										</p>
+									</div>
+									<div class="form-group">
+										<label class="labeling" for="password">Password</label>
+										<div class="input-group pb-modalreglog-input-group">
+											<input type="password" class="form-control" id="login_pwd"
+												placeholder="Password">
+										</div>
+										<p class="d-none red_warning" id="login_pwd_warning">
+											Please enter your password!
+										</p>
+									</div>
+								</form>
+								<div class="text-center mt-2">
+
+									<button class="btn btn-info" id="login">
+										Log in <i class="fas fa-sign-in ml-1"></i>
+									</button>
+								</div>
+							</div>
+							<!--Footer-->
+							<div class="modal-footer">
+								<div class="row loginfooter">
+									<div class="options col-lg-8 col-sm-12">
+										<p class="notmember" onclick="open_register()">
+											Not a member? <a href="#" class="blue-text">Register</a>
+										</p>
+										<p><a href="#" class="blue-text">Forgot Password?</a></p>
+									</div>
+									<div class="col-lg-4 col-sm-12 closebutton">
+										<button type="button" class="btn btn-outline-info waves-effect ml-auto"
+											data-dismiss="modal">
+											Close
+										</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!--/.Panel 7-->
+						<!--Panel 8-->
+						<div class="tab-pane fade" id="panel8" role="tabpanel">
+
+							<!--Body-->
+							<div class="modal-body">
+								<form class="pb-modalreglog-form-reg" id="registerForm">
+									<div class="form-group">
+										<label class="labeling" for="email">Email</label><span class="red_star">
+											*
+										</span>
+										<div class="input-group pb-modalreglog-input-group">
+											<input type="email" class="form-control" id="register_email"
+												placeholder="Email">
+										</div>
+										<p class="d-none red_warning" id="register_email_waring">
+											Please enter your
+											email!
+										</p>
+									</div>
+									<div class="form-group">
+										<label class="labeling" for="address">Address</label><span class="red_star">
+											*
+										</span>
+										<div class="input-group pb-modalreglog-input-group">
+											<input type="address" class="form-control" id="register_address"
+												placeholder="Address">
+										</div>
+										<p class="d-none red_warning" id="register_address_waring">
+											Please enter your
+											address!
+										</p>
+									</div>
+									<div class="form-group">
+										<label class="labeling" for="phone">Phone</label><span class="red_star">
+											*
+										</span>
+										<div class="input-group pb-modalreglog-input-group">
+											<input type="phone" class="form-control" id="register_phone"
+												placeholder="Phone">
+										</div>
+										<p class="d-none red_warning" id="register_phone_waring">
+											Please enter your
+											phone!
+										</p>
+									</div>
+									<div class="form-group">
+										<label class="labeling" for="password">Password</label><span class="red_star">
+											*
+										</span>
+										<div class="input-group pb-modalreglog-input-group">
+											<input type="password" class="form-control" id="register_pwd"
+												placeholder="Password">
+										</div>
+										<p class="d-none red_warning" id="register_pwd_warning">
+											Please enter your
+											password!
+										</p>
+									</div>
+									<div class="form-group">
+										<label class="labeling" for="confirmpassword">Confirm password</label><span
+											class="red_star">*</span>
+										<div class="input-group pb-modalreglog-input-group">
+											<input type="password" class="form-control" id="register_confirm_pwd"
+												placeholder="Confirm Password">
+										</div>
+										<p class="d-none red_warning" id="register_confirm_pwd_warning">
+											Please confirm
+											your password!
+										</p>
+									</div>
+
+
+									<div class="form-group">
+										<label class="labeling captcha_label">Write the following text</label><span
+											class="red_star">*</span>
+										<div id="captcha">
+										</div>
+										<input type="captcha" class="form-control" placeholder="Captcha"
+											id="cpatchaTextBox">
+										<p class="d-none red_warning" id="register_captcha_warning">Are you a robot?</p>
+									</div>
+
+									<div class="form-group terms">
+										<input type="checkbox" id="register_terms" name="chs">
+										I agree with <a href="./terms.html" target="_blank">terms&conditions</a> <span
+											class="red_star">
+											*
+										</span>
+									</div>
+									<p class="d-none red_warning" id="register_terms_warning">
+										Please accept the terms!
+									</p>
+								</form>
+
+								<div class="text-center form-sm mt-2">
+									<button class="btn btn-info" id="signup">
+										Sign up <i class="fas fa-sign-in ml-1"></i>
+									</button>
+								</div>
+
+							</div>
+							<!--Footer-->
+							<div class="modal-footer">
+								<div class="row loginfooter">
+									<div class="options col-lg-8 col-sm-12">
+										<p class="pt-1">
+											Have an account? <a href="#" class="blue-text" onclick="open_login()">Log
+												In</a>
+										</p>
+									</div>
+									<div class="col-lg-4 col-sm-12 closebutton">
+										<button type="button" class="btn btn-outline-info waves-effect ml-auto"
+											data-dismiss="modal">
+											Close
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/.Panel 8-->
+					</div>
+
+				</div>
+			</div>
+			<!--/.Content-->
+		</div>
+	</div>
+	<!--END Modal: Login / Register Form-->
 
 	<!-- Bootstrap core JavaScript -->
 	<script src="vendor/jquery/jquery.js"></script>

@@ -12,22 +12,22 @@
 
 	<!-- Bootstrap core CSS -->
 	<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-	
+
 	<link href="css/style.css" rel="stylesheet">
-	
+
 	<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-	
+
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-	
+
 	<link href="css/style-events.css" rel="stylesheet">
 	<link href="vendor/css/animate.css" rel="stylesheet">
-	
+
 	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
 	<link rel="manifest" href="images/favicon/site.webmanifest">
-
+	<script src="js/login.js" defer></script>
 </head>
 
 <body>
@@ -35,8 +35,11 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-gardiano static-top">
 		<div class="container">
-			<a class="logo-ref" href="index.html"><div id="navbar-logo" class="navbar-brand"></div></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cafeNavbar" aria-controls="cafeNavbar" aria-expanded="false" aria-label="Toggle navigation">
+			<a class="logo-ref" href="index.html">
+				<div id="navbar-logo" class="navbar-brand"></div>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cafeNavbar"
+				aria-controls="cafeNavbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="cafeNavbar">
@@ -52,19 +55,27 @@
 						<a class="nav-link" href="reservations.html">Reservations</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="events.html">Events/Competitions<span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="events.html">Events/Competitions<span
+								class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="contact.html">Contact</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="javascript:void(0)"><i class="fas fa-sign-in-alt"></i> Sign in</a>
+						<a class="nav-link" href="" data-toggle="modal" data-target="#myModal" id="login_tab"
+							onclick="open_login()"><i class="fas fa-sign-in-alt"></i>Sign in</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link d-none" href="profile.html"><i class="fas fa-user-cog"></i> Profile</a>
+						<a class="nav-link d-none" href="profile.html" id="profile_tab">
+							<i class="fas fa-user-cog"></i>
+							Profile
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link d-none" href="javascript:void(0)"><i class="fas fa-sign-out-alt"></i> Sign out</a>
+						<a class="nav-link d-none" href="" id="logout_tab" onclick="logout_function()">
+							<i class="fas fa-sign-out-alt"></i> Sign
+							out
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -77,18 +88,20 @@
 	<header class="d-flex align-items-end justify-content-center">
 		<div id="header-title" class="text-center">Events & Competitions</div>
 	</header>
-	
+
 	<section class="bg-light">
 		<div class="container my-5">
 			<ul class="nav nav-tabs" id="evcomp-tab" role="tablist">
 				<li class="nav-item">
-					<a class="nav-link active gard-animate" id="event-tab" data-toggle="tab" href="#event" role="tab" aria-controls="event" aria-selected="true">EVENTS</a>
+					<a class="nav-link active gard-animate" id="event-tab" data-toggle="tab" href="#event" role="tab"
+						aria-controls="event" aria-selected="true">EVENTS</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link gard-animate" id="comp-tab" data-toggle="tab" href="#comp" role="tab" aria-controls="comp" aria-selected="false">COMPETITIONS</a>
+					<a class="nav-link gard-animate" id="comp-tab" data-toggle="tab" href="#comp" role="tab"
+						aria-controls="comp" aria-selected="false">COMPETITIONS</a>
 				</li>
 			</ul>
-				
+
 			<!-- Tabs content-->
 			<div class="tab-content mt-4" id="tabcontent-evcomp">
 				<!-- EVENT TAB-->
@@ -96,7 +109,9 @@
 					<div class="row">
 						<div class="col-md-4 mb-5">
 							<div class="event-entry h-100 gard-animate">
-								<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976" target="_blank" class="block-img" style="background-image: url('images/competition.jpg');">
+								<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976"
+									target="_blank" class="block-img"
+									style="background-image: url('images/competition.jpg');">
 								</a>
 								<div class="text pt-3 pb-4 px-4">
 									<div class="meta">
@@ -105,14 +120,17 @@
 									</div>
 									<h3 class="heading"><a>30 Free coffee products</a></h3>
 									<p class="clearfix">
-										<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976" target="_blank" class="float-left read">Read more on social media</a>
+										<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976"
+											target="_blank" class="float-left read">Read more on social media</a>
 									</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-4 mb-5">
 							<div class="event-entry h-100 gard-animate">
-								<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976" target="_blank" class="block-img" style="background-image: url('images/competition.jpg');">
+								<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976"
+									target="_blank" class="block-img"
+									style="background-image: url('images/competition.jpg');">
 								</a>
 								<div class="text pt-3 pb-4 px-4">
 									<div class="meta">
@@ -121,14 +139,17 @@
 									</div>
 									<h3 class="heading"><a>30 Free coffee products</a></h3>
 									<p class="clearfix">
-										<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976" target="_blank" class="float-left read">Read more on social media</a>
+										<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976"
+											target="_blank" class="float-left read">Read more on social media</a>
 									</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-4 mb-5">
 							<div class="event-entry h-100 gard-animate">
-								<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976" target="_blank" class="block-img" style="background-image: url('images/competition.jpg');">
+								<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976"
+									target="_blank" class="block-img"
+									style="background-image: url('images/competition.jpg');">
 								</a>
 								<div class="text pt-3 pb-4 px-4">
 									<div class="meta">
@@ -137,14 +158,17 @@
 									</div>
 									<h3 class="heading"><a>30 Free coffee products</a></h3>
 									<p class="clearfix">
-										<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976" target="_blank" class="float-left read">Read more on social media</a>
+										<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976"
+											target="_blank" class="float-left read">Read more on social media</a>
 									</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-4 mb-5">
 							<div class="event-entry h-100 gard-animate">
-								<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976" target="_blank" class="block-img" style="background-image: url('images/competition.jpg');">
+								<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976"
+									target="_blank" class="block-img"
+									style="background-image: url('images/competition.jpg');">
 								</a>
 								<div class="text pt-3 pb-4 px-4">
 									<div class="meta">
@@ -153,14 +177,17 @@
 									</div>
 									<h3 class="heading"><a>30 Free coffee products</a></h3>
 									<p class="clearfix">
-										<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976" target="_blank" class="float-left read">Read more on social media</a>
+										<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976"
+											target="_blank" class="float-left read">Read more on social media</a>
 									</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-4 mb-5">
 							<div class="event-entry h-100 gard-animate">
-								<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976" target="_blank" class="block-img" style="background-image: url('images/competition.jpg');">
+								<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976"
+									target="_blank" class="block-img"
+									style="background-image: url('images/competition.jpg');">
 								</a>
 								<div class="text pt-3 pb-4 px-4">
 									<div class="meta">
@@ -169,14 +196,17 @@
 									</div>
 									<h3 class="heading"><a>30 Free coffee products</a></h3>
 									<p class="clearfix">
-										<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976" target="_blank" class="float-left read">Read more on social media</a>
+										<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976"
+											target="_blank" class="float-left read">Read more on social media</a>
 									</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-4 mb-5">
 							<div class="event-entry h-100 gard-animate">
-								<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976" target="_blank" class="block-img" style="background-image: url('images/competition.jpg');">
+								<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976"
+									target="_blank" class="block-img"
+									style="background-image: url('images/competition.jpg');">
 								</a>
 								<div class="text pt-3 pb-4 px-4">
 									<div class="meta">
@@ -185,7 +215,8 @@
 									</div>
 									<h3 class="heading"><a>30 Free coffee products</a></h3>
 									<p class="clearfix">
-										<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976" target="_blank" class="float-left read">Read more on social media</a>
+										<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976"
+											target="_blank" class="float-left read">Read more on social media</a>
 									</p>
 								</div>
 							</div>
@@ -207,14 +238,16 @@
 						</div>
 					</div>
 				</div>
-				
-				
+
+
 				<!-- COMPETITION TAB-->
 				<div class="tab-pane fade" id="comp" role="tabpanel" aria-labelledby="comp-tab">
 					<div class="row">
 						<div class="col-md-4 mb-5">
 							<div class="event-entry h-100 gard-animate">
-								<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976" target="_blank" class="block-img" style="background-image: url('images/competition.jpg');">
+								<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976"
+									target="_blank" class="block-img"
+									style="background-image: url('images/competition.jpg');">
 								</a>
 								<div class="text pt-3 pb-4 px-4">
 									<div class="meta">
@@ -223,14 +256,17 @@
 									</div>
 									<h3 class="heading"><a>30 Free coffee products</a></h3>
 									<p class="clearfix">
-										<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976" target="_blank" class="float-left read">Read more on social media</a>
+										<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976"
+											target="_blank" class="float-left read">Read more on social media</a>
 									</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-4 mb-5">
 							<div class="event-entry h-100 gard-animate">
-								<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976" target="_blank" class="block-img" style="background-image: url('images/competition.jpg');">
+								<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976"
+									target="_blank" class="block-img"
+									style="background-image: url('images/competition.jpg');">
 								</a>
 								<div class="text pt-3 pb-4 px-4">
 									<div class="meta">
@@ -239,14 +275,17 @@
 									</div>
 									<h3 class="heading"><a>30 Free coffee products</a></h3>
 									<p class="clearfix">
-										<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976" target="_blank" class="float-left read">Read more on social media</a>
+										<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976"
+											target="_blank" class="float-left read">Read more on social media</a>
 									</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-4 mb-5">
 							<div class="event-entry h-100 gard-animate">
-								<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976" target="_blank" class="block-img" style="background-image: url('images/competition.jpg');">
+								<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976"
+									target="_blank" class="block-img"
+									style="background-image: url('images/competition.jpg');">
 								</a>
 								<div class="text pt-3 pb-4 px-4">
 									<div class="meta">
@@ -255,7 +294,8 @@
 									</div>
 									<h3 class="heading"><a>30 Free coffee products</a></h3>
 									<p class="clearfix">
-										<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976" target="_blank" class="float-left read">Read more on social media</a>
+										<a href="https://www.facebook.com/permalink.php?story_fbid=442494546481109&id=393005881429976"
+											target="_blank" class="float-left read">Read more on social media</a>
 									</p>
 								</div>
 							</div>
@@ -280,8 +320,8 @@
 			</div>
 		</div>
 	</section>
-	
-	
+
+
 	<!-- Page Content -->
 
 	<footer class="gf-footer gf-bg-dark gf-section">
@@ -292,9 +332,14 @@
 						<h2 class="gf-heading-2">Gardiano Cafe</h2>
 						<p>This is the only time we'll ever meet.You could be in a cafe Or a bus as you read this.</p>
 						<ul class="gf-footer-social list-unstyled float-md-left float-lft mt-3">
-							<li><a class="d-flex align-items-center justify-content-center gard-animate" href="https://www.facebook.com/Gardiano-Cafe-393005881429976/" target="_blank"><i class="fab fa-facebook-f fa-lg"></i></a></li>
-							<li><a class="d-flex align-items-center justify-content-center gard-animate" href="javascript:void(0)"><i class="fab fa-twitter fa-lg"></i></a></li>
-							<li><a class="d-flex align-items-center justify-content-center gard-animate" href="https://www.instagram.com/gardiano_cafe/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>
+							<li><a class="d-flex align-items-center justify-content-center gard-animate"
+									href="https://www.facebook.com/Gardiano-Cafe-393005881429976/" target="_blank"><i
+										class="fab fa-facebook-f fa-lg"></i></a></li>
+							<li><a class="d-flex align-items-center justify-content-center gard-animate"
+									href="javascript:void(0)"><i class="fab fa-twitter fa-lg"></i></a></li>
+							<li><a class="d-flex align-items-center justify-content-center gard-animate"
+									href="https://www.instagram.com/gardiano_cafe/" target="_blank"><i
+										class="fab fa-instagram fa-lg"></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -316,19 +361,25 @@
 					<div class="gf-footer-widget mb-4">
 						<h2 class="gf-heading-2">Photographs</h2>
 						<div class="thumb d-flex">
-							<a href="javascript:void(0)" class="thumb-menu" style="background-image: url(images/img-1.jpg);background-size: cover;">
+							<a href="javascript:void(0)" class="thumb-menu"
+								style="background-image: url(images/img-1.jpg);background-size: cover;">
 							</a>
-							<a href="javascript:void(0)" class="thumb-menu" style="background-image: url(images/img-2.jpg);background-size: cover;">
+							<a href="javascript:void(0)" class="thumb-menu"
+								style="background-image: url(images/img-2.jpg);background-size: cover;">
 							</a>
-							<a href="javascript:void(0)" class="thumb-menu" style="background-image: url(images/img-3.jpg);background-size: cover;">
+							<a href="javascript:void(0)" class="thumb-menu"
+								style="background-image: url(images/img-3.jpg);background-size: cover;">
 							</a>
 						</div>
 						<div class="thumb d-flex">
-							<a href="javascript:void(0)" class="thumb-menu" style="background-image: url(images/img-4.jpg);background-size: cover;">
+							<a href="javascript:void(0)" class="thumb-menu"
+								style="background-image: url(images/img-4.jpg);background-size: cover;">
 							</a>
-							<a href="javascript:void(0)" class="thumb-menu" style="background-image: url(images/img-5.jpg);background-size: cover;">
+							<a href="javascript:void(0)" class="thumb-menu"
+								style="background-image: url(images/img-5.jpg);background-size: cover;">
 							</a>
-							<a href="javascript:void(0)" class="thumb-menu" style="background-image: url(images/img-6.jpg);background-size: cover;">
+							<a href="javascript:void(0)" class="thumb-menu"
+								style="background-image: url(images/img-6.jpg);background-size: cover;">
 							</a>
 						</div>
 					</div>
@@ -339,7 +390,8 @@
 						<p>Subscribe to receive our newsletter and stay updated on the latest offers.</p>
 						<form action="javascript:void(0)" class="subscribe-form">
 							<div class="form-group">
-								<input type="text" class="form-control mb-2 text-center py-4" placeholder="Enter email address">
+								<input type="text" class="form-control mb-2 text-center py-4"
+									placeholder="Enter email address">
 								<input type="submit" value="Subscribe" class="form-control submit px-3">
 							</div>
 						</form>
@@ -347,16 +399,225 @@
 				</div>
 			</div>
 		</div>
-    </footer>
+	</footer>
 
-	<div id="toTop" class="align-items-center justify-content-center" ><i class="fas fa-level-up-alt fa-lg"></i></div>
+	<div id="toTop" class="align-items-center justify-content-center"><i class="fas fa-level-up-alt fa-lg"></i></div>
 
+	<!--Modal: Login / Register Form-->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog cascading-modal" role="document">
+			<!--Content-->
+			<div class="modal-content">
+
+				<!--Modal cascading tabs-->
+				<div class="modal-c-tabs">
+
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#panel7" id="login_form_tab" role="tab">
+								<i class="fas fa-user mr-1"></i>
+								Login
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#panel8" id="register_form_tab" role="tab">
+								<i class="fas fa-user-plus mr-1"></i>
+								Register
+							</a>
+						</li>
+					</ul>
+
+					<!-- Tab panels -->
+					<div class="tab-content">
+						<!--Panel 7-->
+						<div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+							<!--Body-->
+							<div class="modal-body mb-1">
+								<form id="LoginForm">
+									<div class="form-group">
+										<label class="labeling" for="email">Email</label>
+										<div class="input-group pb-modalreglog-input-group">
+											<input type="email" class="form-control" id="login_email"
+												placeholder="Email">
+										</div>
+										<p class="d-none red_warning" id="login_email_waring">
+											Please enter your email!
+										</p>
+									</div>
+									<div class="form-group">
+										<label class="labeling" for="password">Password</label>
+										<div class="input-group pb-modalreglog-input-group">
+											<input type="password" class="form-control" id="login_pwd"
+												placeholder="Password">
+										</div>
+										<p class="d-none red_warning" id="login_pwd_warning">
+											Please enter your password!
+										</p>
+									</div>
+								</form>
+								<div class="text-center mt-2">
+
+									<button class="btn btn-info" id="login">
+										Log in <i class="fas fa-sign-in ml-1"></i>
+									</button>
+								</div>
+							</div>
+							<!--Footer-->
+							<div class="modal-footer">
+								<div class="row loginfooter">
+									<div class="options col-lg-8 col-sm-12">
+										<p class="notmember" onclick="open_register()">
+											Not a member? <a href="#" class="blue-text">Register</a>
+										</p>
+										<p><a href="#" class="blue-text">Forgot Password?</a></p>
+									</div>
+									<div class="col-lg-4 col-sm-12 closebutton">
+										<button type="button" class="btn btn-outline-info waves-effect ml-auto"
+											data-dismiss="modal">
+											Close
+										</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!--/.Panel 7-->
+						<!--Panel 8-->
+						<div class="tab-pane fade" id="panel8" role="tabpanel">
+
+							<!--Body-->
+							<div class="modal-body">
+								<form class="pb-modalreglog-form-reg" id="registerForm">
+									<div class="form-group">
+										<label class="labeling" for="email">Email</label><span class="red_star">
+											*
+										</span>
+										<div class="input-group pb-modalreglog-input-group">
+											<input type="email" class="form-control" id="register_email"
+												placeholder="Email">
+										</div>
+										<p class="d-none red_warning" id="register_email_waring">
+											Please enter your
+											email!
+										</p>
+									</div>
+									<div class="form-group">
+										<label class="labeling" for="address">Address</label><span class="red_star">
+											*
+										</span>
+										<div class="input-group pb-modalreglog-input-group">
+											<input type="address" class="form-control" id="register_address"
+												placeholder="Address">
+										</div>
+										<p class="d-none red_warning" id="register_address_waring">
+											Please enter your
+											address!
+										</p>
+									</div>
+									<div class="form-group">
+										<label class="labeling" for="phone">Phone</label><span class="red_star">
+											*
+										</span>
+										<div class="input-group pb-modalreglog-input-group">
+											<input type="phone" class="form-control" id="register_phone"
+												placeholder="Phone">
+										</div>
+										<p class="d-none red_warning" id="register_phone_waring">
+											Please enter your
+											phone!
+										</p>
+									</div>
+									<div class="form-group">
+										<label class="labeling" for="password">Password</label><span class="red_star">
+											*
+										</span>
+										<div class="input-group pb-modalreglog-input-group">
+											<input type="password" class="form-control" id="register_pwd"
+												placeholder="Password">
+										</div>
+										<p class="d-none red_warning" id="register_pwd_warning">
+											Please enter your
+											password!
+										</p>
+									</div>
+									<div class="form-group">
+										<label class="labeling" for="confirmpassword">Confirm password</label><span
+											class="red_star">*</span>
+										<div class="input-group pb-modalreglog-input-group">
+											<input type="password" class="form-control" id="register_confirm_pwd"
+												placeholder="Confirm Password">
+										</div>
+										<p class="d-none red_warning" id="register_confirm_pwd_warning">
+											Please confirm
+											your password!
+										</p>
+									</div>
+
+
+									<div class="form-group">
+										<label class="labeling captcha_label">Write the following text</label><span
+											class="red_star">*</span>
+										<div id="captcha">
+										</div>
+										<input type="captcha" class="form-control" placeholder="Captcha"
+											id="cpatchaTextBox">
+										<p class="d-none red_warning" id="register_captcha_warning">Are you a robot?</p>
+									</div>
+
+									<div class="form-group terms">
+										<input type="checkbox" id="register_terms" name="chs">
+										I agree with <a href="./terms.html" target="_blank">terms&conditions</a> <span
+											class="red_star">
+											*
+										</span>
+									</div>
+									<p class="d-none red_warning" id="register_terms_warning">
+										Please accept the terms!
+									</p>
+								</form>
+
+								<div class="text-center form-sm mt-2">
+									<button class="btn btn-info" id="signup">
+										Sign up <i class="fas fa-sign-in ml-1"></i>
+									</button>
+								</div>
+
+							</div>
+							<!--Footer-->
+							<div class="modal-footer">
+								<div class="row loginfooter">
+									<div class="options col-lg-8 col-sm-12">
+										<p class="pt-1">
+											Have an account? <a href="#" class="blue-text" onclick="open_login()">Log
+												In</a>
+										</p>
+									</div>
+									<div class="col-lg-4 col-sm-12 closebutton">
+										<button type="button" class="btn btn-outline-info waves-effect ml-auto"
+											data-dismiss="modal">
+											Close
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/.Panel 8-->
+					</div>
+
+				</div>
+			</div>
+			<!--/.Content-->
+		</div>
+	</div>
+	<!--END Modal: Login / Register Form-->
 	<!-- Bootstrap core JavaScript -->
 	<script src="vendor/jquery/jquery.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
 	<script src="vendor/jquery/jquery.waypoints.min.js"></script>
 	<script src="js/main.js"></script>
-	
+
 
 </body>
 

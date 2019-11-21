@@ -26,6 +26,8 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
 	<link rel="manifest" href="images/favicon/site.webmanifest">
+
+	<script src="js/login.js" defer></script>
 </head>
 
 <body>
@@ -55,15 +57,22 @@
 					<li class="nav-item">
 						<a class="nav-link" href="contact.html">Contact</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="javascript:void(0)"><i class="fas fa-sign-in-alt"></i> Sign in</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link d-none active" href="profile.html"><i class="fas fa-user-cog"></i> Profile<span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link d-none" href="javascript:void(0)"><i class="fas fa-sign-out-alt"></i> Sign out</a>
-					</li>
+                    <li class="nav-item">
+							<a class="nav-link d-none" href="" data-toggle="modal" data-target="#myModal" id="login_tab"
+								onclick="open_login()"><i class="fas fa-sign-in-alt"></i>Sign in</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="profile.html" id="profile_tab">
+								<i class="fas fa-user-cog"></i>
+								Profile
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="" id="logout_tab" onclick="logout_profile()">
+								<i class="fas fa-sign-out-alt"></i> Sign
+								out
+							</a>
+						</li>
 				</ul>
 			</div>
 		</div>
