@@ -116,3 +116,33 @@ jQuery(document).ready(function() {
 	});
 
 });
+
+
+function subscribe(event) {
+	let email = document.getElementById("subscribe-email").value;
+
+
+	event.preventDefault();
+  
+	if (email === ""){
+		swal({
+			title: "Empty fields.",
+			text: "Fill subscription email",
+			icon: "error",
+			button: "Close"
+		});
+   }else {
+		swal({
+			title: "Success!",
+			text: "You have successfully subscribed to our newsletter",
+			icon: "success",
+			button: "Close"
+		});
+		document.getElementById("contact-form").reset();
+
+   }
+	
+}
+
+document.getElementById("subscribe-btn").addEventListener("click", subscribe);
+
