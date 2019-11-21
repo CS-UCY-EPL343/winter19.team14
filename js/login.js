@@ -55,7 +55,7 @@ function LoginAuthentication() {
         return;
     }
 
-    if (email.value==='admin' && password.value==='123'){
+    if (email.value==='admin@ucy.ac.cy' && password.value==='1234'){
         console.log("lol");
         $('#myModal').modal('hide');
         clear_function_login();
@@ -63,7 +63,7 @@ function LoginAuthentication() {
         return;
     }
 
-    if (email.value!='user' || password.value!='123'){
+    if (email.value!='user@ucy.ac.cy' || password.value!='1234'){
         alert('Username or Password is invalid');
         return;
     }
