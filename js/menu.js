@@ -11,6 +11,23 @@ $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();   
 });
 
+$('[name="pay-type"]').on('change', function() {  
+	if($(this).val() === "cash") {
+		$('#collapse-cash').collapse('show');
+	} else {
+		$('#collapse-cash').collapse('hide');
+	}
+	
+	if($(this).val() === "card") {
+		$('#collapse-card').collapse('show');
+	} else {
+		$('#collapse-card').collapse('hide');
+	}
+});
+
+$(function() {
+	$('[data-toggle="tooltip"]').tooltip()
+})
 
 $(function() {
 
@@ -61,4 +78,19 @@ $(function() {
     
 });
 
+
+function confirmOrder(event) {
+
+	event.preventDefault();
+  
+	
+	swal({
+		title: "Unsuccessful Order Placement",	
+		text: "Something went wrong",
+		icon: "error",
+		button: "Close"
+	});
+}
+
+document.getElementById("confirm-order").addEventListener("click", confirmOrder);
 

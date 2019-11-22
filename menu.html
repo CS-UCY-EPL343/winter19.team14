@@ -1074,7 +1074,7 @@
 									</div>
 								</div>
 								<div class="cart-actions text-center">
-									<button class="btn btn-default complete-button"><i class="fa fa-check"></i>
+									<button class="btn btn-default complete-button" data-toggle="modal" data-target="#order-modal"><i class="fa fa-check"></i>
 										Order</button>
 								</div>
 								<input type="hidden" class="cart-items-count" value="1">
@@ -1206,6 +1206,123 @@
 					<div id="modal-price" class="col-12 col-lg-5 text-lg-left text-center">Price: &euro;2.00 </div>
 					<div class="col-12 col-lg-6 text-lg-right text-center mt-lg-0 mt-2"><button type="button"
 							id="add-to-basket-button" class="btn" data-dismiss="modal">Add to Basket</button></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal place order -->
+	<div class="modal fade" id="order-modal" tabindex="-1" role="dialog" aria-labelledby="orderTitle"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title text-dark font-weight-bold" id="orderTitle">Place Your Order!</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="alert alert-del-type">The order will be accepted or rejected by the cafe's manager after
+						it's comfirmation. We will inform you by email. You can also view order's
+						status through your account's order history.</br>
+						If you have selected delivery the delivery address in your account will be used.
+					</div>
+				
+					<div class="add-modal-title mb-3">Choose your payment type:</div>
+					<div class="form-group">
+						<div id="pay-types" class="row">
+							<div class="col-lg-6">
+								<input type="radio" name="pay-type" id="pay-cash" value="cash">
+								<label for="none">Pay By Cash</label>
+							</div>
+							<div class="col-lg-6">
+								<input type="radio" name="pay-type" id="pay-card" value="card">
+								<label for="Vanilla">Pay By Card</label>
+							</div>
+										
+						</div>	
+
+						<div id="collapse-cash" class="collapse">
+							<hr/>
+							We only accept euros!
+						</div>
+						
+						<div id="collapse-card" class="collapse">
+							<hr/>
+							<div class="row">
+								<div class="col-lg-7 mx-auto my-3">
+									<div class="bg-white rounded-lg shadow-sm p-5">
+										<ul role="tablist" class="nav bg-light nav-pills rounded-pill nav-fill mb-3">
+											<li class="nav-item">
+												<a data-toggle="pill" href="javascript:void(0)" class="nav-link active rounded-pill">
+													<i class="fa fa-credit-card"></i>Credit Card
+												</a>
+											</li>
+										</ul>
+									
+										<!-- Credit card form content -->
+										<div class="tab-content">
+
+											<!-- credit card info-->
+											<div id="nav-tab-card" class="tab-pane fade show active">
+												<form role="form">
+													<div class="form-group">
+														<label for="username">Name on the card</label>
+														<input type="text" name="username" placeholder="Andreas Andreou" required class="form-control">
+													</div>
+													<div class="form-group">
+														<label for="cardNumber">Card number</label>
+														<div class="input-group">
+															<input type="text" name="cardNumber" placeholder="Your card number" class="form-control" required>
+															<div class="input-group-append">										
+																<span class="input-group-text text-muted">
+																	<i class="fab fa-cc-visa mx-1"></i>
+																	<i class="fab fa-cc-amex mx-1"></i>
+																	<i class="fab fa-cc-mastercard mx-1"></i>
+																</span>
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-sm-8">
+															<div class="form-group">
+																<label><span class="hidden-xs">Expiration</span></label>
+																<div class="input-group">
+																	<input type="number" placeholder="MM" name="" class="form-control" required>
+																	<input type="number" placeholder="YY" name="" class="form-control" required>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-4">
+															<div class="form-group mb-4">
+																<label data-toggle="tooltip" title="Three-digits code on the back of your card">CVV
+																	<i class="fa fa-question-circle"></i>
+																</label>
+																<input type="text" required class="form-control">
+															</div>
+														</div>
+													</div>
+													
+													<button type="button" class="subscribe btn btn-primary btn-block rounded-pill shadow-sm"> Fill with account's card</button>
+												</form>
+											</div>
+											<!-- End -->
+
+
+										</div>
+									<!-- End -->
+
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="no-gutters modal-footer row justify-content-between">
+					<div class="col-12 text-center mt-lg-0 mt-2"><button type="button"
+							id="confirm-order" class="btn btn-success" data-dismiss="modal">Confirm Order</button></div>
 				</div>
 			</div>
 		</div>
