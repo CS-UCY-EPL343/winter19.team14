@@ -3,7 +3,7 @@ function getProfile(){
 	document.getElementById("profile-name").value = "Marcos Antonios";
 	document.getElementById("profile-phone").value = "99421344";
 	document.getElementById("profile-address").value = "Kallipoleos 75, Nicosia 1678";
-	document.getElementById("profile-email").value = "antonios@mail.com";
+	document.getElementById("profile-email").value = "user@ucy.ac.cy";
 	document.getElementById("profile-confirm").checked = true;
 	document.getElementById("profile-promo").checked = true;
 
