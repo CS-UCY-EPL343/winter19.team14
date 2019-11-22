@@ -1,9 +1,9 @@
 function getProfile(){
 
-	document.getElementById("profile-name").value = "Name Surname";
-	document.getElementById("profile-phone").value = "999-999-999";
+	document.getElementById("profile-name").value = "Marcos Antonios";
+	document.getElementById("profile-phone").value = "99421344";
 	document.getElementById("profile-address").value = "Kallipoleos 75, Nicosia 1678";
-	document.getElementById("profile-email").value = "example@mail.com";
+	document.getElementById("profile-email").value = "antonios@mail.com";
 	document.getElementById("profile-confirm").checked = true;
 	document.getElementById("profile-promo").checked = true;
 
@@ -23,7 +23,16 @@ function updateChanges() {
 			icon: "error",
 			button: "Close"
 		});
-   }else {
+   }
+   else if (isNaN(telephone.toString())){
+		swal({
+			title: "Fail Update",
+			text: "Phone number can contains only integer digits",
+			icon: "error",
+			button: "Close"
+		});
+	}
+   else {
 		swal({
 			title: "Successful update!",
 			text: "Your changes have been submitted successfully.",

@@ -56,7 +56,6 @@ function LoginAuthentication() {
     }
 
     if (email.value==='admin@ucy.ac.cy' && password.value==='1234'){
-        console.log("lol");
         $('#myModal').modal('hide');
         clear_function_login();
         window.location.href = "./admin.html";
@@ -64,7 +63,12 @@ function LoginAuthentication() {
     }
 
     if (email.value!='user@ucy.ac.cy' || password.value!='1234'){
-        alert('Username or Password is invalid');
+        swal({
+			title: "Fail Login",
+			text: "Username or Password is Invalid",
+			icon: "error",
+			button: "Close"
+		});
         return;
     }
 
@@ -76,6 +80,13 @@ function LoginAuthentication() {
 
     element = document.querySelector('#logout_tab');
     element.classList.remove('d-none'); 
+
+    swal({
+        title: "Successful Login!",
+        text: "Welcome to Gardiano Cafe",
+        icon: "success",
+        button: "Close"
+    });
 
     $('#myModal').modal('hide');
     clear_function_login();
@@ -163,23 +174,43 @@ function RegisterAuthentication() {
     }
 
     if (isNaN(phone.value.toString())){
-        alert('Phone number can contains only integer digits. Try Again!');
+        swal({
+			title: "Fail Registration",
+			text: "Phone number can contains only integer digits",
+			icon: "error",
+			button: "Close"
+		});
         return;
     }
 
     if (password.value != confirm.value){
-        alert('Passwords do not match. Try Again!');
+        swal({
+			title: "Fail Registration",
+			text: "Passwords do not match",
+			icon: "error",
+			button: "Close"
+		});
         return;
     }
 
     if (document.getElementById("cpatchaTextBox").value != code) {
-        alert("Invalid Captcha. Try Again!");
+        swal({
+			title: "Fail Registration",
+			text: "Invalid Captcha",
+			icon: "error",
+			button: "Close"
+		});
         createCaptcha();
         return;     
     }
 
     $('#myModal').modal('hide');
-    alert('Registration Completed Successfully!');
+    swal({
+        title: "Successful Registration!",
+        text: "Welcome to Gardiano World!",
+        icon: "success",
+        button: "Close"
+    });
     clear_function_register();
 }
 
@@ -277,7 +308,11 @@ function open_register(){
 }
 
 const login_button = document.querySelector('#login');
-login_button.addEventListener('click', LoginAuthentication);
+if (login_button){
+    login_button.addEventListener('click', LoginAuthentication);
+}
 
 const register_button = document.querySelector('#signup');
-register_button.addEventListener('click', RegisterAuthentication);
+if (register_button){
+    register_button.addEventListener('click', RegisterAuthentication);
+}
