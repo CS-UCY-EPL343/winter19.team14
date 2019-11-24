@@ -85,23 +85,47 @@
 
     <div id="navbarfix" class="d-none"></div>
 
-    <!--Top Carousel -->
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="images/img-4.jpg" alt="First slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="images/img-5.jpg" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="images/img-6.jpg" alt="Third slide">
-        </div>
-      </div>
-    </div>
     
+    <!--Top Carousel -->
+    <div class="container">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+            <!--Indicators-->
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleFade" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleFade" data-slide-to="1"></li>
+                <li data-target="#carouselExampleFade" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="images/carousel-1.jpg"> 
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="images/carousel-2.jpg">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="images/img-contactus.jpeg">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
     <!-- Modal -->
     <!-- Page Content -->
+    <div class="article-section">
+        <div class="container text-center heading">
+            <h1 class="display-1">Gardiano Cafe</h1>
+            <p class="lead">Located at the heart of Larnaca, Cyprus. Gardiano provides a unique experience, for students, families or for the group of friends looking for a place to relax.</p> 
+            <p>We make coffee, serve drinks (if you are over 18), we make food and Hookah coming soon! subscribe to our newsletter to be informed!</p>
+        </div>
+    </div>
+
     <div class="article-section">
         <div class="section-content day-section">
             <div class="caption">
@@ -129,7 +153,7 @@
     <div class="article-section">
         <div class="section-content reservations-section">
             <div class="caption">
-            <span class="border btn" onclick="window.location.href='reservations.html'">Reservation</span>
+            <span class="border btn" onclick="window.location.href='reservations.html'">Reservations</span>
             </div>
         </div>
     </div>
@@ -189,13 +213,13 @@
                         <h2 class="gf-heading-2">Photographs</h2>
                         <div class="thumb d-flex">
                             <a href="javascript:void(0)" class="thumb-menu"
-                                style="background-image: url(images/img-1.jpg);background-size: cover;">
+                                style="background-image: url(images/day.jpg);background-size: cover;">
                             </a>
                             <a href="javascript:void(0)" class="thumb-menu"
                                 style="background-image: url(images/img-2.jpg);background-size: cover;">
                             </a>
                             <a href="javascript:void(0)" class="thumb-menu"
-                                style="background-image: url(images/img-3.jpg);background-size: cover;">
+                                style="background-image: url(images/drink.jpg);background-size: cover;">
                             </a>
 
                         </div>
@@ -204,10 +228,10 @@
                                 style="background-image: url(images/img-4.jpg);background-size: cover;">
                             </a>
                             <a href="javascript:void(0)" class="thumb-menu"
-                                style="background-image: url(images/img-5.jpg);background-size: cover;">
+                                style="background-image: url(images/night.jpg);background-size: cover;">
                             </a>
                             <a href="javascript:void(0)" class="thumb-menu"
-                                style="background-image: url(images/img-6.jpg);background-size: cover;">
+                                style="background-image: url(images/reservations.jpg);background-size: cover;">
                             </a>
                         </div>
                     </div>
