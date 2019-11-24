@@ -1,5 +1,5 @@
 header {
-	background-image: url(../images/img-contactus.jpeg);
+	background-image: url(../images/img-profiles.jpeg);
 	height: 400px;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -419,3 +419,8 @@ tr:nth-child(even) {
 	border: 1px solid #9c9c9c47;;
 	border-top: none;
 }
+
+.spaceOf120 {
+	  height: 120px;
+}
+
