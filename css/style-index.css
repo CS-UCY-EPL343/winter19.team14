@@ -2,6 +2,27 @@ body{
   background-color: #212420; 
 }
 
+@media (max-width: 991px){
+	.responsive-title{
+		font-size: 3rem;
+	}
+}
+
+@media (max-width: 512px){
+	.responsive-title{
+		font-size: 1.5rem;
+	}
+	
+	.lead{
+		font-size: 1rem;
+	}
+	
+	.border{
+		font-size: 16px !important;
+	}
+}
+
+
 .carousel{
   box-shadow: 0px 4px 12px 4px #666464;
 }
