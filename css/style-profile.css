@@ -7,6 +7,15 @@ header {
 	background-position: bottom center;
 	box-shadow: -4px 4px 5px -2px #2f2e2e;
 }
+.History {
+
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 100px;
+}
+#title-history {
+	text-align: center;
+}
 .option-button {
     display: inline-flex;
     width: 40px;
@@ -311,7 +320,6 @@ button{
     cursor: pointer;
 }
 canvas{
-  /*prevent interaction with the canvas*/
   pointer-events:none;
 }
 
@@ -335,9 +343,79 @@ canvas{
 	margin-right: 3px;
 	margin-left: 3px;
 }
-
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+  }
+  
 .closebutton{
     text-align:right;
     padding-right: 0px;
 }
 
+.modal {
+	display: none; 
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%; 
+	overflow: auto; 
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4); 
+}
+  
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; 
+	padding: 20px;
+	border: 1px solid #888;
+	width: 60%; 
+}
+
+#change_pass {
+	font-size: small;
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+  
+.close:hover, .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.tab {
+	overflow: hidden;
+	background-color: #2f2e2e;
+}
+  
+.tab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+}
+  
+.tab button:hover {
+	background-color: #474545;
+}
+  
+.tab button.active {
+	background-color: #474545;
+}
+  
+.tabcontent {
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #9c9c9c47;;
+	border-top: none;
+}

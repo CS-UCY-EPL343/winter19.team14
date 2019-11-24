@@ -69,7 +69,7 @@
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="index.html" id="logout_tab"">
+						<a class="nav-link" href="index.html" id="logout_tab">
 								<i class="fas fa-sign-out-alt"></i> Sign
 								out 
 						</a>
@@ -87,7 +87,16 @@
 		<div id="header-title" class="text-center font-weight-bold">Profile</div>
 	</header>
 
-			<section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
+		<!-- Tab links -->
+<div class="tab">
+		<button class="tablinks" onclick="openTab(event, 'Settings')">Settings</button>
+		<button class="tablinks" onclick="openTab(event, 'History')">History</button>
+	  </div>
+	  
+	  <!-- Tab content -->
+	  <div id="Settings" class="tabcontent">
+
+		<section class="ftco-section ftco-no-pt ftco-no-pb">
 				<div class="container">
 					<div class="row d-flex align-items-stretch no-gutters">
 						<div class="col-md-6 pt-5 px-2 pb-2 p-md-5 order-md-last">
@@ -108,12 +117,47 @@
 	              <div class="form-group">
 	                <span class="font-weight-bold">Email</span>
 	                <input id="profile-email" type="text" class="form-control" placeholder="Email">
-	                <a class="input-block flex-end" href="./change-password.html">Change Password</a>
-				  </div>
-				  <h4 class="subheading h4 mb-2 mb-md-5 font-weight-bold">Notifications</h4>
+					<a id="passBtn" data-toggle="modal" href="">Change Password</a>
+					
+					<!-- Change password Modal -->
+					<div id="change_pass" class="modal">
+
+					<!-- Modal content -->
+					<div class="modal-content">
+							<span class="close">&times;</span>
+		<div class="container">
+			<div>
+				<h2 class="font-weight-bold">Change Password</h2>
+				<form action="#" id="changepwd">
+					<div class="form-group">
+						<span class="font-weight-bold">Old Password</span>
+						<input id="profile-old" type="password" class="form-control" placeholder="Old Password">
+					</div>
+					<div class="form-group">
+						<span class="font-weight-bold">New Password</span>
+						<input id="profile-pass" type="password" class="form-control" placeholder="New Password">
+					</div>
+					<div class="form-group">
+						<span class="font-weight-bold">Confirm</span>
+						<input id="profile-confirm" type="password" class="form-control" placeholder="Confirm Password">
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Submit" class="btn btn-primary py-3 px-5"
+							onclick="changePassword()">
+					</div>
+				</form>
+			</div>
+		</div>
+
+					</div>
+	  				</div>
+				 
+					</div>
+				
+					<h4 class="subheading h4 mb-2 mb-md-5 font-weight-bold">Notifications</h4>
 				  <div class="form-group">
 						<div class="option-button">
-							<input id="profile-confirm" type="checkbox">
+							<input id="profile-conf" type="checkbox">
 						</div>
 					<span>Send Email for order confirmation</span>
 				  </div>
@@ -124,13 +168,59 @@
 					<span>Send Promotional Emails</span>
 				  </div>
 	              <div class="form-group">
-	                <input type="submit" value="Sumbit Changes" class="btn btn-primary py-3 px-5" onclick="updateChanges()">
+	                <input type="button" value="Sumbit Changes" class="btn btn-primary py-3 px-5" onclick="updateChanges()">
 	              </div>
 	            </form>
 						</div>
 					</div>
 				</div>
 			</section>
+	  </div>
+	  
+	  <div id="History" class="tabcontent">
+		<section class="ftco-section ftco-no-pt ftco-no-pb">
+			<div class="container">
+			<h3 id="title-history">History</h3>
+			
+			
+
+		</div>
+		<table class="History">
+				<tr>
+				  <th>Order</th>
+				  <th>Date</th>
+				  <th>Cost</th>
+				  <th></th>
+				</tr>
+				<tr>
+				  <td>Esspreso</td>
+				  <td>11/09/2019 20:58</td>
+				  <td>3.30$</td>
+				  <td><a href="">Order Again</a></td>
+				</tr>
+				<tr>
+						<td>Americano</td>
+						<td>24/10/2019 19:50</td>
+						<td>5$</td>
+						<td><a href="">Order Again</a></td>
+				</tr>
+				<tr>
+						<td>Latte</td>
+						<td>10/10/2019 12:32</td>
+						<td>4.50$</td>
+						<td><a href="">Order Again</a></td>
+				</tr>
+				<tr>
+						<td>Esspreso</td>
+						<td>12/10/2019 14:00</td>
+						<td>2.50$</td>
+						<td><a href="">Order Again</a></td>
+				</tr>
+			  </table>
+		</section>
+
+	  </div>
+
 
 
 	<!-- Footer -->
