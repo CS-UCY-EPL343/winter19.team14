@@ -3,315 +3,430 @@
 
 <head>
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-	<title>Gardiano Cafe</title>
+    <title>Gardiano Cafe</title>
 
-	<!-- Bootstrap core CSS -->
-	<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
-	<link href="css/style-profile.css" rel="stylesheet">
+    <link href="css/style-profile.css" rel="stylesheet">
 
-	<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
-	<link href="vendor/css/animate.css" rel="stylesheet">
+    <link href="vendor/css/animate.css" rel="stylesheet">
 
-	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-	<link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
 
-	<script src="js/login.js" defer></script>
+    <script src="js/login.js" defer></script>
+    <script src="js/repeatOrder.js" defer></script>
+    <script src="js/feedback.js" defer></script>
 </head>
 
 <body>
 
-	<!-- Navigation -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-gardiano static-top">
-		<div class="container">
-			<a class="logo-ref" href="index.html"><div id="navbar-logo" class="navbar-brand"></div></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cafeNavbar" aria-controls="cafeNavbar" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gardiano static-top">
+        <div class="container">
+            <a class="logo-ref" href="index.html">
+                <div id="navbar-logo" class="navbar-brand"></div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cafeNavbar" aria-controls="cafeNavbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse" id="cafeNavbar">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="index.html"><i class="fas fa-home"></i>Home
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="menu.html">Menu</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="reservations.html">Reservations</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="events.html">Events/Competitions</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="contact.html">Contact</a>
-					</li>
+            <div class="collapse navbar-collapse" id="cafeNavbar">
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-						<a class="nav-link d-none" href="" data-toggle="modal" data-target="#myModal" id="login_tab"
-							onclick="open_login()"><i class="fas fa-sign-in-alt"></i>Sign in
+                        <a class="nav-link" href="index.html"><i class="fas fa-home"></i>Home
 						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="profile.html" id="profile_tab">
-								<i class="fas fa-user-cog"></i>
-								Profile
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reservations.html">Reservations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events/Competitions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-none" href="" data-toggle="modal" data-target="#myModal" id="login_tab" onclick="open_login()"><i class="fas fa-sign-in-alt"></i>Sign in
 						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="index.html" id="logout_tab">
-								<i class="fas fa-sign-out-alt"></i> Sign
-								out 
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html" id="profile_tab">
+                            <i class="fas fa-user-cog"></i> Profile
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" id="logout_tab">
+                            <i class="fas fa-sign-out-alt"></i> Sign out
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-	<div id="navbarfix" class="d-none"></div>
+    <div id="navbarfix" class="d-none"></div>
 
-	<!-- Page Content -->
+    <!-- Page Content -->
 
-	<header class="d-flex align-items-end justify-content-center">
-		<div id="header-title" class="text-center font-weight-bold">Profile</div>
-	</header>
+    <header class="d-flex align-items-end justify-content-center">
+        <div id="header-title" class="text-center font-weight-bold">Profile</div>
+    </header>
 
-		<!-- Tab links -->
-	<div class="container">
-		<div class="tab">
-			<button class="tablinks" onclick="openTab(event, 'Settings')">Settings</button>
-			<button class="tablinks" onclick="openTab(event, 'History')">History</button>
-		</div>
-		  
-		  <!-- Tab content -->
-		  <div id="Settings" class="tabcontent">
+    <!-- Tab links -->
+    <div class="container">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Settings')">Settings</button>
+            <button class="tablinks" onclick="openTab(event, 'History')">History</button>
+        </div>
 
-			<section class="ftco-section ftco-no-pt ftco-no-pb">
-					<div class="container">
-						<div class="row d-flex align-items-stretch no-gutters">
-							<div class="col-md-6 pt-5 px-2 pb-2 p-md-5 order-md-last">
-								<h2 class="h4 mb-2 mb-md-5 font-weight-bold">Settings</h2>
-								<form action="#">
-					  <div class="form-group">
-						<span class="font-weight-bold">Name</span>
-						<input id="profile-name" type="text" class="form-control" placeholder="Name">
-					  </div>
-					  <div class="form-group">
-						<span class="font-weight-bold">Phone Number</span>
-						<input id="profile-phone" type="text" class="form-control" placeholder="Phone Number">
-					  </div>
-					  <div class="form-group">
-						<span class="font-weight-bold">Address</span>
-						<input id="profile-address" type="text" class="form-control" placeholder="Address">
-					  </div>
-					  <div class="form-group">
-						<span class="font-weight-bold">Email</span>
-						<input id="profile-email" type="text" class="form-control" placeholder="Email">
-						<a id="passBtn" data-toggle="modal" href="">Change Password</a>
-						
-						<!-- Change password Modal -->
-						<div id="change_pass" class="modal">
+        <!-- Tab content -->
+        <div id="Settings" class="tabcontent">
+            <!-- Settings tab-->
+            <section class="ftco-section ftco-no-pt ftco-no-pb">
+                <div class="container">
+                    <div class="row d-flex align-items-stretch no-gutters">
+                        <div class="col-md-6 pt-5 px-2 pb-2 p-md-5 order-md-last">
+                            <h2 class="h4 mb-2 mb-md-5 font-weight-bold">Settings</h2>
+                            <form action="#">
+                                <div class="form-group">
+                                    <span class="font-weight-bold">Name</span>
+                                    <input id="profile-name" type="text" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <span class="font-weight-bold">Phone Number</span>
+                                    <input id="profile-phone" type="text" class="form-control" placeholder="Phone Number">
+                                </div>
+                                <div class="form-group">
+                                    <span class="font-weight-bold">Address</span>
+                                    <input id="profile-address" type="text" class="form-control" placeholder="Address">
+                                </div>
+                                <div class="form-group">
+                                    <span class="font-weight-bold">Email</span>
+                                    <input id="profile-email" type="text" class="form-control" placeholder="Email">
+                                    <a id="passBtn" data-toggle="modal" href="">Change Password</a>
 
-						<!-- Modal content -->
-						<div class="modal-content">
-								<span class="close">&times;</span>
-			<div class="container">
-				<div>
-					<h2 class="font-weight-bold">Change Password</h2>
-					<form action="#" id="changepwd">
-						<div class="form-group">
-							<span class="font-weight-bold">Old Password</span>
-							<input id="profile-old" type="password" class="form-control" placeholder="Old Password">
-						</div>
-						<div class="form-group">
-							<span class="font-weight-bold">New Password</span>
-							<input id="profile-pass" type="password" class="form-control" placeholder="New Password">
-						</div>
-						<div class="form-group">
-							<span class="font-weight-bold">Confirm</span>
-							<input id="profile-confirm" type="password" class="form-control" placeholder="Confirm Password">
-						</div>
-						<div class="form-group">
-							<input type="submit" value="Submit" class="btn btn-primary py-3 px-5"
-								onclick="changePassword()">
-						</div>
-					</form>
-				</div>
-			</div>
+                                    <!-- Change password Modal -->
+                                    <div id="change_pass" class="modal">
 
-						</div>
-						</div>
-					 
-						</div>
-					
-						<h4 class="subheading h4 mb-2 mb-md-5 font-weight-bold">Notifications</h4>
-					  <div class="form-group">
-							<div class="option-button">
-								<input id="profile-conf" type="checkbox">
-							</div>
-						<span>Send Email for order confirmation</span>
-					  </div>
-					  <div class="form-group">
-							<div class="option-button">
-								<input id="profile-promo" type="checkbox">
-							</div>
-						<span>Send Promotional Emails</span>
-					  </div>
-					  <div class="form-group">
-						<input type="button" value="Sumbit Changes" class="btn btn-primary py-3 px-5" onclick="updateChanges()">
-					  </div>
-					</form>
-							</div>
-						</div>
-					</div>
-				</section>
-		  </div>
-		  
-		  <div id="History" class="tabcontent">
-				<section>
-					<div class="container">
-					<h3 id="title-history">History</h3>
-					
-					
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <span class="close">&times;</span>
+                                            <div class="container">
+                                                <div>
+                                                    <h2 class="font-weight-bold">Change Password</h2>
+                                                    <form action="#" id="changepwd">
+                                                        <div class="form-group">
+                                                            <span class="font-weight-bold">Old Password</span>
+                                                            <input id="profile-old" type="password" class="form-control" placeholder="Old Password">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <span class="font-weight-bold">New Password</span>
+                                                            <input id="profile-pass" type="password" class="form-control" placeholder="New Password">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <span class="font-weight-bold">Confirm</span>
+                                                            <input id="profile-confirm" type="password" class="form-control" placeholder="Confirm Password">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="submit" value="Submit" class="btn btn-primary py-3 px-5" onclick="changePassword()">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
 
-					</div>
-					<div class="table-responsive">
-						<table class="table History">
-								<tr>
-								  <th>Order</th>
-								  <th>Date</th>
-								  <th>Cost</th>
-								  <th></th>
-								</tr>
-								<tr>
-								  <td>Esspreso</td>
-								  <td>11/09/2019 20:58</td>
-								  <td>3.30$</td>
-								  <td><a href="">Order Again</a></td>
-								</tr>
-								<tr>
-										<td>Americano</td>
-										<td>24/10/2019 19:50</td>
-										<td>5$</td>
-										<td><a href="">Order Again</a></td>
-								</tr>
-								<tr>
-										<td>Latte</td>
-										<td>10/10/2019 12:32</td>
-										<td>4.50$</td>
-										<td><a href="">Order Again</a></td>
-								</tr>
-								<tr>
-										<td>Esspreso</td>
-										<td>12/10/2019 14:00</td>
-										<td>2.50$</td>
-										<td><a href="">Order Again</a></td>
-								</tr>
-						</table>
-					</div>
-				</section>
-		  </div>
+                                        </div>
+                                    </div>
 
-		</section>
-	</div>
+                                </div>
 
-	<div class="spaceOf120"></div>
-	<!-- Footer -->
-
-	<footer class="gf-footer gf-bg-dark gf-section">
-		<div class="container">
-			<div class="row mb-5">
-				<div class="col-md-6 col-lg-3">
-					<div class="gf-footer-widget mb-4">
-						<h2 class="gf-heading-2">Gardiano Cafe</h2>
-						<p>This is the only time we'll ever meet.You could be in a cafe Or a bus as you read this.</p>
-						<ul class="gf-footer-social list-unstyled float-md-left float-lft mt-3">
-							<li><a class="d-flex align-items-center justify-content-center gard-animate" href="https://www.facebook.com/Gardiano-Cafe-393005881429976/" target="_blank"><i class="fab fa-facebook-f fa-lg"></i></a></li>
-							<li><a class="d-flex align-items-center justify-content-center gard-animate" href="javascript:void(0)"><i class="fab fa-twitter fa-lg"></i></a></li>
-							<li><a class="d-flex align-items-center justify-content-center gard-animate" href="https://www.instagram.com/gardiano_cafe/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="gf-footer-widget mb-4">
-						<h2 class="gf-heading-2">Open Hours</h2>
-						<ul class="list-unstyled open-hours">
-							<li class="d-flex"><span>Monday</span><span>8:30 - 22:00</span></li>
-							<li class="d-flex"><span>Tuesday</span><span>8:30 - 22:00</span></li>
-							<li class="d-flex"><span>Wednesday</span><span>8:30 - 22:00</span></li>
-							<li class="d-flex"><span>Thursday</span><span>8:30 - 22:00</span></li>
-							<li class="d-flex"><span>Friday</span><span>8:30 - 00:00</span></li>
-							<li class="d-flex"><span>Saturday</span><span>8:30 - 00:00</span></li>
-							<li class="d-flex"><span>Sunday</span><span>8:30 - 22:00</span></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="gf-footer-widget mb-4">
-                        <h2 class="gf-heading-2">Photographs</h2>
-                        <div class="thumb d-flex">
-                            <a href="javascript:void(0)" class="thumb-menu"
-                                style="background-image: url(images/day.jpg);background-size: cover;">
-                            </a>
-                            <a href="javascript:void(0)" class="thumb-menu"
-                                style="background-image: url(images/img-2.jpg);background-size: cover;">
-                            </a>
-                            <a href="javascript:void(0)" class="thumb-menu"
-                                style="background-image: url(images/drink.jpg);background-size: cover;">
-                            </a>
-
-                        </div>
-                        <div class="thumb d-flex">
-                            <a href="javascript:void(0)" class="thumb-menu"
-                                style="background-image: url(images/img-4.jpg);background-size: cover;">
-                            </a>
-                            <a href="javascript:void(0)" class="thumb-menu"
-                                style="background-image: url(images/night.jpg);background-size: cover;">
-                            </a>
-                            <a href="javascript:void(0)" class="thumb-menu"
-                                style="background-image: url(images/reservations.jpg);background-size: cover;">
-                            </a>
+                                <h4 class="subheading h4 mb-2 mb-md-5 font-weight-bold" style="margin-top:25pt;">Notifications</h4>
+                                <div class="form-group">
+                                    <div class="option-button">
+                                        <input id="profile-conf" type="checkbox">
+                                    </div>
+                                    <span>Send Email for order confirmation</span>
+                                </div>
+                                <div class="form-group">
+                                    <div class="option-button">
+                                        <input id="profile-promo" type="checkbox">
+                                    </div>
+                                    <span>Send Promotional Emails</span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="button" value="Sumbit Changes" class="btn btn-primary py-3 px-5" onclick="updateChanges()">
+                                </div>
+                            </form>
                         </div>
                     </div>
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="gf-footer-widget mb-4">
-						<h2 class="gf-heading-2">Newsletter</h2>
-						<p>Subscribe to receive our newsletter and stay updated on the latest offers.</p>
-						<form action="javascript:void(0)" class="subscribe-form">
-							<div class="form-group">
-								<input id="subscribe-email" type="text" class="form-control mb-2 text-center py-4"
-									placeholder="Enter email address">
-								<input id="subscribe-btn" type="submit" value="Subscribe" class="form-control submit px-3">
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-    </footer>
+                </div>
+            </section>
+        </div>
+        <!-- /Settings tab-->
 
-	<div id="toTop" class="align-items-center justify-content-center" ><i class="fas fa-level-up-alt fa-lg"></i></div>
+        <!-- History tab-->
+        <div id="History" class="tabcontent">
+            <section>
+                <div class="container">
+                    <div class="row d-flex align-items-stretch no-gutters">
+                        <div class="col-md-6 pt-5 px-2 p-md-5 order-md-last">
+                            <h2 class="h4 md-5 font-weight-bold">History</h2>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table History">
+                            <tr>
+                                <th>Order Date</th>
+                                <th>Type</th>
+                                <th>Status</th>
+                                <th>Total Cost</th>
+                                <th>Details</th>
+                            </tr>
+                            <tr>
+                                <td>11/09/2019 20:58</td>
+                                <td>Delivery</td>
+                                <td><span class="badge badge-pill badge-success">Completed</span></td>
+                                <td>€3.30</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderModal">
+										Details
+									</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>24/10/2019 19:50</td>
+                                <td>Delivery</td>
+                                <td><span class="badge badge-pill badge-success">Completed</span></td>
+                                <td>€8.50</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderModal">
+										Details
+									</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10/10/2019 12:32</td>
+                                <td>Delivery</td>
+                                <td><span class="badge badge-pill badge-success">Completed</span></td>
+                                <td>€4.50</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderModal">
+										Details
+									</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12/10/2019 10:02</td>
+                                <td>Delivery</td>
+                                <td><span class="badge badge-pill badge-success">Completed</span></td>
+                                <td>€2.50</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#orderModal">
+										Details
+									</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+            </section>
+            </div>
+            <!-- /History tab-->
+            </section>
+        </div>
+        <!-- /Tab links -->
 
-	<!-- Bootstrap core JavaScript -->
-	<script src="vendor/jquery/jquery.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
-	<script src="vendor/jquery/jquery.waypoints.min.js"></script>
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/profile.js"></script>
+        <div class="spaceOf120"></div>
+        <!-- Footer -->
 
+        <footer class="gf-footer gf-bg-dark gf-section">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="gf-footer-widget mb-4">
+                            <h2 class="gf-heading-2">Gardiano Cafe</h2>
+                            <p>This is the only time we'll ever meet.You could be in a cafe Or a bus as you read this.</p>
+                            <ul class="gf-footer-social list-unstyled float-md-left float-lft mt-3">
+                                <li><a class="d-flex align-items-center justify-content-center gard-animate" href="https://www.facebook.com/Gardiano-Cafe-393005881429976/" target="_blank"><i
+										class="fab fa-facebook-f fa-lg"></i></a></li>
+                                <li><a class="d-flex align-items-center justify-content-center gard-animate" href="javascript:void(0)"><i class="fab fa-twitter fa-lg"></i></a></li>
+                                <li><a class="d-flex align-items-center justify-content-center gard-animate" href="https://www.instagram.com/gardiano_cafe/" target="_blank"><i
+										class="fab fa-instagram fa-lg"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="gf-footer-widget mb-4">
+                            <h2 class="gf-heading-2">Open Hours</h2>
+                            <ul class="list-unstyled open-hours">
+                                <li class="d-flex"><span>Monday</span><span>8:30 - 22:00</span></li>
+                                <li class="d-flex"><span>Tuesday</span><span>8:30 - 22:00</span></li>
+                                <li class="d-flex"><span>Wednesday</span><span>8:30 - 22:00</span></li>
+                                <li class="d-flex"><span>Thursday</span><span>8:30 - 22:00</span></li>
+                                <li class="d-flex"><span>Friday</span><span>8:30 - 00:00</span></li>
+                                <li class="d-flex"><span>Saturday</span><span>8:30 - 00:00</span></li>
+                                <li class="d-flex"><span>Sunday</span><span>8:30 - 22:00</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="gf-footer-widget mb-4">
+                            <h2 class="gf-heading-2">Photographs</h2>
+                            <div class="thumb d-flex">
+                                <a href="javascript:void(0)" class="thumb-menu" style="background-image: url(images/day.jpg);background-size: cover;">
+                                </a>
+                                <a href="javascript:void(0)" class="thumb-menu" style="background-image: url(images/img-2.jpg);background-size: cover;">
+                                </a>
+                                <a href="javascript:void(0)" class="thumb-menu" style="background-image: url(images/drink.jpg);background-size: cover;">
+                                </a>
+
+                            </div>
+                            <div class="thumb d-flex">
+                                <a href="javascript:void(0)" class="thumb-menu" style="background-image: url(images/img-4.jpg);background-size: cover;">
+                                </a>
+                                <a href="javascript:void(0)" class="thumb-menu" style="background-image: url(images/night.jpg);background-size: cover;">
+                                </a>
+                                <a href="javascript:void(0)" class="thumb-menu" style="background-image: url(images/reservations.jpg);background-size: cover;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="gf-footer-widget mb-4">
+                            <h2 class="gf-heading-2">Newsletter</h2>
+                            <p>Subscribe to receive our newsletter and stay updated on the latest offers.</p>
+                            <form action="javascript:void(0)" class="subscribe-form">
+                                <div class="form-group">
+                                    <input id="subscribe-email" type="text" class="form-control mb-2 text-center py-4" placeholder="Enter email address">
+                                    <input id="subscribe-btn" type="submit" value="Subscribe" class="form-control submit px-3">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div id="toTop" class="align-items-center justify-content-center"><i class="fas fa-level-up-alt fa-lg"></i></div>
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="vendor/jquery/jquery.waypoints.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/profile.js"></script>
 </body>
+
+<!-- Modal Order Details -->
+<div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="margin: 3%; width: 95%;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="orderModalLabel">Order Details</h5>
+            </div>
+            <div class="modal-body" style="padding: 0;">
+                <table class="table table-responsive">
+                    <tbody>
+                        <tr>
+                            <th scope="row">ID</th>
+                            <td> #1849 </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Date</th>
+                            <td> <span>12/10/2019 10:02</span> </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Type</th>
+                            <td> <span>Delivery</span> </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Address</th>
+                            <td><span>21A Marco António Elias Santos Str., 1205 Larnaca, Cyprus</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Payment Method</th>
+                            <td> <span>Card</span> </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Status</th>
+                            <td><span class="badge badge-pill badge-success">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Items</th>
+                            <td>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr style="background: white;">
+                                                <td>
+                                                    Freddo Espresso
+                                                    <br />
+                                                    <em><small>No Sugar</small></em></a>
+                                                    <br />
+                                                    <small> Quantity 1</small>
+                                                </td>
+                                                <td class="text-right">
+                                                    <div class="d-flex flex-row justify-content-end">
+                                                        <div>&euro;2.00</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr style="background-color:#ffffff">
+                                                <td>
+                                                    Espresso
+                                                    <br />
+                                                    <small>Quantity 2</small>
+                                                </td>
+                                                <td class="text-right">
+                                                    <div class="d-flex flex-row justify-content-end">
+                                                        <div>2 x &euro;1.00</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Total</th>
+                            <td>
+                                <div class="text-right">&euro;4.00</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Feedback</th>
+                            <td>
+                                <textarea class="form-control" id="formControlTextArea" rows="3"></textarea>
+                                <div style="margin-top: 5pt;">
+                                    <button type="button" class="btn btn-primary" style="float: right" onclick="feedbackSubmit()">Submit</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="repeatOrder()">Repeat Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Modal Order Details -->
 
 </html>
