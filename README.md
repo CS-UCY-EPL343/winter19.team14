@@ -29,11 +29,11 @@ For the purposes of the demostration we hardcoded two users with the following u
 
 Normal registered user-customer.\
 username: user@ucy.ac.cy\
-password: 1234\
+password: 1234
 
 Account with admin privileges.\
 username: admin@ucy.ac.cy\
-password: 1234\
+password: 1234
 
 ## Installation
 No installation is needed. Open .html files with a web-browser.
