@@ -211,31 +211,31 @@
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="gf-footer-widget mb-4">
-                        <h2 class="gf-heading-2">Photographs</h2>
-                        <div class="thumb d-flex">
-                            <a href="javascript:void(0)" class="thumb-menu"
-                                style="background-image: url(images/day.jpg);background-size: cover;">
-                            </a>
-                            <a href="javascript:void(0)" class="thumb-menu"
-                                style="background-image: url(images/img-2.jpg);background-size: cover;">
-                            </a>
-                            <a href="javascript:void(0)" class="thumb-menu"
-                                style="background-image: url(images/drink.jpg);background-size: cover;">
-                            </a>
+						<h2 class="gf-heading-2">Photographs</h2>
+						<div class="thumb d-flex">
+							<a href="javascript:void(0)" class="thumb-menu"
+								style="background-image: url(images/day.jpg);background-size: cover;">
+							</a>
+							<a href="javascript:void(0)" class="thumb-menu"
+								style="background-image: url(images/img-2.jpg);background-size: cover;">
+							</a>
+							<a href="javascript:void(0)" class="thumb-menu"
+								style="background-image: url(images/drink.jpg);background-size: cover;">
+							</a>
 
-                        </div>
-                        <div class="thumb d-flex">
-                            <a href="javascript:void(0)" class="thumb-menu"
-                                style="background-image: url(images/img-4.jpg);background-size: cover;">
-                            </a>
-                            <a href="javascript:void(0)" class="thumb-menu"
-                                style="background-image: url(images/night.jpg);background-size: cover;">
-                            </a>
-                            <a href="javascript:void(0)" class="thumb-menu"
-                                style="background-image: url(images/reservations.jpg);background-size: cover;">
-                            </a>
-                        </div>
-                    </div>
+						</div>
+						<div class="thumb d-flex">
+							<a href="javascript:void(0)" class="thumb-menu"
+								style="background-image: url(images/img-4.jpg);background-size: cover;">
+							</a>
+							<a href="javascript:void(0)" class="thumb-menu"
+								style="background-image: url(images/night.jpg);background-size: cover;">
+							</a>
+							<a href="javascript:void(0)" class="thumb-menu"
+								style="background-image: url(images/reservations.jpg);background-size: cover;">
+							</a>
+						</div>
+					</div>
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="gf-footer-widget mb-4">
@@ -245,7 +245,8 @@
 							<div class="form-group">
 								<input id="subscribe-email" type="text" class="form-control mb-2 text-center py-4"
 									placeholder="Enter email address">
-								<input id="subscribe-btn" type="submit" value="Subscribe" class="form-control submit px-3">
+								<input id="subscribe-btn" type="submit" value="Subscribe"
+									class="form-control submit px-3">
 							</div>
 						</form>
 					</div>
@@ -315,7 +316,8 @@
 								<div class="options mt-1">
 									<p class="notmember" onclick="open_register()">Not a member? <a href="#"
 											class="blue-text">Register</a></p>
-									<p><a href="#" class="blue-text">Forgot Password?</a></p>
+									<p onclick="open_restorePassword()"><a href="#" class="blue-text">Forgot
+											Password?</a></p>
 								</div>
 								<button type="button" class="btn btn-outline-info waves-effect ml-auto"
 									data-dismiss="modal">Close</button>
@@ -641,6 +643,30 @@
 		</div>
 	</div>
 	<!--END Modal: Login / Register Form-->
+
+	<!-- Modal Restore Password -->
+	<div class="modal fade" id="forgotPassword" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="orderModalLabel">Restore Password</h5>
+				</div>
+				<div class="modal-body">
+					<form class="pb-modalreglog-form-reg" id="forgotForm">
+						<label class="labeling">Write your email:</label><span class="red_star">*</span>
+						<input type="email" class="form-control" placeholder="Email" id="fgpsswd">
+						<p class="d-none red_warning" id="fgpsswd_warning"></p>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" onclick="restoreScript()">Restore</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Modal Restore Password -->
 
 	<!-- Bootstrap core JavaScript -->
 	<script src="vendor/jquery/jquery.js"></script>

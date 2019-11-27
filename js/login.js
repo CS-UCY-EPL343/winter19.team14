@@ -307,6 +307,32 @@ function open_register(){
     clear_function_register();
 }
 
+function open_restorePassword() {
+    document.getElementById("forgotForm").reset();
+    $('#myModal').modal('hide');
+    $('#forgotPassword').modal('show');
+}
+
+function restoreScript(){
+    if (document.getElementById("fgpsswd").value === '') {
+        swal({
+			title: "Fail Restore",
+			text: "Email must be filled",
+			icon: "error",
+			button: "Close"
+		});   
+    }
+    else{
+        swal({
+            title: "Successful Password Restore!",
+            text: "In your email you can find a temporary password! Please change it at the first login.",
+            icon: "success",
+            button: "Close"
+        });
+        $('#forgotPassword').modal('hide');
+    }
+}
+
 const login_button = document.querySelector('#login');
 if (login_button){
     login_button.addEventListener('click', LoginAuthentication);
