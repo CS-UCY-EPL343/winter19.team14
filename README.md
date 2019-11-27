@@ -38,4 +38,4 @@ password: 1234
 ## Installation
 No installation is needed. Open .html files with a web-browser.\
 OR\
-Launch this application for this website [`Gardiano Caffè`](https://www.cs.ucy.ac.cy/~kdemet06/epl343/)
+Launch this application from this website [`Gardiano Caffè`](https://www.cs.ucy.ac.cy/~kdemet06/epl343/)
