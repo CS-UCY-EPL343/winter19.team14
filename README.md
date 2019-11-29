@@ -28,6 +28,8 @@ The website was designed to meet the requirements of the client, collected and s
 For the purposes of the demostration we hardcoded two users with the following user credintials:
 
 Normal registered user-customer.\
+Effect - Profile tab will show up in navigation bar.\
+Use the following credintials.\
 username: user@ucy.ac.cy\
 password: 1234
 
