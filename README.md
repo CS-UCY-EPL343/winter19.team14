@@ -29,7 +29,7 @@ For the purposes of the demonstration we hard-coded two users with the following
 
 Normal registered user-customer.\
 Effect - Profile tab will show up in navigation bar.\
-Use the following credintials.\
+Use the following credentials.\
 username: user@ucy.ac.cy\
 password: 1234
 
@@ -40,7 +40,7 @@ username: admin@ucy.ac.cy\
 password: 1234
 
 ## Supported Browsers
-We have tested our implementation on:\
+We have tested our implementation on:
 1. Google Chrome
 2. Mozilla Firefox
 
