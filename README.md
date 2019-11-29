@@ -39,8 +39,16 @@ Use the following credentials.\
 username: admin@ucy.ac.cy\
 password: 1234
 
+## Supported Browsers
+We have tested our implementation on:\
+1. Google Chrome
+2. Mozilla Firefox
+
+It has also a Responsive Design for mobile phone devices.
+
+
 ## Installation
-No installation is needed. Open .html files with a web-browser.\
+No installation is needed. Clone or download repository and Open index.html file with a web-browser.\
 OR\
 Launch this application from this website [Gardiano Caffè](https://www.cs.ucy.ac.cy/~kdemet06/epl343/)
 
