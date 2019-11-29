@@ -22,10 +22,10 @@ The website was designed to meet the requirements of the client, collected and s
 1. Update contents of the web-site (add events and competitions)
 2. Current in-progress orders detailed preview.
 3. Update status of orders.
-4. View statistics such as total sales, total online orders, favourite products etc.
+4. View statistics such as total sales, total on-line orders, favorite products etc.
 
 ## Login
-For the purposes of the demostration we hardcoded two users with the following user credintials:
+For the purposes of the demonstration we hard-coded two users with the following user credentials:
 
 Normal registered user-customer.\
 Effect - Profile tab will show up in navigation bar.\
@@ -34,6 +34,8 @@ username: user@ucy.ac.cy\
 password: 1234
 
 Account with admin privileges.\
+Effect - You will be redirected to the admin page.\
+Use the following credentials.\
 username: admin@ucy.ac.cy\
 password: 1234
 
